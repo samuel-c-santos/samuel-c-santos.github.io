@@ -1,0 +1,693 @@
+/* ====================
+   Fonte e Reset Geral
+==================== */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #f5f8fe;
+  color: #181b1f;
+  line-height: 1.6;
+}
+
+/* ====================
+   Cabeçalho / Topo
+==================== */
+.topo {
+  background-color: #1446b4;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.topo nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.topo nav ul li {
+  margin: 0 15px;
+}
+
+.topo nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.topo nav ul li a:hover {
+  color: #f5f8fe;
+}
+
+.titulo h1 {
+  margin-top: 10px;
+  font-size: 2em;
+}
+
+.titulo p {
+  margin-top: 5px;
+  font-size: 1em;
+}
+
+/* ====================
+   Introdução / Badges
+==================== */
+.intro {
+  text-align: center;
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.badges {
+  margin-top: 20px;
+}
+
+.badges a {
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 14px;
+  background-color: #1446b4;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.badges a:hover {
+  background-color: #181b1f;
+}
+
+/* ====================
+   Seção Sobre
+==================== */
+.sobre {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+.sobre-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px;
+  justify-content: center;
+}
+
+.foto-wrapper {
+  position: relative;
+}
+
+.foto-perfil {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #1446b4;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+.descricao {
+  flex: 1;
+  max-width: 600px;
+}
+
+.descricao h2 {
+  font-size: 2rem;
+  color: #1446b4;
+  margin-bottom: 20px;
+}
+
+.descricao p {
+  margin-bottom: 14px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #f5f8fe;
+  color: #1446b4;
+  border: 1px solid #1446b4;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: #1446b4;
+  color: white;
+}
+
+/* ====================
+   Seção Certificações
+==================== */
+.certificacoes {
+  background-color: #f5f8fe;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.certificacoes h2 {
+  font-size: 2rem;
+  color: #1446b4;
+  margin-bottom: 40px;
+}
+
+.certificacoes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cert-card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: #181b1f;
+  width: 200px;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+}
+
+.cert-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cert-card h3 {
+  padding: 15px;
+  margin: 0;
+  font-size: 1rem;
+  color: #1446b4;
+}
+
+/* ====================
+   Seção Propósito
+==================== */
+.proposito {
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.proposito h2 {
+  font-size: 2rem;
+  color: #1446b4;
+  margin-bottom: 30px;
+}
+
+.proposito-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.proposito-content p {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ====================
+   Seção Tecnologias
+==================== */
+#tecnologias {
+  background-color: #f5f8fe;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#tecnologias h2 {
+  font-size: 2rem;
+  color: #1446b4;
+  margin-bottom: 40px;
+}
+
+.tecnologias-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tecnologia-item {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease;
+}
+
+.tecnologia-item:hover {
+  transform: translateY(-5px);
+}
+
+.tecnologia-nome {
+  font-weight: 700;
+  color: #1446b4;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.tecnologia-desc {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ====================
+   Seção Projetos
+==================== */
+#projetos {
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#projetos h2 {
+  font-size: 2rem;
+  color: #1446b4;
+  margin-bottom: 40px;
+}
+
+.projetos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.projeto-card {
+  background-color: #f5f8fe;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease;
+}
+
+.projeto-card:hover {
+  transform: translateY(-5px);
+}
+
+.projeto-card h3 {
+  color: #1446b4;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.tags span {
+  background-color: rgba(211, 84, 0, 0.1);
+  color: #1446b4;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.projeto-card p {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.projeto-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-projeto, .btn-demo {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-projeto {
+  background-color: #1446b4;
+  color: white;
+}
+
+.btn-demo {
+  background-color: white;
+  color: #1446b4;
+  border: 1px solid #1446b4;
+}
+
+.btn-projeto:hover, .btn-demo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ====================
+   Seção Dashboards
+==================== */
+.dashboards {
+  background-color: #f5f8fe;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.dashboards h2 {
+  font-size: 2rem;
+  color: #1446b4;
+  margin-bottom: 40px;
+}
+
+.dashboards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+}
+
+.dashboard-item {
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.dashboard-item:hover {
+  transform: translateY(-5px);
+}
+
+.dashboard-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.dashboard-item h3 {
+  padding: 20px 20px 10px;
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1446b4;
+  text-align: left;
+}
+
+.dashboard-item p {
+  padding: 0 20px 20px;
+  margin: 0;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.btn-dashboard {
+  display: inline-block;
+  margin: 0 20px 20px;
+  padding: 8px 16px;
+  background-color: #1446b4;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-dashboard:hover {
+  background-color: #181b1f;
+}
+
+.repo-link {
+  margin-top: 30px;
+}
+
+.repo-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #181b1f;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.repo-link a:hover {
+  background-color: #1446b4;
+  transform: translateY(-2px);
+}
+
+/* ====================
+   Projetos Adicionais
+==================== */
+.projetos-adicionais {
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.projetos-adicionais h2 {
+  font-size: 2rem;
+  color: #1446b4;
+  margin-bottom: 40px;
+}
+
+.projeto-adicional {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: left;
+  padding: 30px;
+  background-color: #f5f8fe;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.projeto-adicional h3 {
+  color: #1446b4;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.projeto-adicional p {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.btn-projeto-adicional {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #1446b4;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-projeto-adicional:hover {
+  background-color: #181b1f;
+  transform: translateY(-2px);
+}
+
+/* ====================
+   Seção Contato
+==================== */
+.contato {
+  background-color: #f5f8fe;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 2rem;
+  color: #1446b4;
+  margin-bottom: 40px;
+}
+
+.contato-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+}
+
+.contato-item {
+  background-color: white;
+  border-radius: 16px;
+  padding: 30px;
+  width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.contato-item:hover {
+  transform: translateY(-5px);
+}
+
+.contato-item i {
+  font-size: 2rem;
+  color: #1446b4;
+  margin-bottom: 15px;
+}
+
+.contato-item h3 {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #181b1f;
+}
+
+.contato-item a {
+  color: #1446b4;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.contato-item a:hover {
+  text-decoration: underline;
+}
+
+.portfolio-adicional {
+  margin-top: 40px;
+}
+
+.portfolio-adicional p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.btn-portfolio {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1446b4;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-portfolio:hover {
+  background-color: #181b1f;
+  transform: translateY(-2px);
+}
+
+/* ====================
+   Rodapé
+==================== */
+footer {
+  background-color: #181b1f;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ====================
+   Responsividade
+==================== */
+@media (max-width: 768px) {
+  .topo nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .sobre-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .descricao {
+    text-align: left;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .projetos-container, .dashboards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .contato-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contato-item {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo h1 {
+    font-size: 1.5em;
+  }
+  
+  .titulo p {
+    font-size: 0.9em;
+  }
+  
+  .projeto-card, .dashboard-item {
+    padding: 20px;
+  }
+  
+  .btn-projeto, .btn-demo, .btn-dashboard, .btn-projeto-adicional {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .projeto-links {
+    flex-direction: column;
+  }
+}
