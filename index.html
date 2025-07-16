@@ -5,344 +5,645 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio de Samuel Santos</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header class="topo">
-    <div class="titulo-fixa">
-      <h1>Portfólio de Samuel Santos</h1>
-      <p>Ciência de Dados | Geoprocessamento | Business Intelligence | Python | R | Meio Ambiente | Sustentabilidade</p>
+  <header class="header">
+    <div class="header-content">
+      <div class="profile-section">
+        <img src="perfil.jpeg" alt="Samuel Santos" class="profile-image">
+        <div class="profile-info">
+          <h1>Samuel Santos</h1>
+          <p class="profile-title">Cientista de Dados & Especialista em Geoprocessamento</p>
+          <p class="profile-description">Transformando dados em insights valiosos para tomada de decisões estratégicas</p>
+        </div>
+      </div>
+      <div class="header-stats">
+        <div class="stat-item">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Projetos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">4</span>
+          <span class="stat-label">Certificações</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Anos Exp.</span>
+        </div>
+      </div>
     </div>
   </header>
 
-  <nav class="barra-navegacao">
-    <ul>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#certificacoes">Certificações</a></li>
-      <li><a href="#proposito">Propósito</a></li>
-      <li><a href="#tecnologias">Tecnologias</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-links">
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#certificacoes" class="nav-link">Certificações</a>
+        <a href="#tecnologias" class="nav-link">Tecnologias</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </div>
+      <div class="social-links-nav">
+        <a href="https://github.com/samuel-c-santos" target="_blank" class="social-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/samuelsantos-amb/" target="_blank" class="social-link">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:samuelsantosambiental@gmail.com" class="social-link">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
   </nav>
 
-  <section class="intro">
-    <p>Seja bem-vindo(a)! Este portfólio reúne meus projetos e estudos nas áreas de <strong>ciência de dados, análise espacial, automação de processos e regularização ambiental</strong>.</p>
-    <p>Aqui você encontrará soluções que aplicam desde <strong>análise exploratória e inteligência de dados</strong> até <strong>geoprocessamento, dashboards, modelagem e uso de ferramentas de BI</strong>.</p>
-    
-    <div class="badges">
-      <a href="#proposito">🧭 Propósito</a>
-      <a href="#projetos">📊 Destaques</a>
-      <a href="https://www.linkedin.com/in/samuelsantos-amb/" target="_blank">🔗 LinkedIn</a>
-      <a href="https://wa.me/5591984741391" target="_blank">📱 WhatsApp</a>
-      <a href="https://github.com/samuel-c-santos" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-    </div>
-  </section>
-
-  <section id="sobre" class="sobre">
-    <div class="sobre-container">
-      <div class="foto-wrapper">
-        <img src="perfil.jpeg" alt="Foto de perfil" class="foto-perfil">
-      </div>
-      <div class="descricao">
-        <h2>Sobre mim</h2>
-        <p>Sou um profissional apaixonado por análise de dados e desenvolvimento de soluções baseadas em dados. Mestre em Biologia Ambiental e especialista em Ciência de Dados, tenho experiência em geoprocessamento, regularização ambiental e ciência de dados.</p>
-        <p>Minha expertise abrange desde a análise profunda de dados ambientais e espaciais até o desenvolvimento de sistemas para automação de fluxos de dados e certificações. Trabalho com visualizações interativas e painéis dinâmicos com foco em gestão pública e ambiental, buscando sempre transformar dados em informações valiosas para tomada de decisões.</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/samuelsantos-amb/" target="_blank" class="social-btn">
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-          <a href="https://github.com/samuel-c-santos" target="_blank" class="social-btn">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-          <a href="https://dot.cards/samuelsantos" target="_blank" class="social-btn">
-            <i class="fas fa-id-card"></i> Cartão Digital
-          </a>
-          <a href="mailto:samuelsantosambiental@gmail.com" class="social-btn">
-            <i class="fas fa-envelope"></i> E-mail
-          </a>
+  <section id="sobre" class="about-section">
+    <div class="container">
+      <h2 class="section-title">Sobre Mim</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Sou um profissional apaixonado por análise de dados e desenvolvimento de soluções baseadas em dados. Mestre em Biologia Ambiental e especialista em Ciência de Dados, tenho experiência em geoprocessamento, regularização ambiental e ciência de dados.</p>
+          <p>Minha expertise abrange desde a análise profunda de dados ambientais e espaciais até o desenvolvimento de sistemas para automação de fluxos de dados e certificações. Trabalho com visualizações interativas e painéis dinâmicos com foco em gestão pública e ambiental, buscando sempre transformar dados em informações valiosas para tomada de decisões.</p>
+          
+          <div class="skills-highlight">
+            <div class="skill-item">
+              <i class="fas fa-chart-line"></i>
+              <span>Análise de Dados</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-map-marked-alt"></i>
+              <span>Geoprocessamento</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-robot"></i>
+              <span>Automação</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-leaf"></i>
+              <span>Meio Ambiente</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="certificacoes" class="certificacoes">
-    <h2>Certificações</h2>
-    <div class="certificacoes-grid">
-      <a href="https://www.coursera.org/account/accomplishments/professional-cert/S77137BIW3BB" target="_blank" class="cert-card">
-        <img src="https://images.credly.com/size/680x680/images/42ce4209-8839-431a-9046-f2ce2e72e04b/Coursera_20Data_20Science_20Professional_20Certificate.png" 
-             alt="IBM Data Science">
-        <h3>IBM Data Science</h3>
-      </a>
-      <a href="https://www.coursera.org/account/accomplishments/professional-cert/6O9UOEAOR8SC" target="_blank" class="cert-card">
-        <img src="https://images.credly.com/size/680x680/images/cbe961ef-3536-47a1-be43-14c461a3216e/image.png" 
-             alt="Google Business Intelligence">
-        <h3>Google Business Intelligence</h3>
-      </a>
-      <a href="https://www.coursera.org/account/accomplishments/professional-cert/UCL8PA52WE22" target="_blank" class="cert-card">
-        <img src="https://images.credly.com/size/680x680/images/d41de2b7-cbc2-47ec-bcf1-ebecbe83872f/GCC_badge_DA_1000x1000.png" 
-             alt="Google Data Analytics">
-        <h3>Google Data Analytics</h3>
-      </a>
-      <a href="https://www.coursera.org/account/accomplishments/professional-cert/FERD3VNVCZUX" target="_blank" class="cert-card">
-        <img src="https://images.credly.com/size/680x680/images/9267a387-1a51-4ebe-8c05-976a5ec4c3d0/image.png" 
-             alt="Google Advanced Data Analytics">
-        <h3>Google Advanced Data Analytics</h3>
-      </a>
+  <section id="projetos" class="projects-section">
+    <div class="container">
+      <div class="projects-header">
+        <h2 class="section-title">Meus Projetos</h2>
+        <p class="section-subtitle">Explore meus trabalhos em ciência de dados, geoprocessamento e desenvolvimento</p>
+      </div>
+
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+        <button class="filter-btn" data-filter="bi">BI</button>
+        <button class="filter-btn" data-filter="dados">Dados</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Projeto 1: Sistema CAR -->
+        <div class="project-card" data-category="fullstack">
+          <div class="project-image">
+            <img src="https://github.com/samuel-c-santos/sistema-certificacao-car/blob/main/index.png?raw=true" alt="Sistema CAR">
+            <div class="project-overlay">
+              <span class="project-tag">fullstack</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Sistema de Certificação do CAR</h3>
+            <p class="project-description">Automatiza a emissão de certificados do CAR com geração em PDF, controle de acesso e registro completo de operações.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">ReportLab</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric">
+                <span class="metric-value">89%</span>
+                <span class="metric-label">Automação</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">+2k</span>
+                <span class="metric-label">Certificados</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/samuel-c-santos/sistema-certificacao-car" target="_blank" class="btn-primary">
+                <i class="fab fa-github"></i> Ver código
+              </a>
+              <a href="https://player.vimeo.com/video/1035004919?h=805fa5024b" target="_blank" class="btn-secondary">
+                <i class="fas fa-play"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 2: Prioritask -->
+        <div class="project-card" data-category="fullstack">
+          <div class="project-image">
+            <div class="image-grid">
+              <img src="https://github.com/samuel-c-santos/prioritask/blob/main/Screenshot_20241217_041628_Prioritask.jpg?raw=true" alt="Prioritask App 1">
+              <img src="https://github.com/samuel-c-santos/prioritask/blob/main/Screenshot_20241217_044751_Prioritask.jpg?raw=true" alt="Prioritask App 2">
+            </div>
+            <div class="project-overlay">
+              <span class="project-tag">fullstack</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Prioritask - App de Tarefas</h3>
+            <p class="project-description">Aplicativo mobile para gestão de tarefas com filtros, categorias e foco em produtividade.</p>
+            <div class="project-tech">
+              <span class="tech-tag">React Native</span>
+              <span class="tech-tag">Expo</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric">
+                <span class="metric-value">95%</span>
+                <span class="metric-label">Performance</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">4.8</span>
+                <span class="metric-label">Rating</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/samuel-c-santos/prioritask" target="_blank" class="btn-primary">
+                <i class="fab fa-github"></i> Ver código
+              </a>
+              <a href="https://vimeo.com/1039919429" target="_blank" class="btn-secondary">
+                <i class="fas fa-play"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 3: Análise Geoestatística -->
+        <div class="project-card" data-category="dados">
+          <div class="project-image">
+            <img src="https://github.com/samuel-c-santos/krigarem_r/blob/main/saida/Krigagem%20do%20par%C3%A2metro%20phagua.png?raw=true" alt="Geoestatística">
+            <div class="project-overlay">
+              <span class="project-tag">dados</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Análise Geoestatística com R</h3>
+            <p class="project-description">Krigagem espacial de pH da água do solo com ajuste de semivariograma e mapeamento temático.</p>
+            <div class="project-tech">
+              <span class="tech-tag">R</span>
+              <span class="tech-tag">sf</span>
+              <span class="tech-tag">gstat</span>
+              <span class="tech-tag">raster</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric">
+                <span class="metric-value">92%</span>
+                <span class="metric-label">Precisão</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">1.2k</span>
+                <span class="metric-label">Pontos</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/samuel-c-santos/krigarem_r" target="_blank" class="btn-primary">
+                <i class="fab fa-github"></i> Ver código
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 4: Super-Resolução Sentinel -->
+        <div class="project-card" data-category="dados">
+          <div class="project-image">
+            <img src="https://github.com/samuel-c-santos/s2dr3_inferencia_automatizada_sentinel2/blob/main/demonstracao.png?raw=true" alt="Super-Resolução Sentinel">
+            <div class="project-overlay">
+              <span class="project-tag">dados</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Super-Resolução Sentinel-2</h3>
+            <p class="project-description">Geração automatizada de imagens Sentinel-2 em 1m/px com seleção baseada em nuvens via Earth Engine.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">GEE</span>
+              <span class="tech-tag">Colab</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric">
+                <span class="metric-value">1m</span>
+                <span class="metric-label">Resolução</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">85%</span>
+                <span class="metric-label">Qualidade</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/samuel-c-santos/s2dr3_inferencia_automatizada_sentinel2" target="_blank" class="btn-primary">
+                <i class="fab fa-github"></i> Ver código
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 5: Painel Incêndios -->
+        <div class="project-card" data-category="bi">
+          <div class="project-image">
+            <img src="https://github.com/samuel-c-santos/painel-incendios-australia/blob/main/painel.png?raw=true" alt="Painel Incêndios">
+            <div class="project-overlay">
+              <span class="project-tag">bi</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Painel de Incêndios na Austrália</h3>
+            <p class="project-description">Dashboard com dados históricos de incêndios e visualização de área queimada e sazonalidade por estado.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Dash</span>
+              <span class="tech-tag">Plotly</span>
+              <span class="tech-tag">Pandas</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric">
+                <span class="metric-value">10k+</span>
+                <span class="metric-label">Registros</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">5</span>
+                <span class="metric-label">Estados</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/samuel-c-santos/painel-incendios-australia" target="_blank" class="btn-primary">
+                <i class="fab fa-github"></i> Ver código
+              </a>
+              <a href="https://painel-incendios-australia.onrender.com" target="_blank" class="btn-secondary">
+                <i class="fas fa-external-link-alt"></i> Ver painel
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 6: Download Landsat e Sentinel -->
+        <div class="project-card" data-category="dados">
+          <div class="project-image">
+            <div class="image-grid">
+              <img src="https://raw.githubusercontent.com/samuel-c-santos/download_landsat_sentinel/main/demonstracao_sentinel.png" alt="Sentinel">
+              <img src="https://raw.githubusercontent.com/samuel-c-santos/download_landsat_sentinel/main/demonstracao_landsat.png" alt="Landsat">
+            </div>
+            <div class="project-overlay">
+              <span class="project-tag">dados</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Download de Imagens Landsat e Sentinel</h3>
+            <p class="project-description">Rotina automatizada para download de imagens Landsat e Sentinel a partir de shapefile, com filtragem por cobertura de nuvens e exportação para Google Drive.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Earth Engine</span>
+              <span class="tech-tag">Colab</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric">
+                <span class="metric-value">90%</span>
+                <span class="metric-label">Automação</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">2</span>
+                <span class="metric-label">Satélites</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/samuel-c-santos/download_landsat_sentinel" target="_blank" class="btn-primary">
+                <i class="fab fa-github"></i> Ver código
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 7: Sentinel Time Viewer -->
+        <div class="project-card" data-category="dados">
+          <div class="project-image">
+            <img src="https://github.com/samuel-c-santos/Sentinel-Time-Viewer/blob/main/exemplo_swipe.gif?raw=true" alt="Sentinel Swipe">
+            <div class="project-overlay">
+              <span class="project-tag">dados</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Sentinel Time Viewer – Swipe Interativo</h3>
+            <p class="project-description">Aplicação em GEE para comparar imagens multitemporais Sentinel-2 utilizando a ferramenta de "Swipe" interativa. Permite avaliar mudanças ambientais em duas datas diferentes lado a lado.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Google Earth Engine</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Sentinel-2</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric">
+                <span class="metric-value">100%</span>
+                <span class="metric-label">Interativo</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">2</span>
+                <span class="metric-label">Datas</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/samuel-c-santos/sentinel-time-viewer" target="_blank" class="btn-primary">
+                <i class="fab fa-github"></i> Ver código
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 8: GeoVisor Belém -->
+        <div class="project-card" data-category="dados">
+          <div class="project-image">
+            <img src="https://github.com/samuel-c-santos/geovisor-belem/blob/master/demo/Captura%20de%20tela.png?raw=true" alt="GeoVisor Belém">
+            <div class="project-overlay">
+              <span class="project-tag">dados</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">GeoVisor Belém – Visualizador Interativo</h3>
+            <p class="project-description">Aplicação web para visualização interativa de bairros e logradouros em Belém/PA, com busca por endereço, upload e download de camadas geográficas.</p>
+            <div class="project-tech">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Leaflet</span>
+              <span class="tech-tag">GeoJSON</span>
+              <span class="tech-tag">OpenStreetMap</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric">
+                <span class="metric-value">100%</span>
+                <span class="metric-label">Web</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">PA</span>
+                <span class="metric-label">Belém</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/samuel-c-santos/geovisor-belem" target="_blank" class="btn-primary">
+                <i class="fab fa-github"></i> Ver código
+              </a>
+              <a href="https://samuel-c-santos.github.io/geovisor-belem/" target="_blank" class="btn-secondary">
+                <i class="fas fa-external-link-alt"></i> Acessar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 9: Relatório DIGEO -->
+        <div class="project-card" data-category="bi">
+          <div class="project-image">
+            <img src="https://github.com/samuel-c-santos/relatorios_bi/blob/main/dashboard_iniciativas.png?raw=true" alt="DIGEO Iniciativas">
+            <div class="project-overlay">
+              <span class="project-tag">bi</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Relatório de Iniciativas da DIGEO</h3>
+            <p class="project-description">Painel com dados de mutirões, contratos e municipalização do CAR pela DIGEO.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">Indicadores</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric">
+                <span class="metric-value">15+</span>
+                <span class="metric-label">Indicadores</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">100%</span>
+                <span class="metric-label">Automação</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="https://app.powerbi.com/view?r=eyJrIjoiMzJhMTg4NzItMmI5Ny00YjQwLTgzN2UtOWQxMzU1M2JhNDk0IiwidCI6ImJiOWRkMWUwLTgzYmEtNGZmYS1hY2Q3LTQyNzJhZGY4ZGIyNSJ9" target="_blank" class="btn-secondary">
+                <i class="fas fa-external-link-alt"></i> Acessar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="proposito" class="proposito">
-    <h2>🧭 Propósito</h2>
-    <div class="proposito-content">
-      <p>Este portfólio tem como objetivo apresentar minhas habilidades práticas em ciência de dados aplicada ao meio ambiente e análise espacial. Trabalho com análise exploratória de dados e geração de insights, geoprocessamento, regularização ambiental e monitoramento territorial.</p>
-      <p>Desenvolvo sistemas para automação de fluxos de dados e certificações, além de criar visualizações interativas e painéis dinâmicos com foco em gestão pública e ambiental. Os projetos são organizados em repositórios independentes, com exemplos, demonstrações e links úteis para facilitar a navegação.</p>
-    </div>
-  </section>
-
-  <section id="tecnologias">
-    <h2>🧩 Tecnologias & Ferramentas</h2>
-    <div class="tecnologias-container">
-      <div class="tecnologia-item">
-        <div class="tecnologia-nome">Python</div>
-        <div class="tecnologia-desc">Análise de dados, automação de processos e processamento espacial</div>
-      </div>
-      <div class="tecnologia-item">
-        <div class="tecnologia-nome">SQL</div>
-        <div class="tecnologia-desc">Consultas, integração e modelagem de bancos de dados</div>
-      </div>
-      <div class="tecnologia-item">
-        <div class="tecnologia-nome">Dash / Plotly</div>
-        <div class="tecnologia-desc">Dashboards analíticos e visualizações interativas</div>
-      </div>
-      <div class="tecnologia-item">
-        <div class="tecnologia-nome">Power BI</div>
-        <div class="tecnologia-desc">Relatórios de inteligência de dados e KPIs</div>
-      </div>
-      <div class="tecnologia-item">
-        <div class="tecnologia-nome">Pandas / NumPy</div>
-        <div class="tecnologia-desc">Manipulação, limpeza e transformação de dados</div>
-      </div>
-      <div class="tecnologia-item">
-        <div class="tecnologia-nome">Flask</div>
-        <div class="tecnologia-desc">Desenvolvimento de sistemas web e APIs em Python</div>
-      </div>
-      <div class="tecnologia-item">
-        <div class="tecnologia-nome">PostgreSQL</div>
-        <div class="tecnologia-desc">Bancos de dados relacionais e consultas geoespaciais (PostGIS)</div>
-      </div>
-      <div class="tecnologia-item">
-        <div class="tecnologia-nome">GeoPandas</div>
-        <div class="tecnologia-desc">Análise espacial e manipulação de dados geográficos em Python</div>
-      </div>
-      <div class="tecnologia-item">
-        <div class="tecnologia-nome">QGIS</div>
-        <div class="tecnologia-desc">Geoprocessamento, edição e análises espaciais</div>
-      </div>
-      <div class="tecnologia-item">
-        <div class="tecnologia-nome">Google Earth Engine</div>
-        <div class="tecnologia-desc">Processamento de imagens de satélite e análises ambientais</div>
-      </div>
-      <div class="tecnologia-item">
-        <div class="tecnologia-nome">R</div>
-        <div class="tecnologia-desc">Análises estatísticas e geoestatísticas (krigagem espacial)</div>
-      </div>
-      <div class="tecnologia-item">
-        <div class="tecnologia-nome">React Native</div>
-        <div class="tecnologia-desc">Desenvolvimento de aplicativos móveis nativos</div>
+  <section id="certificacoes" class="certifications-section">
+    <div class="container">
+      <h2 class="section-title">Certificações</h2>
+      <div class="certifications-grid">
+        <a href="https://www.coursera.org/account/accomplishments/professional-cert/S77137BIW3BB" target="_blank" class="cert-card">
+          <img src="https://images.credly.com/size/680x680/images/42ce4209-8839-431a-9046-f2ce2e72e04b/Coursera_20Data_20Science_20Professional_20Certificate.png" alt="IBM Data Science">
+          <h3>IBM Data Science</h3>
+          <p>Professional Certificate</p>
+        </a>
+        <a href="https://www.coursera.org/account/accomplishments/professional-cert/6O9UOEAOR8SC" target="_blank" class="cert-card">
+          <img src="https://images.credly.com/size/680x680/images/cbe961ef-3536-47a1-be43-14c461a3216e/image.png" alt="Google Business Intelligence">
+          <h3>Google Business Intelligence</h3>
+          <p>Professional Certificate</p>
+        </a>
+        <a href="https://www.coursera.org/account/accomplishments/professional-cert/UCL8PA52WE22" target="_blank" class="cert-card">
+          <img src="https://images.credly.com/size/680x680/images/d41de2b7-cbc2-47ec-bcf1-ebecbe83872f/GCC_badge_DA_1000x1000.png" alt="Google Data Analytics">
+          <h3>Google Data Analytics</h3>
+          <p>Professional Certificate</p>
+        </a>
+        <a href="https://www.coursera.org/account/accomplishments/professional-cert/FERD3VNVCZUX" target="_blank" class="cert-card">
+          <img src="https://images.credly.com/size/680x680/images/9267a387-1a51-4ebe-8c05-976a5ec4c3d0/image.png" alt="Google Advanced Data Analytics">
+          <h3>Google Advanced Data Analytics</h3>
+          <p>Professional Certificate</p>
+        </a>
       </div>
     </div>
   </section>
 
-  <section id="projetos" class="projetos">
-    <h2>📁 Projetos</h2>
+  <section id="tecnologias" class="tech-section">
+    <div class="container">
+      <h2 class="section-title">Tecnologias & Ferramentas</h2>
+      <div class="tech-grid">
+        <div class="tech-category">
+          <h3>Linguagens</h3>
+          <div class="tech-items">
+            <div class="tech-item">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-database"></i>
+              <span>SQL</span>
+            </div>
+            <div class="tech-item">
+              <i class="fab fa-r-project"></i>
+              <span>R</span>
+            </div>
+            <div class="tech-item">
+              <i class="fab fa-js"></i>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tech-category">
+          <h3>Frameworks</h3>
+          <div class="tech-items">
+            <div class="tech-item">
+              <i class="fas fa-flask"></i>
+              <span>Flask</span>
+            </div>
+            <div class="tech-item">
+              <i class="fab fa-react"></i>
+              <span>React Native</span>
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-chart-bar"></i>
+              <span>Dash/Plotly</span>
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-table"></i>
+              <span>Pandas</span>
+            </div>
+          </div>
+        </div>
 
-    <!-- 🔧 Desenvolvimento de Sistemas -->
-    <h3 class="categoria">🔧 Desenvolvimento de Sistemas</h3>
-    <div class="projetos-container">
-      <div class="projeto-card">
-        <img src="https://github.com/samuel-c-santos/sistema-certificacao-car/blob/main/index.png?raw=true" alt="Sistema CAR">
-        <h3>Sistema de Certificação do CAR</h3>
-        <div class="tags"><span>Python</span><span>Flask</span><span>PostgreSQL</span><span>ReportLab</span></div>
-        <p>Automatiza a emissão de certificados do CAR com geração em PDF, controle de acesso e registro completo de operações.</p>
-        <div class="projeto-links">
-          <a href="https://github.com/samuel-c-santos/sistema-certificacao-car" class="btn-projeto" target="_blank">Ver Projeto</a>
-          <a href="https://player.vimeo.com/video/1035004919?h=805fa5024b" class="btn-demo" target="_blank">Demo</a>
-        </div>
-      </div>
-
-      <div class="projeto-card">
-        <div class="imagem-dupla">
-          <img src="https://github.com/samuel-c-santos/prioritask/blob/main/Screenshot_20241217_041628_Prioritask.jpg?raw=true" alt="Prioritask App 1">
-          <img src="https://github.com/samuel-c-santos/prioritask/blob/main/Screenshot_20241217_044751_Prioritask.jpg?raw=true" alt="Prioritask App 2">
-        </div>
-        <h3>Prioritask - App de Tarefas</h3>
-        <div class="tags">
-          <span>React Native</span><span>Expo</span><span>JavaScript</span>
-        </div>
-        <p>Aplicativo mobile para gestão de tarefas com filtros, categorias e foco em produtividade. Desenvolvido com React Native e Expo.</p>
-        <div class="projeto-links">
-          <a href="https://github.com/samuel-c-santos/prioritask" class="btn-projeto" target="_blank">Ver Projeto</a>
-          <a href="https://vimeo.com/1039919429" class="btn-demo" target="_blank">Demonstração</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 🛰️ Geoprocessamento e Sensoriamento Remoto -->
-    <h3 class="categoria">🛰️ Geoprocessamento e Sensoriamento Remoto</h3>
-    <div class="projetos-container">
-      <div class="projeto-card">
-        <img src="https://github.com/samuel-c-santos/krigarem_r/blob/main/saida/Krigagem%20do%20par%C3%A2metro%20phagua.png?raw=true" alt="Geoestatística">
-        <h3>Análise Geoestatística com R</h3>
-        <div class="tags"><span>R</span><span>sf</span><span>gstat</span><span>raster</span></div>
-        <p>Krigagem espacial de pH da água do solo com ajuste de semivariograma e mapeamento temático.</p>
-        <div class="projeto-links">
-          <a href="https://github.com/samuel-c-santos/krigarem_r" class="btn-projeto" target="_blank">Ver Projeto</a>
-        </div>
-      </div>
-
-      <div class="projeto-card">
-        <img src="https://github.com/samuel-c-santos/s2dr3_inferencia_automatizada_sentinel2/blob/main/demonstracao.png?raw=true" alt="Super-Resolução Sentinel">
-        <h3>Super-Resolução Sentinel-2 com S2DR3</h3>
-        <div class="tags"><span>Python</span><span>GEE</span><span>Colab</span></div>
-        <p>Geração automatizada de imagens Sentinel-2 em 1m/px com seleção baseada em nuvens via Earth Engine.</p>
-        <div class="projeto-links">
-          <a href="https://github.com/samuel-c-santos/s2dr3_inferencia_automatizada_sentinel2" class="btn-projeto" target="_blank">Ver Projeto</a>
-        </div>
-      </div>
-
-      <div class="projeto-card">
-        <div class="imagem-empilhada">
-          <img src="https://raw.githubusercontent.com/samuel-c-santos/download_landsat_sentinel/main/demonstracao_sentinel.png" alt="Sentinel">
-          <img src="https://raw.githubusercontent.com/samuel-c-santos/download_landsat_sentinel/main/demonstracao_landsat.png" alt="Landsat">
-        </div>
-        <h3>Download de Imagens Landsat e Sentinel</h3>
-        <div class="tags">
-          <span>Python</span><span>Earth Engine</span><span>Colab</span>
-        </div>
-        <p>Rotina automatizada para download de imagens Landsat e Sentinel a partir de shapefile, com filtragem por cobertura de nuvens e exportação para Google Drive.</p>
-        <div class="projeto-links">
-          <a href="https://github.com/samuel-c-santos/download_landsat_sentinel" class="btn-projeto" target="_blank">Ver Projeto</a>
-        </div>
-      </div>
-
-      <div class="projeto-card">
-        <img src="https://github.com/samuel-c-santos/Sentinel-Time-Viewer/blob/main/exemplo_swipe.gif?raw=true" alt="Sentinel Swipe">
-        <h3>Sentinel Time Viewer – Swipe Interativo no GEE</h3>
-        <div class="tags">
-          <span>Google Earth Engine</span><span>JavaScript</span><span>Sentinel-2</span>
-        </div>
-        <p>Aplicação em GEE para comparar imagens multitemporais Sentinel-2 utilizando a ferramenta de "Swipe" interativa. Permite avaliar mudanças ambientais em duas datas diferentes lado a lado.</p>
-        <div class="projeto-links">
-          <a href="https://github.com/samuel-c-santos/sentinel-time-viewer" class="btn-projeto" target="_blank">Ver Projeto</a>
-        </div>
-      </div>
-
-      <div class="projeto-card">
-        <img src="https://github.com/samuel-c-santos/painel-incendios-australia/blob/main/painel.png?raw=true" alt="Painel Incêndios">
-        <h3>Painel de Incêndios na Austrália</h3>
-        <div class="tags"><span>Dash</span><span>Plotly</span><span>Pandas</span></div>
-        <p>Dashboard com dados históricos de incêndios e visualização de área queimada e sazonalidade por estado.</p>
-        <div class="projeto-links">
-          <a href="https://github.com/samuel-c-santos/painel-incendios-australia" class="btn-projeto" target="_blank">Ver Projeto</a>
-          <a href="https://painel-incendios-australia.onrender.com" class="btn-demo" target="_blank">Ver Painel</a>
-        </div>
-      </div>
-
-      <div class="projeto-card">
-        <img src="https://github.com/samuel-c-santos/geovisor-belem/blob/master/demo/Captura%20de%20tela.png?raw=true" alt="GeoVisor Belém">
-        <h3>GeoVisor Belém – Visualizador Interativo</h3>
-        <div class="tags">
-          <span>JavaScript</span><span>Leaflet</span><span>GeoJSON</span><span>OpenStreetMap</span>
-        </div>
-        <p>Aplicação web para visualização interativa de bairros e logradouros em Belém/PA, com busca por endereço, upload e download de camadas geográficas.</p>
-        <div class="projeto-links">
-          <a href="https://github.com/samuel-c-santos/geovisor-belem" class="btn-projeto" target="_blank">Ver Projeto</a>
-          <a href="https://samuel-c-santos.github.io/geovisor-belem/" class="btn-demo" target="_blank">Acessar</a>
+        <div class="tech-category">
+          <h3>Ferramentas</h3>
+          <div class="tech-items">
+            <div class="tech-item">
+              <i class="fas fa-chart-pie"></i>
+              <span>Power BI</span>
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-map"></i>
+              <span>QGIS</span>
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-satellite"></i>
+              <span>Google Earth Engine</span>
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-server"></i>
+              <span>PostgreSQL</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- 📊 Dashboards Power BI -->
-    <h3 class="categoria">📊 Dashboards Power BI</h3>
-    <div class="projetos-container">
-      <div class="projeto-card">
-        <img src="https://github.com/samuel-c-santos/relatorios_bi/blob/main/dashboard_iniciativas.png?raw=true" alt="DIGEO Iniciativas">
-        <h3>Relatório de Iniciativas da DIGEO</h3>
-        <div class="tags"><span>Power BI</span><span>Indicadores</span></div>
-        <p>Painel com dados de mutirões, contratos e municipalização do CAR pela DIGEO.</p>
-        <a href="https://app.powerbi.com/view?r=eyJrIjoiMzJhMTg4NzItMmI5Ny00YjQwLTgzN2UtOWQxMzU1M2JhNDk0IiwidCI6ImJiOWRkMWUwLTgzYmEtNGZmYS1hY2Q3LTQyNzJhZGY4ZGIyNSJ9" class="btn-demo" target="_blank">Acessar</a>
-      </div>
-
-      <div class="projeto-card">
-        <img src="https://github.com/samuel-c-santos/relatorios_bi/blob/main/dashboard_floresta_mais_amazonia.png?raw=true" alt="Floresta+">
-        <h3>Projeto Floresta+ Amazônia</h3>
-        <div class="tags"><span>Power BI</span></div>
-        <p>Painel de indicadores e métricas de implementação do programa Floresta+ Amazônia.</p>
-      </div>
-
-      <div class="projeto-card">
-        <img src="https://github.com/samuel-c-santos/relatorios_bi/blob/main/dashboard_contratos.png?raw=true" alt="Gestão de Contratos">
-        <h3>Gestão de Contratos</h3>
-        <div class="tags"><span>Power BI</span><span>Execução Contratual</span></div>
-        <p>Dashboard que monitora contratos e fiscalizações vinculadas à DIGEO.</p>
-      </div>
-
-      <div class="projeto-card">
-        <img src="https://github.com/samuel-c-santos/relatorios_bi/blob/main/sobreposicoes.png?raw=true" alt="Sobreposições">
-        <h3>Sobreposição de CAR em Áreas Protegidas</h3>
-        <div class="tags"><span>Power BI</span><span>CAR</span><span>Áreas Protegidas</span></div>
-        <p>Visualização de sobreposições do CAR com TIs, UCs, Quilombolas e Assentamentos.</p>
-        <a href="https://app.powerbi.com/view?r=eyJrIjoiNGQ4YzZmMWEtZTcwZC00MzY2LTk4MDctZjI1Y2I1ZTJiZTcyIiwidCI6ImJiOWRkMWUwLTgzYmEtNGZmYS1hY2Q3LTQyNzJhZGY4ZGIyNSJ9" class="btn-demo" target="_blank">Acessar</a>
-      </div>
-    </div>
-
-    <!-- 🧠 Automatização no QGIS -->
-    <h3 class="categoria">🧠 Automação no QGIS</h3>
-    <div class="projetos-container">
-      <div class="projeto-card">
-        <img src="https://github.com/nidgeo-digeo-semas/cenario_automatizado_qgis/blob/main/clip_automatico_base_local.png?raw=true" alt="Clip QGIS">
-        <h3>Cenário Automatizado no QGIS</h3>
-        <div class="tags"><span>QGIS</span><span>Automação</span></div>
-        <p>Organiza vetores em grupos, aplica buffers e exporta camadas automaticamente para análises geoespaciais detalhadas.</p>
-        <a href="https://github.com/nidgeo-digeo-semas/cenario_automatizado_qgis" class="btn-projeto" target="_blank">Ver Projeto</a>
+  <section id="contato" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Vamos Conversar?</h2>
+      <p class="section-subtitle">Estou sempre aberto a novas oportunidades e colaborações</p>
+      
+      <div class="contact-grid">
+        <a href="mailto:samuelsantosambiental@gmail.com" class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>E-mail</h3>
+          <p>samuelsantosambiental@gmail.com</p>
+        </a>
+        
+        <a href="https://wa.me/5591984741391" target="_blank" class="contact-card">
+          <div class="contact-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <h3>WhatsApp</h3>
+          <p>+55 (91) 98474-1391</p>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/samuelsantos-amb/" target="_blank" class="contact-card">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <h3>LinkedIn</h3>
+          <p>samuelsantos-amb</p>
+        </a>
+        
+        <a href="https://dot.cards/samuelsantos" target="_blank" class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-id-card"></i>
+          </div>
+          <h3>Cartão Digital</h3>
+          <p>dot.cards/samuelsantos</p>
+        </a>
       </div>
     </div>
-</section>
+  </section>
 
-<section id="contato" class="contato">
-  <h2>Contato</h2>
-  <div class="contato-container">
-    <div class="contato-item">
-      <i class="fas fa-envelope"></i>
-      <div>
-        <h3>E-mail</h3>
-        <a href="mailto:samuelsantosambiental@gmail.com">samuelsantosambiental@gmail.com</a>
-      </div>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Samuel Santos. Todos os direitos reservados.</p>
     </div>
-    <div class="contato-item">
-      <i class="fab fa-whatsapp"></i>
-      <a href="https://wa.me/5591984741391" target="_blank"><h3>WhatsApp</h3></a>
-    </div>
-    <div class="contato-item">
-      <i class="fab fa-linkedin"></i>
-      <a href="https://www.linkedin.com/in/samuelsantos-amb/" target="_blank"><h3>LinkedIn</h3></a>
-    </div>
-    <div class="contato-item">
-      <i class="fas fa-id-card"></i>
-      <a href="https://dot.cards/samuelsantos" target="_blank"><h3>Cartão Digital</h3></a>
-    </div>
-  </div>
-
-  <div class="portfolio-adicional">
-    <p>Veja também meu Portfólio de Geoprocessamento e Cartografia:</p>
-    <a href="#" class="btn-portfolio">Explorar Portfólio de Cartografia</a>
-  </div>
-</section>
-
-  <footer>
-    <p>© Samuel Santos — Portfólio Profissional</p>
   </footer>
+
+  <script>
+    // Filtros de projeto
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+
+        const filter = button.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+            card.style.animation = 'fadeIn 0.5s ease-in-out';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Smooth scrolling para links de navegação
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Animação de entrada dos cards
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observar todos os cards
+    document.querySelectorAll('.project-card, .cert-card, .contact-card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(card);
+    });
+  </script>
 </body>
 </html>
+
