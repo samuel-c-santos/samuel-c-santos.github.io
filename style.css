@@ -1136,3 +1136,61 @@ html {
     transform: none;
   }
 }
+/* === Carousel & Gallery (namespaced, sem conflito) === */
+.ch-image-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+.ch-image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Carrossel horizontal com scroll-snap */
+.ch-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.ch-carousel-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  gap: 8px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.ch-carousel-item {
+  position: relative;
+  scroll-snap-align: start;
+}
+.ch-carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Dots do carrossel */
+.ch-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+.ch-carousel-dots a {
+  width: 10px; height: 10px;
+  border-radius: 9999px;
+  background: #d1d5db;
+  display: inline-block;
+  transition: transform .15s ease, background .2s ease;
+}
+.ch-carousel-dots a:hover { transform: scale(1.15); background: #9ca3af; }
