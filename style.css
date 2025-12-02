@@ -1039,11 +1039,15 @@ section {
 
 @media (max-width: 768px) {
 
-  .header-content,
-  .profile-section,
+  /* Força a barra de navegação a ficar em linha (horizontal) */
   .nav-container {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row !important;
+    /* Importante para sobrescrever a regra antiga */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    /* Garante que o texto não fique centralizado forçadamente */
   }
 
   .profile-info h1 {
@@ -1142,4 +1146,135 @@ section {
 .ch-carousel-dots a:hover {
   transform: scale(1.15);
   background: #9ca3af;
+}
+
+/* =========================================
+   MENU HAMBÚRGUER E MOBILE FIX (Substitua o bloco mobile anterior)
+   ========================================= */
+
+/* Estilo do Botão do Menu (Invisível no Desktop) */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  /* Mostra o botão no mobile */
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  /* Esconde o menu inicialmente e estiliza como 'gaveta' */
+  .nav-links {
+    display: none;
+    /* Oculto por padrão */
+    position: absolute;
+    top: 100%;
+    /* Fica logo abaixo da barra de navegação */
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+    animation: slideDown 0.3s ease-out;
+  }
+
+  /* Classe que o JavaScript vai adicionar para mostrar o menu */
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Ajuste para o botão CTA no menu mobile */
+  .nav-cta {
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Mantém a correção dos projetos (que já tínhamos feito) */
+  .scroll-reveal,
+  .scroll-reveal-item {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  .projects-grid,
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ajuste de altura da imagem no mobile */
+  .project-image {
+    height: 200px;
+  }
+}
+
+/* Animação suave de descida */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* correções */
+.fade-in {
+  animation: fadeInEffect 0.5s ease-in-out;
+}
+
+@keyframes fadeInEffect {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   CORREÇÃO DO TAMANHO DA FONTE (TIPO DIGITAÇÃO/ANIMAÇÃO)
+   ========================================= */
+
+@media (max-width: 480px) {
+
+  /* Reduz o tamanho do título principal no celular para a palavra caber */
+  .hero-text h1 {
+    font-size: 2rem !important;
+    /* Estava 2.8rem, reduzimos para caber */
+    word-wrap: break-word;
+    /* Previne que vaze da tela em casos extremos */
+    line-height: 1.2;
+  }
+
+  /* Ajuste fino para o cursor não pular de linha sozinho */
+  .cursor {
+    height: 2rem;
+    vertical-align: bottom;
+  }
+
+  /* Garante que o container do texto tenha o tamanho correto */
+  .header-content {
+    width: 100%;
+    padding: 0 10px;
+    /* Margem de segurança nas laterais */
+    overflow-x: hidden;
+    /* Corta qualquer excesso invisível */
+  }
 }
