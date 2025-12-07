@@ -1014,6 +1014,33 @@ section {
     display: none;
     /* Em um cenário real, precisaria de um menu hambúrguer */
   }
+
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+  }
+
+  .about-image-container {
+    order: -1;
+    /* Imagem acima do texto no mobile */
+    padding: 0;
+  }
+
+  .about-img {
+    height: 350px;
+    /* Altura reduzida para mobile */
+  }
+
+  .section-title-alt {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: 24px;
+  }
+
+  .about-metrics {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1277,4 +1304,90 @@ section {
     overflow-x: hidden;
     /* Corta qualquer excesso invisível */
   }
+}
+
+/* ====================
+  Seção Sobre (NOVO LAYOUT DE DUAS COLUNAS)
+==================== */
+
+/* Titulo Alternativo (não centralizado) */
+.section-title-alt {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--bg-dark);
+}
+
+.about-section {
+  background: var(--bg-secondary);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  /* Imagem na 1a coluna (mais larga), Conteúdo na 2a */
+  align-items: center;
+  gap: 60px;
+}
+
+.about-image-container {
+  /* Estilo da Imagem (simulando a referência) */
+  position: relative;
+  padding: 20px;
+  /* Espaço para sombra/borda */
+}
+
+.about-img {
+  width: 100%;
+  height: 600px;
+  /* Altura fixa para impacto visual */
+  object-fit: cover;
+  object-position: center center;
+  /* Foca na área central da imagem */
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Oculta o antigo about-content centralizado */
+.about-section .about-content {
+  max-width: none;
+  margin: 0;
+  text-align: left;
+}
+
+/* Novo Estilo para Métricas no Bloco Sobre */
+.about-metrics {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  margin-top: 32px;
+  border-top: 1px solid var(--border-color);
+}
+
+.metric-item {
+  text-align: center;
+  flex: 1;
+}
+
+.metric-value-lg {
+  display: block;
+  font-size: 2rem;
+  /* Reduzido para ser mais discreto */
+  font-weight: 900;
+  color: var(--accent-primary);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.metric-label-lg {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Garante que o texto dentro do about-content não tenha estilo centralizado */
+.about-content .about-text p {
+  text-align: left;
 }
