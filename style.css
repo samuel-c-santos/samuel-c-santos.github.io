@@ -1310,13 +1310,14 @@ section {
   Seção Sobre (NOVO LAYOUT DE DUAS COLUNAS)
 ==================== */
 
-/* Titulo Alternativo (não centralizado) */
+/* Titulo Alternativo (centralizado) */
 .section-title-alt {
   font-family: var(--font-serif);
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 24px;
   color: var(--bg-dark);
+  text-align: center;
 }
 
 .about-section {
