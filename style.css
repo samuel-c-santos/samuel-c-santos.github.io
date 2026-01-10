@@ -13,7 +13,7 @@
 }
 
 :root {
-  /* Paleta Inspirada na Referência (Matt Forrest) */
+  /* Paleta de cores) */
   --bg-primary: #FFFFFF;
   /* Fundo Branco Puro */
   --bg-secondary: #F8FAFC;
@@ -77,7 +77,7 @@ html {
 }
 
 /* ====================
-  Navegação (Estilo Minimalista)
+  Navegação
 ==================== */
 .main-nav {
   background: rgba(255, 255, 255, 0.95);
@@ -1012,7 +1012,7 @@ section {
 
   .nav-links {
     display: none;
-    /* Em um cenário real, precisaria de um menu hambúrguer */
+    /* Nota: em um cenário real, precisaria de um menu hambúrguer */
   }
 
   .about-grid {
@@ -1061,6 +1061,23 @@ section {
 
   .timeline-item:nth-child(odd) .experience-tech-tags {
     justify-content: flex-start;
+  }
+
+  /* REMOVER A IMAGEM NO MOBILE */
+  .about-image-container {
+    display: none; 
+  }
+
+  /* Ajuste opcional para remover o gap extra já que a imagem sumiu */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0; 
+  }
+  
+  /* Mantém o título centralizado no mobile para ficar harmônico */
+  .section-title-alt {
+    text-align: center;
+    margin-top: 0;
   }
 }
 
@@ -1176,7 +1193,7 @@ section {
 }
 
 /* =========================================
-   MENU HAMBÚRGUER E MOBILE FIX (Substitua o bloco mobile anterior)
+   MENU HAMBÚRGUER E MOBILE FIX
    ========================================= */
 
 /* Estilo do Botão do Menu (Invisível no Desktop) */
