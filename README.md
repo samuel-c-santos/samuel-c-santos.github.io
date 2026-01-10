@@ -1,14 +1,16 @@
-# 🌐 Portfólio Profissional — Samuel Santos
+# Portfólio Profissional — Samuel Santos
 
 Este repositório hospeda minha página de portfólio profissional, criada com HTML e CSS puro, e publicada via **GitHub Pages**.
 
 Acesse a versão online e interativa em:
 
-🔗 **https://samuel-c-santos.github.io/**
+**https://samuel-c-santos.github.io/** ou **https://samuelsantos.site/**
+
+![Tutorial Preview](mockup.png)
 
 ---
 
-## 📌 Sobre
+## Sobre
 
 Sou um profissional especializado em ciência de dados e geoprocessamento, com foco em soluções ambientais e análise espacial. Mestre em Biologia Ambiental e especialista em Ciência de Dados, desenvolvo desde análises exploratórias até sistemas completos de automação e visualização.
 
@@ -19,58 +21,62 @@ Neste portfólio, apresento:
 - Análises geoespaciais e processamento de imagens de satélite
 - Sistemas de automação para certificação ambiental
 - Aplicações de geoestatística e monitoramento territorial
+- **Tutoriais técnicos** sobre QGIS, Python, Google Earth Engine e análise de dados
 
 ---
 
-## 🛠️ Tecnologias Utilizadas no Portfólio
+## Tecnologias Utilizadas no Portfólio
 
 - HTML5 & CSS3
 - GitHub Pages
-- Google Fonts (Quicksand)
+- Google Fonts (Inter)
 - Font Awesome (ícones)
 - Visual Studio Code
 
 ---
 
-## 📊 Destaques do Conteúdo
+## Destaques do Conteúdo
 
 O portfólio apresenta seções organizadas que incluem:
 
-- **Certificações**: Credenciais profissionais da IBM, Google e outras instituições
-- **Propósito**: Objetivos e foco de atuação profissional
-- **Tecnologias & Ferramentas**: Stack tecnológico completo
+- **Experiências Profissionais**: Trajetória e realizações
 - **Projetos em Destaque**: Principais trabalhos desenvolvidos
-- **Dashboards no Power BI**: Visualizações e painéis analíticos
-- **Projetos Adicionais**: Outros trabalhos relevantes
+- **Tutoriais**: Guias técnicos sobre geotecnologias e análise de dados
+- **Certificações**: Credenciais profissionais da IBM, Google e outras instituições
+- **Educação**: Formação acadêmica e especializações
 - **Contato**: Canais de comunicação e redes profissionais
 
 ---
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
-📁 portfolio/
-├── index.html      # Estrutura da página
-├── style.css       # Estilos e responsividade
-├── perfil.jpeg     # Foto de perfil
-└── README.md       # Documentação
+samuel-c-santos.github.io/
+├── index.html                    # Estrutura da página
+├── style.css                     # Estilos e responsividade
+├── Perfil2.png                   # Foto de perfil
+├── samuel_presentation.png       # Imagens do portfólio
+└── README.md                     # Documentação
 ```
 
 ---
 
-## 📬 Contato
+## Repositórios Relacionados
 
-- 📧 E-mail: [samuelsantosambiental@gmail.com](mailto:samuelsantosambiental@gmail.com)
-- 💼 LinkedIn: [linkedin.com/in/samuelsantos-amb](https://www.linkedin.com/in/samuelsantos-amb/)
-- 📱 WhatsApp: [+55 91 98474-1391](https://wa.me/5591984741391)
-- 🪪 Cartão Digital: [dot.cards/samuelsantos](https://dot.cards/samuelsantos)
+Confira também meus outros repositórios:
+
+- **Tutoriais**: [samuelsantos.site/tutoriais](https://samuelsantos.site/tutoriais) — Biblioteca de tutoriais técnicos
+- **Cartografia**: [github.com/samuel-c-santos/cartografia](https://github.com/samuel-c-santos/cartografia) — Portfólio de Geoprocessamento
 
 ---
 
-## 🔗 Portfólios Relacionados
+## Contato
 
-Confira também meu portfólio específico de Geoprocessamento e Cartografia:
-- [github.com/samuel-c-santos/cartografia](https://github.com/samuel-c-santos/cartografia)
+- E-mail: [samuelsantosambiental@gmail.com](mailto:samuelsantosambiental@gmail.com)
+- LinkedIn: [linkedin.com/in/samuel-c-santos](https://www.linkedin.com/in/samuel-c-santos/)
+- GitHub: [github.com/samuel-c-santos](https://github.com/samuel-c-santos)
+- WhatsApp: [+55 91 98474-1391](https://wa.me/5591984741391)
+- Cartão Digital: [dot.cards/samuelsantos](https://dot.cards/samuelsantos)
 
 ---
 
