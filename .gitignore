@@ -1,0 +1,6 @@
+# Ambiente e IDE
+.vscode/
+
+# Templates e arquivos temporários locais
+templates/
+files/card-cartografia-temp.html

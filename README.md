@@ -6,7 +6,7 @@ Acesse a versão online e interativa em:
 
 **https://samuel-c-santos.github.io/** ou **https://samuelsantos.site/**
 
-![Tutorial Preview](mockup.png)
+![Tutorial Preview](files/mockup.png)
 
 ---
 
@@ -54,8 +54,11 @@ O portfólio apresenta seções organizadas que incluem:
 samuel-c-santos.github.io/
 ├── index.html                    # Estrutura da página
 ├── style.css                     # Estilos e responsividade
-├── Perfil2.png                   # Foto de perfil
-├── samuel_presentation.png       # Imagens do portfólio
+├── files/                        # Arquivos e mídias de suporte
+│   ├── Perfil2.png               # Foto de perfil
+│   ├── samuel_presentation.png   # Imagens do portfólio
+│   ├── mockup.png                # Mockups e pré-visualizações
+│   └── ...
 └── README.md                     # Documentação
 ```
 
