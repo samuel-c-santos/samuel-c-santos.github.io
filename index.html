@@ -458,6 +458,270 @@
 
           <div class="project-card" data-category="dados">
             <div class="project-image">
+              <img class="contain"
+                src="https://github.com/samuel-c-santos/satellite-lst-downscaler/blob/main/demo/lst_downscale_comparison.png?raw=true"
+                alt="Comparação do Downscaling Térmico de LST — RDS Vitória de Souzel">
+              <div class="project-overlay">
+                <span class="project-tag">dados</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Downscaling Térmico de LST — IDEFLOR-Bio</h3>
+              <p class="project-description">
+                Fluxo de <em>thermal sharpening</em> que desagrega a Temperatura da Superfície Terrestre do MODIS
+                (1.000 m) para a escala de paisagem, usando preditores multiespectrais Sentinel-2 (NDVI e bandas de
+                reflectância) calibrados por Random Forest e interpolação espacial dos resíduos para conservação
+                estrita do gradiente térmico. Interface interativa para seleção de Unidades de Conservação, concessões
+                florestais e contratos de transição do Pará.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Python 3.11</span>
+                <span class="tech-tag">Google Earth Engine</span>
+                <span class="tech-tag">Sentinel-2</span>
+                <span class="tech-tag">MODIS</span>
+                <span class="tech-tag">scikit-learn</span>
+                <span class="tech-tag">Colab</span>
+              </div>
+              <div class="project-metrics">
+                <div class="metric">
+                  <span class="metric-value">10–30 m</span>
+                  <span class="metric-label">Resolução Fina</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">29</span>
+                  <span class="metric-label">UCs Estaduais</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/samuel-c-santos/satellite-lst-downscaler" target="_blank" class="btn-primary">
+                  <i class="fab fa-github"></i> Ver repositório
+                </a>
+                <a href="https://colab.research.google.com/github/samuel-c-santos/satellite-lst-downscaler/blob/main/LST_Downscaling_IDEFLORBio_Colab.ipynb"
+                  target="_blank" class="btn-secondary">
+                  <i class="fas fa-code"></i> Colab
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="dados">
+            <div class="project-image">
+              <img class="contain"
+                src="https://github.com/samuel-c-santos/opensr-sentinel-pipeline/blob/main/demo/comparativo_10m_vs_2_5m.png?raw=true"
+                alt="Comparativo de super-resolução Sentinel-2 (10 m vs 2,5 m) com LDSR-S2">
+              <div class="project-overlay">
+                <span class="project-tag">dados</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Super-Resolução Sentinel-2 (ESA OpenSR)</h3>
+              <p class="project-description">
+                Ambiente de super-resolução espacial por difusão latente (modelo LDSR-S2, iniciativa ESA OpenSR) que
+                eleva as bandas B02, B03, B04 e B08 do Sentinel-2 de 10 m para 2,5 m (4x), integrando Google Earth
+                Engine e inferência PyTorch/CUDA. O processamento por janelas deslizantes de 128×128 com ponderação
+                Hanning evita esgotamento de VRAM e suprime descontinuidades no mosaico final, exportando GeoTIFF
+                georreferenciado.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">ESA OpenSR (LDSR-S2)</span>
+                <span class="tech-tag">Google Earth Engine</span>
+                <span class="tech-tag">CUDA / GPU</span>
+                <span class="tech-tag">Colab</span>
+              </div>
+              <div class="project-metrics">
+                <div class="metric">
+                  <span class="metric-value">4x</span>
+                  <span class="metric-label">Fator de Escala</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">2.5m</span>
+                  <span class="metric-label">Resolução Final</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/samuel-c-santos/opensr-sentinel-pipeline" target="_blank" class="btn-primary">
+                  <i class="fab fa-github"></i> Ver repositório
+                </a>
+                <a href="https://colab.research.google.com/github/samuel-c-santos/opensr-sentinel-pipeline/blob/main/OpenSR_Producao_Poligono_Colab.ipynb"
+                  target="_blank" class="btn-secondary">
+                  <i class="fas fa-code"></i> Colab
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="dados">
+            <div class="project-image">
+              <img
+                src="https://github.com/NGEO-IDEFLOR-Bio/cartografia-tematica/blob/main/assets/img/thumbnails/thumb-panorama-ucs-para.jpg?raw=true"
+                alt="Cartografia Temática — Panorama das UCs do Pará">
+              <div class="project-overlay">
+                <span class="project-tag">dados</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Cartografia Temática — NGEO/IDEFLOR-Bio</h3>
+              <p class="project-description">
+                Catálogo digital de malhas territoriais, cartas temáticas e produtos cartográficos do Núcleo de
+                Geotecnologias (NGEO) do IDEFLOR-Bio. Acervo em dados abertos governamentais, georreferenciado em
+                SIRGAS 2000 (EPSG 4674) e projetado em UTM 21N/21S/22N, com versões para plotagem em PDF (ISO A0/A1/A4)
+                e matriciais JPEG/PNG, organizado por Gerências Regionais.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">QGIS</span>
+                <span class="tech-tag">SIRGAS 2000 / EPSG 4674</span>
+                <span class="tech-tag">UTM 21N/21S/22N</span>
+                <span class="tech-tag">Leaflet.js</span>
+                <span class="tech-tag">GeoJSON</span>
+              </div>
+              <div class="project-metrics">
+                <div class="metric">
+                  <span class="metric-value">3</span>
+                  <span class="metric-label">Gerências Ativas</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">EPSG 4674</span>
+                  <span class="metric-label">SIRGAS 2000</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/NGEO-IDEFLOR-Bio/cartografia-tematica" target="_blank" class="btn-primary">
+                  <i class="fab fa-github"></i> Ver código
+                </a>
+                <a href="https://ngeo-ideflor-bio.github.io/cartografia-tematica/" target="_blank" class="btn-secondary">
+                  <i class="fas fa-external-link-alt"></i> Acessar
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="dados">
+            <div class="project-image">
+              <div class="ch-carousel" id="viz-carousel">
+                <div class="ch-carousel-track">
+                  <div class="ch-carousel-item" id="viz-slide-1">
+                    <img src="https://ngeo-ideflor-bio.github.io/visualizador/demo/inicial.png"
+                      alt="Tela inicial do Visualizador" loading="lazy">
+                  </div>
+                  <div class="ch-carousel-item" id="viz-slide-2">
+                    <img src="https://ngeo-ideflor-bio.github.io/visualizador/demo/seletor_camadas.png"
+                      alt="Seletor de camadas" loading="lazy">
+                  </div>
+                  <div class="ch-carousel-item" id="viz-slide-3">
+                    <img src="https://ngeo-ideflor-bio.github.io/visualizador/demo/legenda.png" alt="Legenda dinâmica"
+                      loading="lazy">
+                  </div>
+                  <div class="ch-carousel-item" id="viz-slide-4">
+                    <img src="https://ngeo-ideflor-bio.github.io/visualizador/demo/filtro.png"
+                      alt="Filtro por atributos" loading="lazy">
+                  </div>
+                </div>
+              </div>
+              <div class="ch-carousel-dots">
+                <a href="#viz-slide-1" title="1"></a>
+                <a href="#viz-slide-2" title="2"></a>
+                <a href="#viz-slide-3" title="3"></a>
+                <a href="#viz-slide-4" title="4"></a>
+              </div>
+              <div class="project-overlay">
+                <span class="project-tag">dados</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">Visualizador Geoespacial – IDEFLOR-Bio</h3>
+              <p class="project-description">
+                Aplicação web para visualizar, filtrar e exportar camadas geográficas (UCs, TIs, Quilombos, Municípios
+                etc.).
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Leaflet</span>
+                <span class="tech-tag">TailwindCSS</span>
+                <span class="tech-tag">VectorGrid</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://ngeo-ideflor-bio.github.io/visualizador/" target="_blank" class="btn-secondary">
+                  <i class="fas fa-external-link-alt"></i> Acessar
+                </a>
+                <a href="https://github.com/NGEO-IDEFLOR-Bio/visualizador" target="_blank" class="btn-primary">
+                  <i class="fab fa-github"></i> Ver código
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="dados">
+            <div class="project-image">
+              <div class="ch-image-grid">
+                <img src="files/guia-uc-para-demo.gif"
+                  alt="Scrollytelling – UCs do Pará (GIF demo)" loading="lazy">
+              </div>
+              <div class="project-overlay">
+                <span class="project-tag">dados</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Scrollytelling – UCs do Pará</h3>
+              <p class="project-description">
+                Narrativa geoespacial por rolagem das 29 Unidades de Conservação Estaduais do Pará (1989–2023),
+                com mapa Leaflet sincronizado ao texto, HUD dinâmico com área e hectares acumulados, filtros por
+                década, tipo e grupo, linha do tempo com 15 marcos clicáveis e modo bottom sheet em telas pequenas.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Leaflet</span>
+                <span class="tech-tag">Web Worker</span>
+                <span class="tech-tag">GeoJSON</span>
+                <span class="tech-tag">HTML/CSS</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://ngeo-ideflor-bio.github.io/guia-uc-para/" target="_blank" class="btn-secondary">
+                  <i class="fas fa-external-link-alt"></i> Acessar
+                </a>
+                <a href="https://github.com/NGEO-IDEFLOR-Bio/guia-uc-para" target="_blank" class="btn-primary">
+                  <i class="fab fa-github"></i> Ver código
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="bi">
+            <div class="project-image">
+              <img src="https://github.com/samuel-c-santos/relatorios_bi/blob/main/dash_cpa.png?raw=true"
+                alt="Painel CPAs Compensatórias">
+              <div class="project-overlay">
+                <span class="project-tag">bi</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Painel de Desempenho: CPAs Compensatórias</h3>
+              <p class="project-description">Monitoramento da política de Cota de Proteção Ambiental (CPA)
+                Compensatória. Análise de aquisições por município (origem do CAR), Unidade de Conservação e Região de
+                Integração.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">DirectQuery</span>
+              </div>
+              <div class="project-metrics">
+                <div class="metric">
+                  <span class="metric-value">19k+</span>
+                  <span class="metric-label">CPAs (ESEC)</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">3.9k+</span>
+                  <span class="metric-label">CPAs (S. Araguaia)</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiOTNiMzg3MjQtN2Q0Zi00YjlkLTgxZWQtZTljYmQxMTVjN2JkIiwidCI6ImQ1MmMxYTcyLWUwNzEtNDhhNS04YTJhLTFjNDI5ZjMxYzE0MiJ9"
+                  target="_blank" class="btn-secondary">
+                  <i class="fas fa-external-link-alt"></i> Acessar
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="dados">
+            <div class="project-image">
               <img
                 src="https://github.com/samuel-c-santos/auto-review-r/blob/main/data/03_visuals/top_journals.png?raw=true"
                 alt="Auto Review R">
@@ -614,50 +878,6 @@
             </div>
           </div>
 
-          <div class="project-card" data-category="fullstack">
-            <div class="project-image">
-              <div class="image-grid">
-                <img
-                  src="https://github.com/samuel-c-santos/prioritask/blob/main/Screenshot_20241217_041628_Prioritask.jpg?raw=true"
-                  alt="Prioritask App 1">
-                <img
-                  src="https://github.com/samuel-c-santos/prioritask/blob/main/Screenshot_20241217_044751_Prioritask.jpg?raw=true"
-                  alt="Prioritask App 2">
-              </div>
-              <div class="project-overlay">
-                <span class="project-tag">fullstack</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Prioritask - App de Tarefas</h3>
-              <p class="project-description">Aplicativo mobile para gestão de tarefas com filtros, categorias e foco em
-                produtividade.</p>
-              <div class="project-tech">
-                <span class="tech-tag">React Native</span>
-                <span class="tech-tag">Expo</span>
-                <span class="tech-tag">JavaScript</span>
-              </div>
-              <div class="project-metrics">
-                <div class="metric">
-                  <span class="metric-value">95%</span>
-                  <span class="metric-label">Performance</span>
-                </div>
-                <div class="metric">
-                  <span class="metric-value">4.8</span>
-                  <span class="metric-label">Rating</span>
-                </div>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/samuel-c-santos/prioritask" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
-                </a>
-                <a href="https://vimeo.com/1039919429" target="_blank" class="btn-secondary">
-                  <i class="fas fa-play"></i> Demo
-                </a>
-              </div>
-            </div>
-          </div>
-
           <div class="project-card" data-category="dados">
             <div class="project-image">
               <img
@@ -732,45 +952,6 @@
             </div>
           </div>
 
-          <div class="project-card" data-category="bi">
-            <div class="project-image">
-              <img src="https://github.com/samuel-c-santos/painel-incendios-australia/blob/main/painel.png?raw=true"
-                alt="Painel Incêndios">
-              <div class="project-overlay">
-                <span class="project-tag">bi</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Painel de Incêndios na Austrália</h3>
-              <p class="project-description">Dashboard com dados históricos de incêndios e visualização de área queimada
-                e sazonalidade por estado.</p>
-              <div class="project-tech">
-                <span class="tech-tag">Dash</span>
-                <span class="tech-tag">Plotly</span>
-                <span class="tech-tag">Pandas</span>
-              </div>
-              <div class="project-metrics">
-                <div class="metric">
-                  <span class="metric-value">10k+</span>
-                  <span class="metric-label">Registros</span>
-                </div>
-                <div class="metric">
-                  <span class="metric-value">5</span>
-                  <span class="metric-label">Estados</span>
-                </div>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/samuel-c-santos/painel-incendios-australia" target="_blank"
-                  class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
-                </a>
-                <a href="https://painel-incendios-australia.onrender.com" target="_blank" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Ver painel
-                </a>
-              </div>
-            </div>
-          </div>
-
           <div class="project-card" data-category="dados">
             <div class="project-image">
               <div class="image-grid">
@@ -787,27 +968,33 @@
             </div>
             <div class="project-content">
               <h3 class="project-title">Download de Imagens Landsat e Sentinel</h3>
-              <p class="project-description">Rotina automatizada para download de imagens Landsat e Sentinel a partir de
-                shapefile, com filtragem por cobertura de nuvens e exportação para Google Drive.</p>
+              <p class="project-description">Notebook automatizado para aquisição de imagens Sentinel-2, Landsat, CBERS-4A
+                e SPOT 2008 sobre áreas definidas por shapefile, com composição, máscara de nuvens, divisão
+                automática em tiles e exportação em GeoTIFF para o Google Drive.</p>
               <div class="project-tech">
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Earth Engine</span>
+                <span class="tech-tag">GeoPandas</span>
                 <span class="tech-tag">Colab</span>
               </div>
               <div class="project-metrics">
                 <div class="metric">
-                  <span class="metric-value">90%</span>
-                  <span class="metric-label">Automação</span>
+                  <span class="metric-value">4</span>
+                  <span class="metric-label">Sensores</span>
                 </div>
                 <div class="metric">
-                  <span class="metric-value">2</span>
-                  <span class="metric-label">Satélites</span>
+                  <span class="metric-value">GeoTIFF</span>
+                  <span class="metric-label">Exportação</span>
                 </div>
               </div>
               <div class="project-actions">
-                <a href="https://github.com/samuel-c-santos/download_landsat_sentinel" target="_blank"
+                <a href="https://github.com/NGEO-IDEFLOR-Bio/ngeo_satellite_downloader" target="_blank"
                   class="btn-primary">
                   <i class="fab fa-github"></i> Ver código
+                </a>
+                <a href="https://colab.research.google.com/github/NGEO-IDEFLOR-Bio/ngeo_satellite_downloader/blob/main/ngeo_satellite_downloader.ipynb"
+                  target="_blank" class="btn-secondary">
+                  <i class="fas fa-code"></i> Colab
                 </a>
               </div>
             </div>
@@ -965,45 +1152,6 @@
           </div>
           <div class="project-card" data-category="dados">
             <div class="project-image">
-              <img src="https://github.com/samuel-c-santos/iriri-landcover-2006-2023/blob/main/demo.png?raw=true"
-                alt="Iriri Land Cover">
-              <div class="project-overlay">
-                <span class="project-tag">dados</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Iriri Land Cover</h3>
-              <p class="project-description">Visualizador de mudanças na cobertura do solo na Floresta Estadual do Iriri
-                (2006–2023), com dados do MapBiomas e GEE.</p>
-              <div class="project-tech">
-                <span class="tech-tag">Leaflet.js</span>
-                <span class="tech-tag">Google Earth Engine</span>
-                <span class="tech-tag">QGIS</span>
-              </div>
-              <div class="project-metrics">
-                <div class="metric">
-                  <span class="metric-value">2006</span>
-                  <span class="metric-label">Cobertura</span>
-                </div>
-                <div class="metric">
-                  <span class="metric-value">2023</span>
-                  <span class="metric-label">Comparação</span>
-                </div>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/samuel-c-santos/iriri-landcover-2006-2023" target="_blank"
-                  class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
-                </a>
-                <a href="https://samuel-c-santos.github.io/iriri-landcover-2006-2023/" target="_blank"
-                  class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Acessar
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card" data-category="dados">
-            <div class="project-image">
               <img src="https://github.com/samuel-c-santos/viveiros-ideflorbio/blob/main/demo/demo_geral.png?raw=true"
                 alt="Visualizador de Viveiros IDEFLOR-Bio">
               <div class="project-overlay">
@@ -1040,37 +1188,6 @@
                 </a>
                 <a href="https://samuel-c-santos.github.io/viveiros-ideflorbio/" target="_blank" class="btn-secondary">
                   <i class="fas fa-external-link-alt"></i> Acessar
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card" data-category="dados">
-            <div class="project-image">
-              <div class="ch-image-grid">
-                <img src="https://github.com/NGEO-IDEFLOR-Bio/guia-uc-para/raw/main/demo.gif"
-                  alt="Scrollytelling – UCs do Pará (GIF demo)" loading="lazy">
-              </div>
-              <div class="project-overlay">
-                <span class="project-tag">dados</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Scrollytelling – UCs do Pará</h3>
-              <p class="project-description">
-                Narrativa interativa com Leaflet e texto sincronizado apresentando a evolução das Unidades de
-                Conservação do Pará.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Leaflet</span>
-                <span class="tech-tag">HTML/CSS</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://ngeo-ideflor-bio.github.io/guia-uc-para/" target="_blank" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Acessar
-                </a>
-                <a href="https://github.com/NGEO-IDEFLOR-Bio/guia-uc-para" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
                 </a>
               </div>
             </div>
@@ -1114,60 +1231,6 @@
           </div>
           <div class="project-card" data-category="dados">
             <div class="project-image">
-              <div class="ch-carousel" id="viz-carousel">
-                <div class="ch-carousel-track">
-                  <div class="ch-carousel-item" id="viz-slide-1">
-                    <img src="https://ngeo-ideflor-bio.github.io/visualizador/demo/inicial.png"
-                      alt="Tela inicial do Visualizador" loading="lazy">
-                  </div>
-                  <div class="ch-carousel-item" id="viz-slide-2">
-                    <img src="https://ngeo-ideflor-bio.github.io/visualizador/demo/seletor_camadas.png"
-                      alt="Seletor de camadas" loading="lazy">
-                  </div>
-                  <div class="ch-carousel-item" id="viz-slide-3">
-                    <img src="https://ngeo-ideflor-bio.github.io/visualizador/demo/legenda.png" alt="Legenda dinâmica"
-                      loading="lazy">
-                  </div>
-                  <div class="ch-carousel-item" id="viz-slide-4">
-                    <img src="https://ngeo-ideflor-bio.github.io/visualizador/demo/filtro.png"
-                      alt="Filtro por atributos" loading="lazy">
-                  </div>
-                </div>
-              </div>
-              <div class="ch-carousel-dots">
-                <a href="#viz-slide-1" title="1"></a>
-                <a href="#viz-slide-2" title="2"></a>
-                <a href="#viz-slide-3" title="3"></a>
-                <a href="#viz-slide-4" title="4"></a>
-              </div>
-              <div class="project-overlay">
-                <span class="project-tag">dados</span>
-              </div>
-            </div>
-
-            <div class="project-content">
-              <h3 class="project-title">Visualizador Geoespacial – IDEFLOR-Bio</h3>
-              <p class="project-description">
-                Aplicação web para visualizar, filtrar e exportar camadas geográficas (UCs, TIs, Quilombos, Municípios
-                etc.).
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Leaflet</span>
-                <span class="tech-tag">TailwindCSS</span>
-                <span class="tech-tag">VectorGrid</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://ngeo-ideflor-bio.github.io/visualizador/" target="_blank" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Acessar
-                </a>
-                <a href="https://github.com/NGEO-IDEFLOR-Bio/visualizador" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card" data-category="dados">
-            <div class="project-image">
               <img
                 src="https://github.com/samuel-c-santos/manguezais-pa458-monitoramento/blob/main/bfastmonitor_Oeste.png?raw=true"
                 alt="Análise BFAST Monitor Lado Oeste">
@@ -1199,42 +1262,6 @@
                 <a href="https://github.com/samuel-c-santos/manguezais-pa458-monitoramento" target="_blank"
                   class="btn-primary">
                   <i class="fab fa-github"></i> Ver repositório
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card" data-category="bi">
-            <div class="project-image">
-              <img src="https://github.com/samuel-c-santos/relatorios_bi/blob/main/dash_cpa.png?raw=true"
-                alt="Painel CPAs Compensatórias">
-              <div class="project-overlay">
-                <span class="project-tag">bi</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Painel de Desempenho: CPAs Compensatórias</h3>
-              <p class="project-description">Monitoramento da política de Cota de Proteção Ambiental (CPA)
-                Compensatória. Análise de aquisições por município (origem do CAR), Unidade de Conservação e Região de
-                Integração.</p>
-              <div class="project-tech">
-                <span class="tech-tag">Power BI</span>
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">DirectQuery</span>
-              </div>
-              <div class="project-metrics">
-                <div class="metric">
-                  <span class="metric-value">19k+</span>
-                  <span class="metric-label">CPAs (ESEC)</span>
-                </div>
-                <div class="metric">
-                  <span class="metric-value">3.9k+</span>
-                  <span class="metric-label">CPAs (S. Araguaia)</span>
-                </div>
-              </div>
-              <div class="project-actions">
-                <a href="https://app.powerbi.com/view?r=eyJrIjoiOTNiMzg3MjQtN2Q0Zi00YjlkLTgxZWQtZTljYmQxMTVjN2JkIiwidCI6ImQ1MmMxYTcyLWUwNzEtNDhhNS04YTJhLTFjNDI5ZjMxYzE0MiJ9"
-                  target="_blank" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Acessar
                 </a>
               </div>
             </div>
@@ -1280,6 +1307,128 @@
               </div>
             </div>
           </div>
+          <div class="project-card" data-category="fullstack">
+            <div class="project-image">
+              <div class="image-grid">
+                <img
+                  src="https://github.com/samuel-c-santos/prioritask/blob/main/Screenshot_20241217_041628_Prioritask.jpg?raw=true"
+                  alt="Prioritask App 1">
+                <img
+                  src="https://github.com/samuel-c-santos/prioritask/blob/main/Screenshot_20241217_044751_Prioritask.jpg?raw=true"
+                  alt="Prioritask App 2">
+              </div>
+              <div class="project-overlay">
+                <span class="project-tag">fullstack</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Prioritask - App de Tarefas</h3>
+              <p class="project-description">Aplicativo mobile para gestão de tarefas com filtros, categorias e foco em
+                produtividade.</p>
+              <div class="project-tech">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Expo</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="project-metrics">
+                <div class="metric">
+                  <span class="metric-value">95%</span>
+                  <span class="metric-label">Performance</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">4.8</span>
+                  <span class="metric-label">Rating</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/samuel-c-santos/prioritask" target="_blank" class="btn-primary">
+                  <i class="fab fa-github"></i> Ver código
+                </a>
+                <a href="https://vimeo.com/1039919429" target="_blank" class="btn-secondary">
+                  <i class="fas fa-play"></i> Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="dados">
+            <div class="project-image">
+              <img src="https://github.com/samuel-c-santos/iriri-landcover-2006-2023/blob/main/demo.png?raw=true"
+                alt="Iriri Land Cover">
+              <div class="project-overlay">
+                <span class="project-tag">dados</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Iriri Land Cover</h3>
+              <p class="project-description">Visualizador de mudanças na cobertura do solo na Floresta Estadual do Iriri
+                (2006–2023), com dados do MapBiomas e GEE.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Leaflet.js</span>
+                <span class="tech-tag">Google Earth Engine</span>
+                <span class="tech-tag">QGIS</span>
+              </div>
+              <div class="project-metrics">
+                <div class="metric">
+                  <span class="metric-value">2006</span>
+                  <span class="metric-label">Cobertura</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">2023</span>
+                  <span class="metric-label">Comparação</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/samuel-c-santos/iriri-landcover-2006-2023" target="_blank"
+                  class="btn-primary">
+                  <i class="fab fa-github"></i> Ver código
+                </a>
+                <a href="https://samuel-c-santos.github.io/iriri-landcover-2006-2023/" target="_blank"
+                  class="btn-secondary">
+                  <i class="fas fa-external-link-alt"></i> Acessar
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="bi">
+            <div class="project-image">
+              <img src="https://github.com/samuel-c-santos/painel-incendios-australia/blob/main/painel.png?raw=true"
+                alt="Painel Incêndios">
+              <div class="project-overlay">
+                <span class="project-tag">bi</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Painel de Incêndios na Austrália</h3>
+              <p class="project-description">Dashboard com dados históricos de incêndios e visualização de área queimada
+                e sazonalidade por estado.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Dash</span>
+                <span class="tech-tag">Plotly</span>
+                <span class="tech-tag">Pandas</span>
+              </div>
+              <div class="project-metrics">
+                <div class="metric">
+                  <span class="metric-value">10k+</span>
+                  <span class="metric-label">Registros</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">5</span>
+                  <span class="metric-label">Estados</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/samuel-c-santos/painel-incendios-australia" target="_blank"
+                  class="btn-primary">
+                  <i class="fab fa-github"></i> Ver código
+                </a>
+                <a href="https://painel-incendios-australia.onrender.com" target="_blank" class="btn-secondary">
+                  <i class="fas fa-external-link-alt"></i> Ver painel
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

@@ -675,6 +675,12 @@ section {
   transform: scale(1.05);
 }
 
+.project-image img.contain {
+  object-fit: contain;
+  padding: 8px;
+  background: var(--bg-secondary);
+}
+
 .image-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
