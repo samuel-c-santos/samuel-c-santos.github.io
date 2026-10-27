@@ -4,3 +4,6 @@
 # Templates e arquivos temporários locais
 templates/
 files/card-cartografia-temp.html
+
+# Backups locais de imagens
+files/*_old.*
