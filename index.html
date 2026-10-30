@@ -480,6 +480,95 @@
             </div>
           </div>
 
+          <!-- Projeto: Pórtica App -->
+          <div class="project-card" data-category="fullstack">
+            <div class="project-image">
+              <img
+                src="files/portica-tela-inicial.png"
+                alt="Pórtica App — Calculadora Estrutural de Vigas NBR 6118:2023">
+              <div class="project-overlay">
+                <span class="project-tag">fullstack</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Pórtica — Calculadora Estrutural NBR 6118:2023</h3>
+              <p class="project-description">
+                Software desktop livre para cálculo e dimensionamento de vigas de concreto armado conforme a ABNT NBR 6118:2023. Realiza verificação de flexão (seções R e T, armadura simples e dupla), cisalhamento (Modelo I), armadura de pele e ELS. Conta com parser para importação direta de diagramas e envoltórias do FTOOL, detecção automática de seções críticas governantes, geração de relatórios técnicos completos em PDF (com campos de ART/CREA) e exportação de desenhos das seções em DXF para CAD.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Python 3.10+</span>
+                <span class="tech-tag">Flet (GUI)</span>
+                <span class="tech-tag">ABNT NBR 6118</span>
+                <span class="tech-tag">FTOOL Parser</span>
+                <span class="tech-tag">ReportLab (PDF)</span>
+                <span class="tech-tag">ezdxf (CAD)</span>
+                <span class="tech-tag">pytest</span>
+              </div>
+              <div class="project-metrics">
+                <div class="metric">
+                  <span class="metric-value">NBR 6118</span>
+                  <span class="metric-label">Edição 2023</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">PDF & DXF</span>
+                  <span class="metric-label">Relatórios & CAD</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/samuel-c-santos/portica-app" target="_blank" class="btn-primary">
+                  <i class="fab fa-github"></i> Ver repositório
+                </a>
+                <a href="https://samuelsantos.site/portica-app/" target="_blank" class="btn-secondary">
+                  <i class="fas fa-external-link-alt"></i> Acessar Site
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto: Cartografia de Queimadas em UCs do Pará -->
+          <div class="project-card" data-category="dados">
+            <div class="project-image">
+              <img
+                src="files/cartografia-queimadas-ucs-pa.jpg"
+                alt="Cartografia de Queimadas e Severidade — NGEO/IDEFLOR-Bio">
+              <div class="project-overlay">
+                <span class="project-tag">dados</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Cartografia de Queimadas e Severidade em UCs do Pará</h3>
+              <p class="project-description">
+                Pipeline automatizado em Python, Google Earth Engine (GEE) e Google Colab para monitoramento contínuo e mapeamento institucional de focos de queimada (BDQueimadas/INPE) e severidade espectral (Sentinel-2 Harmonized) nas Unidades de Conservação estaduais do Pará. Gera pranchas de alta precisão A4 Paisagem (300 DPI) em 3 variantes (Cor Natural, Falsa Cor SWIR e NBR), cobertura orbital 100% ajustada ao viewport e emissão automatizada de relatório técnico institucional (.docx) para subsídio tático à fiscalização.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Python 3.10+</span>
+                <span class="tech-tag">Google Earth Engine</span>
+                <span class="tech-tag">Sentinel-2</span>
+                <span class="tech-tag">BDQueimadas/INPE</span>
+                <span class="tech-tag">Google Colab</span>
+                <span class="tech-tag">python-docx</span>
+              </div>
+              <div class="project-metrics">
+                <div class="metric">
+                  <span class="metric-value">300 DPI</span>
+                  <span class="metric-label">Pranchas A4 Paisagem</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">100% Nuvem</span>
+                  <span class="metric-label">Pipeline GEE & Colab</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/NGEO-IDEFLOR-Bio/cartografia-queimadas-ucs-pa" target="_blank" class="btn-primary">
+                  <i class="fab fa-github"></i> Ver repositório
+                </a>
+                <a href="https://colab.research.google.com/github/NGEO-IDEFLOR-Bio/cartografia-queimadas-ucs-pa/blob/main/notebooks/colab_runner.ipynb" target="_blank" class="btn-secondary">
+                  <i class="fas fa-play"></i> Abrir Colab
+                </a>
+              </div>
+            </div>
+          </div>
+
           <div class="project-card" data-category="dados">
             <div class="project-image">
               <img class="contain"
@@ -822,46 +911,6 @@
               </div>
             </div>
           </div>
-          <div class="project-card" data-category="fullstack">
-            <div class="project-image">
-              <img src="https://github.com/samuel-c-santos/sistema-certificacao-car/blob/main/demo/index.jpg?raw=true"
-                alt="Sistema CAR">
-              <div class="project-overlay">
-                <span class="project-tag">fullstack</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Sistema de Certificação do CAR</h3>
-              <p class="project-description">Automatiza a emissão de certificados do CAR com geração em PDF, controle de
-                acesso e registro completo de operações.</p>
-              <div class="project-tech">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Flask</span>
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">ReportLab</span>
-              </div>
-              <div class="project-metrics">
-                <div class="metric">
-                  <span class="metric-value">89%</span>
-                  <span class="metric-label">Automação</span>
-                </div>
-                <div class="metric">
-                  <span class="metric-value">+2k</span>
-                  <span class="metric-label">Certificados</span>
-                </div>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/samuel-c-santos/sistema-certificacao-car" target="_blank"
-                  class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
-                </a>
-                <a href="https://player.vimeo.com/video/1035004919?h=805fa5024b" target="_blank" class="btn-secondary">
-                  <i class="fas fa-play"></i> Demo
-                </a>
-              </div>
-            </div>
-          </div>
-
           <div class="project-card" data-category="dados">
             <div class="project-image">
               <img
@@ -1046,36 +1095,6 @@
           </div>
           <div class="project-card" data-category="dados">
             <div class="project-image">
-              <img
-                src="https://github.com/samuel-c-santos/visualizador-tematico-sicar/blob/master/captura-de-tela.png?raw=true"
-                alt="Visualizador SICAR">
-              <div class="project-overlay">
-                <span class="project-tag">dados</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Visualizador Temático SICAR</h3>
-              <p class="project-description">Aplicação web para visualização e exportação de camadas temáticas do SICAR
-                diretamente no navegador.</p>
-              <div class="project-tech">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Leaflet.js</span>
-                <span class="tech-tag">HTML/CSS</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/samuel-c-santos/visualizador-tematico-sicar" target="_blank"
-                  class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
-                </a>
-                <a href="https://samuel-c-santos.github.io/visualizador-tematico-sicar/" target="_blank"
-                  class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Acessar
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card" data-category="dados">
-            <div class="project-image">
               <img src="https://github.com/samuel-c-santos/viveiros-ideflorbio/blob/main/demo/demo_geral.png?raw=true"
                 alt="Visualizador de Viveiros IDEFLOR-Bio">
               <div class="project-overlay">
@@ -1197,107 +1216,6 @@
                 </a>
                 <a href="https://youtu.be/_1-IMBy0Xbw" target="_blank" class="btn-secondary">
                   <i class="fas fa-play"></i> Demo
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card" data-category="fullstack">
-            <div class="project-image">
-              <div class="image-grid">
-                <img
-                  src="https://github.com/samuel-c-santos/prioritask/blob/main/Screenshot_20241217_041628_Prioritask.jpg?raw=true"
-                  alt="Prioritask App 1">
-                <img
-                  src="https://github.com/samuel-c-santos/prioritask/blob/main/Screenshot_20241217_044751_Prioritask.jpg?raw=true"
-                  alt="Prioritask App 2">
-              </div>
-              <div class="project-overlay">
-                <span class="project-tag">fullstack</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Prioritask - App de Tarefas</h3>
-              <p class="project-description">Aplicativo mobile para gestão de tarefas com filtros, categorias e foco em
-                produtividade.</p>
-              <div class="project-tech">
-                <span class="tech-tag">React Native</span>
-                <span class="tech-tag">Expo</span>
-                <span class="tech-tag">JavaScript</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/samuel-c-santos/prioritask" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
-                </a>
-                <a href="https://vimeo.com/1039919429" target="_blank" class="btn-secondary">
-                  <i class="fas fa-play"></i> Demo
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card" data-category="dados">
-            <div class="project-image">
-              <img src="https://github.com/samuel-c-santos/iriri-landcover-2006-2023/blob/main/demo.png?raw=true"
-                alt="Iriri Land Cover">
-              <div class="project-overlay">
-                <span class="project-tag">dados</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Iriri Land Cover</h3>
-              <p class="project-description">Visualizador de mudanças na cobertura do solo na Floresta Estadual do Iriri
-                (2006–2023), com dados do MapBiomas e GEE.</p>
-              <div class="project-tech">
-                <span class="tech-tag">Leaflet.js</span>
-                <span class="tech-tag">Google Earth Engine</span>
-                <span class="tech-tag">QGIS</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/samuel-c-santos/iriri-landcover-2006-2023" target="_blank"
-                  class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
-                </a>
-                <a href="https://samuel-c-santos.github.io/iriri-landcover-2006-2023/" target="_blank"
-                  class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Acessar
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card" data-category="bi">
-            <div class="project-image">
-              <img src="https://github.com/samuel-c-santos/painel-incendios-australia/blob/main/painel.png?raw=true"
-                alt="Painel Incêndios">
-              <div class="project-overlay">
-                <span class="project-tag">bi</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Painel de Incêndios na Austrália</h3>
-              <p class="project-description">Dashboard com dados históricos de incêndios e visualização de área queimada
-                e sazonalidade por estado.</p>
-              <div class="project-tech">
-                <span class="tech-tag">Dash</span>
-                <span class="tech-tag">Plotly</span>
-                <span class="tech-tag">Pandas</span>
-              </div>
-              <div class="project-metrics">
-                <div class="metric">
-                  <span class="metric-value">10k+</span>
-                  <span class="metric-label">Registros</span>
-                </div>
-                <div class="metric">
-                  <span class="metric-value">5</span>
-                  <span class="metric-label">Estados</span>
-                </div>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/samuel-c-santos/painel-incendios-australia" target="_blank"
-                  class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
-                </a>
-                <a href="https://painel-incendios-australia.onrender.com" target="_blank" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Ver painel
                 </a>
               </div>
             </div>
