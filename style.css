@@ -687,6 +687,23 @@ a:hover {
   border-color: var(--aipim-action-primary-bg);
 }
 
+.project-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.project-keywords span {
+  font-size: 0.68rem;
+  line-height: 1;
+  color: var(--aipim-text-secondary);
+  background: var(--aipim-bg-sunken);
+  border: var(--aipim-border-thin) solid var(--aipim-border-subtle);
+  border-radius: 999px;
+  padding: 4px 8px;
+}
+
 .aipim-tag--accent,
 .project-tag {
   --aipim-tag-bg: var(--aipim-accent-bg);

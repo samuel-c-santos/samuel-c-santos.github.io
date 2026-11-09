@@ -26,7 +26,7 @@
   <meta name="description"
     content="Portfólio de Samuel Santos. Especialista em Ciência de Dados, Python, Geoprocessamento (GIS) e soluções Fullstack. Atuando no IDEFLOR-Bio e projetos de Inteligência Artificial.">
   <meta name="keywords"
-    content="Samuel Santos, Ciência de Dados, Python, Geoprocessamento, GIS, Fullstack, Sensoriamento Remoto, QGIS, ArcGIS, Google Earth Engine, Machine Learning">
+    content="Samuel Santos, Ciência de Dados, Python, Geoprocessamento, GIS, Fullstack, Sensoriamento Remoto, QGIS, ArcGIS, Google Earth Engine, Machine Learning, Visualizador Geoespacial, Guia das UCs, Guia dos Viveiros, PROSAF, Unidades de Conservação, Pará">
   <meta name="author" content="Samuel Santos">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://samuel-c-santos.github.io/">
@@ -701,47 +701,32 @@
           </div>
           <div class="project-card" data-category="dados">
             <div class="project-image">
-              <div class="ch-carousel" id="viz-carousel">
-                <div class="ch-carousel-track">
-                  <div class="ch-carousel-item" id="viz-slide-1">
-                    <img src="https://ngeo-ideflor-bio.github.io/visualizador/demo/inicial.png"
-                      alt="Tela inicial do Visualizador" loading="lazy">
-                  </div>
-                  <div class="ch-carousel-item" id="viz-slide-2">
-                    <img src="https://ngeo-ideflor-bio.github.io/visualizador/demo/seletor_camadas.png"
-                      alt="Seletor de camadas" loading="lazy">
-                  </div>
-                  <div class="ch-carousel-item" id="viz-slide-3">
-                    <img src="https://ngeo-ideflor-bio.github.io/visualizador/demo/legenda.png" alt="Legenda dinâmica"
-                      loading="lazy">
-                  </div>
-                  <div class="ch-carousel-item" id="viz-slide-4">
-                    <img src="https://ngeo-ideflor-bio.github.io/visualizador/demo/filtro.png"
-                      alt="Filtro por atributos" loading="lazy">
-                  </div>
-                </div>
-              </div>
-              <div class="ch-carousel-dots">
-                <a href="#viz-slide-1" title="1"></a>
-                <a href="#viz-slide-2" title="2"></a>
-                <a href="#viz-slide-3" title="3"></a>
-                <a href="#viz-slide-4" title="4"></a>
-              </div>
+              <img src="files/visualizador-inicial.png" alt="Visualizador Geoespacial do NGEO/IDEFLOR-Bio" loading="lazy">
               <div class="project-overlay">
                 <span class="project-tag">dados</span>
               </div>
             </div>
 
             <div class="project-content">
-              <h3 class="project-title">Visualizador Geoespacial – IDEFLOR-Bio</h3>
+              <h3 class="project-title">Visualizador Geoespacial do NGEO/IDEFLOR-Bio</h3>
               <p class="project-description">
-                Aplicação web para visualizar, filtrar e exportar camadas geográficas (UCs, TIs, Quilombos, Municípios
-                etc.).
+                Aplicação web de consulta territorial do NGEO/IDEFLOR-Bio. Usa PMTiles e MapLibre GL para carregar
+                as camadas sob demanda, com identificação por clique, filtros por atributo, catálogo de camadas,
+                upload de GeoJSON, KML e Shapefile e download com geometria completa.
               </p>
               <div class="project-tech">
-                <span class="tech-tag">Leaflet</span>
-                <span class="tech-tag">TailwindCSS</span>
-                <span class="tech-tag">VectorGrid</span>
+                <span class="tech-tag">MapLibre GL</span>
+                <span class="tech-tag">PMTiles</span>
+                <span class="tech-tag">Tippecanoe</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">PWA</span>
+              </div>
+              <div class="project-keywords" aria-label="Palavras-chave">
+                <span>Unidades de Conservação</span>
+                <span>Terras Indígenas</span>
+                <span>Quilombos</span>
+                <span>Território</span>
+                <span>Dados abertos</span>
               </div>
               <div class="project-actions">
                 <a href="https://ngeo-ideflor-bio.github.io/visualizador/" target="_blank" class="btn-secondary">
@@ -755,27 +740,31 @@
           </div>
           <div class="project-card" data-category="dados">
             <div class="project-image">
-              <div class="ch-image-grid">
-                <img src="files/guia-uc-para-demo.gif"
-                  alt="Scrollytelling – UCs do Pará (GIF demo)" loading="lazy">
-              </div>
+              <img src="files/guia-uc.png" alt="Guia das UCs Estaduais do Pará" loading="lazy">
               <div class="project-overlay">
                 <span class="project-tag">dados</span>
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-title">Scrollytelling – UCs do Pará</h3>
+              <h3 class="project-title">Guia das UCs Estaduais do Pará</h3>
               <p class="project-description">
-                Narrativa geoespacial por rolagem das 29 Unidades de Conservação Estaduais do Pará (1989–2023),
-                com mapa Leaflet sincronizado ao texto, HUD dinâmico com área e hectares acumulados, filtros por
-                década, tipo e grupo, linha do tempo com 15 marcos clicáveis e modo bottom sheet em telas pequenas.
+                Atlas editorial das 29 UCs estaduais do Pará. Reúne busca e filtros, mapa do sistema, perfis
+                padronizados, temas editoriais e links para a fonte oficial. O guia complementa o Visualizador
+                Geoespacial.
               </p>
               <div class="project-tech">
                 <span class="tech-tag">JavaScript</span>
                 <span class="tech-tag">Leaflet</span>
-                <span class="tech-tag">Web Worker</span>
+                <span class="tech-tag">MapLibre</span>
                 <span class="tech-tag">GeoJSON</span>
-                <span class="tech-tag">HTML/CSS</span>
+                <span class="tech-tag">Rawline</span>
+              </div>
+              <div class="project-keywords" aria-label="Palavras-chave">
+                <span>Unidades de Conservação</span>
+                <span>Atlas editorial</span>
+                <span>Pará</span>
+                <span>Fonte oficial</span>
+                <span>Território</span>
               </div>
               <div class="project-actions">
                 <a href="https://ngeo-ideflor-bio.github.io/guia-uc-para/" target="_blank" class="btn-secondary">
@@ -783,6 +772,46 @@
                 </a>
                 <a href="https://github.com/NGEO-IDEFLOR-Bio/guia-uc-para" target="_blank" class="btn-primary">
                   <i class="fab fa-github"></i> Ver código
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="dados">
+            <div class="project-image">
+              <img src="files/guia-viveiros.png"
+                alt="Guia dos Viveiros do PROSAF" loading="lazy">
+              <div class="project-overlay">
+                <span class="project-tag">dados</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Guia dos Viveiros do PROSAF</h3>
+              <p class="project-description">
+                Guia de consulta dos viveiros do PROSAF. Reúne 288 unidades em 102 municípios, a base normalizada,
+                o manual de montagem de 2020 e os mapas oficiais. Tem catálogo com filtros, ficha por viveiro,
+                perfis por município e regional, diagramas dos componentes, lista de materiais e links para a
+                fonte oficial.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">MapLibre GL</span>
+                <span class="tech-tag">Leaflet</span>
+                <span class="tech-tag">GeoJSON</span>
+                <span class="tech-tag">SVG</span>
+              </div>
+              <div class="project-keywords" aria-label="Palavras-chave">
+                <span>Viveiros</span>
+                <span>PROSAF</span>
+                <span>Produção de mudas</span>
+                <span>Sistema Agroflorestal</span>
+                <span>Pará</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/NGEO-IDEFLOR-Bio/viveiros-ideflorbio" target="_blank" class="btn-primary">
+                  <i class="fab fa-github"></i> Ver código
+                </a>
+                <a href="https://ngeo-ideflor-bio.github.io/viveiros/" target="_blank" class="btn-secondary">
+                  <i class="fas fa-external-link-alt"></i> Acessar
                 </a>
               </div>
             </div>
@@ -1097,38 +1126,6 @@
               <div class="project-actions">
                 <a href="https://app.powerbi.com/view?r=eyJrIjoiMzJhMTg4NzItMmI5Ny00YjQwLTgzN2UtOWQxMzU1M2JhNDk0IiwidCI6ImJiOWRkMWUwLTgzYmEtNGZmYS1hY2Q3LTQyNzJhZGY4ZGIyNSJ9"
                   target="_blank" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Acessar
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card" data-category="dados">
-            <div class="project-image">
-              <img src="https://github.com/samuel-c-santos/viveiros-ideflorbio/blob/main/demo/demo_geral.png?raw=true"
-                alt="Visualizador de Viveiros IDEFLOR-Bio">
-              <div class="project-overlay">
-                <span class="project-tag">dados</span>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Visualizador de Viveiros - IDEFLOR-Bio</h3>
-              <p class="project-description">
-                Aplicativo web interativo desenvolvido para o IDEFLOR-Bio, com objetivo de visualizar e pesquisar
-                informações geoespaciais sobre viveiros de mudas no Pará.
-                O sistema, criado em atendimento ao processo 2025/2460154, permite explorar dados de viveiros,
-                municípios, Unidades de Conservação e regiões de integração.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">HTML</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Leaflet.js</span>
-                <span class="tech-tag">TailwindCSS</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://github.com/samuel-c-santos/viveiros-ideflorbio" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
-                </a>
-                <a href="https://samuel-c-santos.github.io/viveiros-ideflorbio/" target="_blank" class="btn-secondary">
                   <i class="fas fa-external-link-alt"></i> Acessar
                 </a>
               </div>
