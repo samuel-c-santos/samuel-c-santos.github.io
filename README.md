@@ -1,108 +1,129 @@
-# Portfólio Profissional — Samuel Santos
+# Portfólio Profissional Samuel Santos
 
-Este repositório hospeda minha página de portfólio profissional, criada com HTML e CSS puro, e publicada via **GitHub Pages**.
+Repositório do site de portfólio profissional, desenvolvido com HTML e CSS puro, publicado via GitHub Pages.
 
-Acesse a versão online e interativa em:
-
-**https://samuel-c-santos.github.io/** ou **https://samuelsantos.site/**
-
-![Tutorial Preview](files/mockup.png)
-
----
+Versao online: https://samuel-c-santos.github.io ou https://samuelsantos.site
 
 ## Sobre
 
-Sou um profissional especializado em ciência de dados e geoprocessamento, com foco em soluções ambientais e análise espacial. Mestre em Biologia Ambiental e especialista em Ciência de Dados, desenvolvo desde análises exploratórias até sistemas completos de automação e visualização.
+Profissional especializado em ciencia de dados e geoprocessamento, com foco em solucoes ambientais e analise espacial. Mestre em Biologia Ambiental e especialista em Ciencia de Dados, desenvolvo desde analises exploratorias ate sistemas completos de automao e visualizacao.
 
-Neste portfólio, apresento:
-
+O portfólio apresenta:
 - Projetos em Python, R, SQL, Flask e React Native
 - Dashboards interativos no Power BI e Plotly/Dash
-- Análises geoespaciais e processamento de imagens de satélite
-- Sistemas de automação para certificação ambiental
-- Aplicações de geoestatística e monitoramento territorial
-- **Tutoriais técnicos** sobre QGIS, Python, Google Earth Engine e análise de dados
+- Analises geoespaciais e processamento de imagens de satelite
+- Sistemas de automao para certificacao ambiental
+- Aplicacoes de geoestatistica e monitoramento territorial
+- Tutoriais tecnicos sobre QGIS, Python, Google Earth Engine e analise de dados
 
----
+## Tecnologias do Portfólio
 
-## Tecnologias Utilizadas no Portfólio
+- HTML5 e CSS3 (sem frameworks)
+- GitHub Pages para hospedagem
+- Design tokens baseados no Aipim Design System
+- Tipografia IBM Plex Sans (self-hosted, font-display swap)
+- Icones SVG sprite (subset Font Awesome 6.4)
+- Otimizacao de imagens WebP/AVIF com fallback PNG
+- Dark mode nativo via CSS custom properties
+- Print CSS otimizado para curriculo
 
-- HTML5 & CSS3
-- GitHub Pages
-- Google Fonts (Inter)
-- Font Awesome (ícones)
-- Visual Studio Code
+## Performance
 
----
+- Imagens otimizadas: 92 por cento de reducao (10 MB para 0.76 MB)
+- Formatos WebP e AVIF com fallback PNG
+- Hero image com fetchpriority high e srcset responsivo
+- Lazy loading nas imagens de projetos
+- Fontes self-hosted com preload e font-display swap
+- Zero dependencias externas bloqueantes (zero Google Fonts CDN, zero Font Awesome CDN)
 
-## Destaques do Conteúdo
+## Acessibilidade
 
-O portfólio apresenta seções organizadas que incluem:
+- Contraste WCAG 2.1 AA em todos os pares texto/fundo
+- Focus visible padrao em todos elementos interativos
+- Focus trap no menu mobile com suporte a Escape
+- Touch targets minimos 44px
+- Reduced motion respeitado (cursor, typewriter, drawer parallax)
+- Hierarquia de headings correta (h1 > h2 > h3)
+- Alt text descritivo em todas imagens
+- ARIA labels em controles sem texto visivel
 
-- **Experiências Profissionais**: Trajetória e realizações
-- **Projetos em Destaque**: Principais trabalhos desenvolvidos
-- **Tutoriais**: Guias técnicos sobre geotecnologias e análise de dados
-- **Certificações**: Credenciais profissionais da IBM, Google e outras instituições
-- **Educação**: Formação acadêmica e especializações
-- **Contato**: Canais de comunicação e redes profissionais
+## Dark Mode
 
----
-
-## Certificações
-
-<p align="center">
-  <a href="https://www.coursera.org/account/accomplishments/professional-cert/S77137BIW3BB" target="_blank">
-    <img src="files/ibm_data_science.png" width="130" alt="IBM Data Science">
-  </a>
-  <a href="https://www.coursera.org/account/accomplishments/professional-cert/6O9UOEAOR8SC" target="_blank">
-    <img src="files/google_business_intelligence.png" width="130" alt="Google Business Intelligence">
-  </a>
-  <a href="https://www.coursera.org/account/accomplishments/professional-cert/UCL8PA52WE22" target="_blank">
-    <img src="files/google_data_analytics.png" width="130" alt="Google Data Analytics">
-  </a>
-  <a href="https://www.coursera.org/account/accomplishments/professional-cert/FERD3VNVCZUX" target="_blank">
-    <img src="files/google_advanced_data_analytics.png" width="130" alt="Google Advanced Data Analytics">
-  </a>
-  <a href="https://www.coursera.org/account/accomplishments/specialization/TMPQCW1K8GJU" target="_blank">
-    <img src="files/google_it_automation_python.png" width="130" alt="Google IT Automation with Python">
-  </a>
-</p>
-
----
+- Tokens CSS semânticos para light/dark
+- Color-scheme declarado
+- Imagens de projeto com background adaptativo (sem caixas brancas)
+- Scrollbar estilizada com tokens
+- Persistencia via localStorage
 
 ## Estrutura do Projeto
 
 ```
 samuel-c-santos.github.io/
-├── index.html                    # Estrutura da página
-├── style.css                     # Estilos e responsividade
-├── files/                        # Arquivos e mídias de suporte
-│   ├── Perfil2.png               # Foto de perfil
-│   ├── samuel_presentation.png   # Imagens do portfólio
-│   ├── mockup.png                # Mockups e pré-visualizações
-│   └── ...
-└── README.md                     # Documentação
+├── index.html                      # Pagina principal
+├── style.css                       # Estilos, tokens, responsividade, print
+├── favicon.svg                     # Favicon token-driven
+├── fonts/
+│   ├── ibm-plex-sans.css           # @font-face IBM Plex Sans
+│   ├── IBMPlexSans-Variable/       # Variable font + estaticos TTF
+│   ├── fa-sprite.svg               # Sprite SVG 23 icones
+│   └── fa-sprite.css               # Mapeamento classes FA
+├── images/
+│   └── optimized/                  # 62 arquivos WebP/AVIF
+├── files/                          # Originais PNG/JPG/GIF (referenciados como fallback)
+├── scripts/
+│   ├── optimize-images.js          # Pipeline Sharp (remove orfaos, converte, manifesto)
+│   ├── update-html-images.js       # Atualiza index.html com picture elements
+│   ├── validate-links.js           # Validador 47 links externos
+│   ├── download-fonts.js           # Download IBM Plex Sans
+│   ├── image-manifest.json         # Mapeamento original -> otimizado
+│   └── link-report.json            # Relatório validacao links
+├── sitemap.xml                     # Sitemap principal
+├── sitemap_index.xml               # Sitemap index
+├── CNAME                           # Dominio personalizado
+└── README.md                       # Esta documentacao
 ```
 
----
+## Certificacoes
 
-## Repositórios Relacionados
+- IBM Data Science Professional Certificate
+- Google Business Intelligence Professional Certificate
+- Google Data Analytics Professional Certificate
+- Google Advanced Data Analytics Professional Certificate
+- Google IT Automation with Python Professional Certificate
 
-Confira também meus outros repositórios:
-
-- **Tutoriais**: [samuelsantos.site/tutoriais](https://samuelsantos.site/tutoriais) — Biblioteca de tutoriais técnicos
-- **Cartografia**: [github.com/samuel-c-santos/cartografia](https://github.com/samuel-c-santos/cartografia) — Portfólio de Geoprocessamento
-
----
+Links de verificacao no Coursera estao na secao de certificacoes do site.
 
 ## Contato
 
-- E-mail: [samuelsantosambiental@gmail.com](mailto:samuelsantosambiental@gmail.com)
-- LinkedIn: [linkedin.com/in/samuel-c-santos](https://www.linkedin.com/in/samuel-c-santos/)
-- GitHub: [github.com/samuel-c-santos](https://github.com/samuel-c-santos)
-- WhatsApp: [+55 91 98474-1391](https://wa.me/5591984741391)
-- Cartão Digital: [dot.cards/samuelsantos](https://dot.cards/samuelsantos)
+- Email: samuelsantosambiental@gmail.com
+- LinkedIn: linkedin.com/in/samuelsantos-amb
+- GitHub: github.com/samuel-c-santos
+- WhatsApp: +55 91 98474-1391
+- Cartao Digital: dot.cards/samuelsantos
+
+## Scripts Disponiveis
+
+```bash
+# Otimizacao de imagens (requer Node + Sharp)
+npm install sharp
+node scripts/optimize-images.js
+
+# Atualiza index.html com picture elements do manifesto
+node scripts/update-html-images.js
+
+# Valida links externos
+node scripts/validate-links.js
+```
+
+## Notas de Implementacao
+
+- Branch de desenvolvimento: style/perfect-aipim
+- Zero hardcodes de cor (tokens semânticos em todo CSS)
+- Componentes puros Aipim (buttons, badges, tags, cards)
+- Print CSS oculta navegacao, CTAs, acoes, filtros; expande URLs em links externos
+- Manifest de imagens em scripts/image-manifest.json para reprodutibilidade
+- Relatorio de links em scripts/link-report.json (41 OK, 6 falhas conhecidas: 4 Colab HEAD 405 false positive, 2 LinkedIn bot block)
 
 ---
 
-> Repositório desenvolvido para apresentação profissional e demonstração de projetos nas áreas de ciência de dados, análise espacial, automação de processos e regularização ambiental.
+Repositorio desenvolvido para apresentacao profissional e demonstracao de projetos nas areas de ciencia de dados, analise espacial, automao de processos e regularizacao ambiental.
