@@ -1,0 +1,497 @@
+{
+  "Perfil2.png": {
+    "original": "Perfil2.png",
+    "widths": [
+      400,
+      280
+    ],
+    "webp": [
+      "images\\optimized\\Perfil2-400w.webp",
+      "images\\optimized\\Perfil2-280w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\Perfil2-400w.avif",
+      "images\\optimized\\Perfil2-280w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "high",
+    "alt": "hero"
+  },
+  "samuel_presentation.png": {
+    "original": "samuel_presentation.png",
+    "widths": [
+      500
+    ],
+    "webp": [
+      "images\\optimized\\samuel_presentation-500w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\samuel_presentation-500w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "about"
+  },
+  "geovicinal-capa.png": {
+    "original": "geovicinal-capa.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\geovicinal-capa-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\geovicinal-capa-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "portica-tela-inicial.png": {
+    "original": "portica-tela-inicial.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\portica-tela-inicial-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\portica-tela-inicial-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "cartografia-queimadas-ucs-pa.jpg": {
+    "original": "cartografia-queimadas-ucs-pa.jpg",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\cartografia-queimadas-ucs-pa-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\cartografia-queimadas-ucs-pa-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "lst-downscale-comparison.png": {
+    "original": "lst-downscale-comparison.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\lst-downscale-comparison-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\lst-downscale-comparison-360w.avif"
+    ],
+    "contain": true,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "opensr-comparativo.png": {
+    "original": "opensr-comparativo.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\opensr-comparativo-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\opensr-comparativo-360w.avif"
+    ],
+    "contain": true,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "cartografia-tematica-thumb.jpg": {
+    "original": "cartografia-tematica-thumb.jpg",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\cartografia-tematica-thumb-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\cartografia-tematica-thumb-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "visualizador-inicial.png": {
+    "original": "visualizador-inicial.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\visualizador-inicial-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\visualizador-inicial-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "guia-uc.png": {
+    "original": "guia-uc.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\guia-uc-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\guia-uc-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "guia-viveiros.png": {
+    "original": "guia-viveiros.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\guia-viveiros-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\guia-viveiros-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "dash_cpa.png": {
+    "original": "dash_cpa.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\dash_cpa-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\dash_cpa-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "auto-review-top-journals.png": {
+    "original": "auto-review-top-journals.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\auto-review-top-journals-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\auto-review-top-journals-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "kanban-board-inicial.png": {
+    "original": "kanban-board-inicial.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\kanban-board-inicial-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\kanban-board-inicial-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "doom-fire-comparison.gif": {
+    "original": "doom-fire-comparison.gif",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\doom-fire-comparison-360w.webp"
+    ],
+    "avif": [],
+    "contain": false,
+    "animated": true,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "krigagem-solo-r-showcase.png": {
+    "original": "krigagem-solo-r-showcase.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\krigagem-solo-r-showcase-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\krigagem-solo-r-showcase-360w.avif"
+    ],
+    "contain": true,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "s2dr3-demonstracao.png": {
+    "original": "s2dr3-demonstracao.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\s2dr3-demonstracao-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\s2dr3-demonstracao-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "download-landsat-sentinel-demo.png": {
+    "original": "download-landsat-sentinel-demo.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\download-landsat-sentinel-demo-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\download-landsat-sentinel-demo-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "sentinel-time-viewer-swipe.gif": {
+    "original": "sentinel-time-viewer-swipe.gif",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\sentinel-time-viewer-swipe-360w.webp"
+    ],
+    "avif": [],
+    "contain": false,
+    "animated": true,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "geovisor-belem-screenshot.png": {
+    "original": "geovisor-belem-screenshot.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\geovisor-belem-screenshot-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\geovisor-belem-screenshot-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "dashboard-iniciativas.png": {
+    "original": "dashboard-iniciativas.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\dashboard-iniciativas-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\dashboard-iniciativas-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "cartografia-mapa-braganca.png": {
+    "original": "cartografia-mapa-braganca.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\cartografia-mapa-braganca-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\cartografia-mapa-braganca-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "manguezais-bfastmonitor.png": {
+    "original": "manguezais-bfastmonitor.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\manguezais-bfastmonitor-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\manguezais-bfastmonitor-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "archisearch-img-cabana.png": {
+    "original": "archisearch-img-cabana.png",
+    "widths": [
+      360
+    ],
+    "webp": [
+      "images\\optimized\\archisearch-img-cabana-360w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\archisearch-img-cabana-360w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "project"
+  },
+  "ibm_data_science.png": {
+    "original": "ibm_data_science.png",
+    "widths": [
+      80
+    ],
+    "webp": [
+      "images\\optimized\\ibm_data_science-80w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\ibm_data_science-80w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "cert"
+  },
+  "google_business_intelligence.png": {
+    "original": "google_business_intelligence.png",
+    "widths": [
+      80
+    ],
+    "webp": [
+      "images\\optimized\\google_business_intelligence-80w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\google_business_intelligence-80w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "cert"
+  },
+  "google_data_analytics.png": {
+    "original": "google_data_analytics.png",
+    "widths": [
+      80
+    ],
+    "webp": [
+      "images\\optimized\\google_data_analytics-80w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\google_data_analytics-80w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "cert"
+  },
+  "google_advanced_data_analytics.png": {
+    "original": "google_advanced_data_analytics.png",
+    "widths": [
+      80
+    ],
+    "webp": [
+      "images\\optimized\\google_advanced_data_analytics-80w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\google_advanced_data_analytics-80w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "cert"
+  },
+  "google_it_automation_python.png": {
+    "original": "google_it_automation_python.png",
+    "widths": [
+      80
+    ],
+    "webp": [
+      "images\\optimized\\google_it_automation_python-80w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\google_it_automation_python-80w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "cert"
+  },
+  "samuel-santos-thumbnail.png": {
+    "original": "samuel-santos-thumbnail.png",
+    "widths": [
+      1200
+    ],
+    "webp": [
+      "images\\optimized\\samuel-santos-thumbnail-1200w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\samuel-santos-thumbnail-1200w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "og"
+  },
+  "mockup.png": {
+    "original": "mockup.png",
+    "widths": [
+      800
+    ],
+    "webp": [
+      "images\\optimized\\mockup-800w.webp"
+    ],
+    "avif": [
+      "images\\optimized\\mockup-800w.avif"
+    ],
+    "contain": false,
+    "animated": false,
+    "priority": "lazy",
+    "alt": "readme"
+  }
+}
