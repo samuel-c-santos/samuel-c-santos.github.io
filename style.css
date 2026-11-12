@@ -1,60 +1,70 @@
 /* ===================================================================
-   PORTFÓLIO SAMUEL SANTOS
-   Refatorado com a identidade, tokens e filosofia do AIPIM DESIGN SYSTEM
-   Baseado em https://github.com/talis-galhardi/aipim (Talis Galhardi)
-   Tipografia: Antonio (Headings) & Karla (Body)
-   Cores: Terracota, Azulejo, Cajá, Folha e Neutros Quentes
+   PORTFÓLIO SAMUEL SANTOS — "TERRA & DADOS"
+   Tokens e filosofia do AIPIM DESIGN SYSTEM (https://github.com/talis-galhardi/aipim)
+   Tipografia: Antonio (Headings) & Karla (Body) — migração planejada p/ IBM Plex Sans
+   Paleta: Azulejo (Primary · água/rios/sensoriamento) · Folha (Secondary · floresta/UCs/Amazônia)
+           Cajá 500 (Accent · dado bruto/solo/riqueza) · Terracota (Legacy · não usar)
+   Neutros: cerâmica/taipa quentes (mantidos)
 =================================================================== */
 
 /* ===================================================================
    1. AIPIM TOKENS (Design Tokens W3C - Single Source of Truth)
+   PALETA "TERRA & DADOS" — Samuel Santos
+   Primary = Azulejo (água, rios, sensoriamento remoto, precisão)
+   Secondary = Folha (floresta, UCs, manguezais, Amazônia)
+   Accent = Cajá 500 (dado bruto, solo, riqueza territorial)
+   Terracota movida para legacy — não representa o perfil técnico
 =================================================================== */
 :root {
-  --aipim-version: "0.1.2";
+  --aipim-version: "0.2.0";
 
-  /* Primitivas de Cor - Terracota (Primary) */
-  --aipim-color-primary-100: #fee9e4;
-  --aipim-color-primary-200: #fed7cc;
-  --aipim-color-primary-300: #febba9;
-  --aipim-color-primary-400: #ff9275;
-  --aipim-color-primary-500: #fa653d;
-  --aipim-color-primary-600: #d9471b;
-  --aipim-color-primary-700: #b43000;
-  --aipim-color-primary-800: #892402;
-  --aipim-color-primary-900: #621701;
+  /* Primitivas de Cor - AZULEJO (PRIMARY — sua cor) */
+  --aipim-color-primary-100: #e4f0ff;
+  --aipim-color-primary-200: #cee3ff;
+  --aipim-color-primary-300: #aed1fe;
+  --aipim-color-primary-400: #8cbefe;
+  --aipim-color-primary-500: #4d9cfe;
+  --aipim-color-primary-600: #047df1;
+  --aipim-color-primary-700: #0364c2;   /* ACTION PRIMARY */
+  --aipim-color-primary-800: #014b95;
+  --aipim-color-primary-900: #00346b;
 
-  /* Primitivas de Cor - Azulejo (Secondary) */
-  --aipim-color-secondary-100: #e4f0ff;
-  --aipim-color-secondary-200: #cee3ff;
-  --aipim-color-secondary-300: #aed1fe;
-  --aipim-color-secondary-400: #8cbefe;
-  --aipim-color-secondary-500: #4d9cfe;
-  --aipim-color-secondary-600: #047df1;
-  --aipim-color-secondary-700: #0364c2;
-  --aipim-color-secondary-800: #014b95;
-  --aipim-color-secondary-900: #00346b;
+  /* Primitivas de Cor - FOLHA (SECONDARY — seu domínio) */
+  --aipim-color-secondary-100: #e0f5e6;
+  --aipim-color-secondary-200: #c4edd1;
+  --aipim-color-secondary-300: #a0dfb5;
+  --aipim-color-secondary-400: #6ecb91;
+  --aipim-color-secondary-500: #37b671;
+  --aipim-color-secondary-600: #029957;  /* ACTION SECONDARY */
+  --aipim-color-secondary-700: #007a44;
+  --aipim-color-secondary-800: #025d33;
+  --aipim-color-secondary-900: #014122;
 
-  /* Primitivas de Cor - Cajá / Ocre (Tertiary) */
+  /* Primitivas de Cor - CAJÁ / OCRE (TERTIARY/ACCENT — dado bruto) */
   --aipim-color-tertiary-100: #f6eed5;
   --aipim-color-tertiary-200: #f1e1b1;
   --aipim-color-tertiary-300: #ffd337;
   --aipim-color-tertiary-400: #d4b137;
-  --aipim-color-tertiary-500: #ba9706;
+  --aipim-color-tertiary-500: #ba9706;   /* ACCENT FIXO (AA 4.6:1) */
   --aipim-color-tertiary-600: #9a7d03;
   --aipim-color-tertiary-700: #7c6300;
   --aipim-color-tertiary-800: #5e4b03;
   --aipim-color-tertiary-900: #423400;
 
-  /* Primitivas de Cor - Folha (Success) */
-  --aipim-color-success-100: #e0f5e6;
-  --aipim-color-success-200: #c4edd1;
-  --aipim-color-success-300: #a0dfb5;
-  --aipim-color-success-400: #6ecb91;
-  --aipim-color-success-500: #37b671;
-  --aipim-color-success-600: #029957;
-  --aipim-color-success-700: #007a44;
-  --aipim-color-success-800: #025d33;
-  --aipim-color-success-900: #014122;
+  /* Accent token (usa cajá-500 para AA) */
+  --aipim-accent-bg-fixed: var(--aipim-color-tertiary-500);
+  --aipim-accent-text-fixed: var(--aipim-color-neutral-950);
+
+  /* Primitivas de Cor - TERRACOTA (LEGACY — mantida para compat, NÃO USAR) */
+  --aipim-color-legacy-terracota-100: #fee9e4;
+  --aipim-color-legacy-terracota-200: #fed7cc;
+  --aipim-color-legacy-terracota-300: #febba9;
+  --aipim-color-legacy-terracota-400: #ff9275;
+  --aipim-color-legacy-terracota-500: #fa653d;
+  --aipim-color-legacy-terracota-600: #d9471b;
+  --aipim-color-legacy-terracota-700: #b43000;
+  --aipim-color-legacy-terracota-800: #892402;
+  --aipim-color-legacy-terracota-900: #621701;
 
   /* Primitivas de Cor - Erro */
   --aipim-color-error-100: #fee8ec;
@@ -230,8 +240,8 @@
   --aipim-link-visited: var(--aipim-color-primary-800);
   --aipim-focus-ring: var(--aipim-color-secondary-700);
 
-  --aipim-accent-bg: var(--aipim-color-tertiary-300);
-  --aipim-accent-text: var(--aipim-color-neutral-950);
+  --aipim-accent-bg: var(--aipim-accent-bg-fixed);
+  --aipim-accent-text: var(--aipim-accent-text-fixed);
 
   --aipim-success-bg: var(--aipim-color-success-100);
   --aipim-success-text: var(--aipim-color-success-800);
@@ -293,8 +303,8 @@
     --aipim-link-visited: var(--aipim-color-primary-300);
     --aipim-focus-ring: var(--aipim-color-secondary-300);
 
-    --aipim-accent-bg: var(--aipim-color-tertiary-300);
-    --aipim-accent-text: var(--aipim-color-neutral-950);
+    --aipim-accent-bg: var(--aipim-accent-bg-fixed);
+    --aipim-accent-text: var(--aipim-accent-text-fixed);
 
     --aipim-success-bg: var(--aipim-color-success-900);
     --aipim-success-text: var(--aipim-color-success-200);
@@ -355,8 +365,8 @@
   --aipim-link-visited: var(--aipim-color-primary-300);
   --aipim-focus-ring: var(--aipim-color-secondary-300);
 
-  --aipim-accent-bg: var(--aipim-color-tertiary-300);
-  --aipim-accent-text: var(--aipim-color-neutral-950);
+  --aipim-accent-bg: var(--aipim-accent-bg-fixed);
+  --aipim-accent-text: var(--aipim-accent-text-fixed);
 
   --aipim-success-bg: var(--aipim-color-success-900);
   --aipim-success-text: var(--aipim-color-success-200);
@@ -398,6 +408,24 @@
     --aipim-duration-fast: 0ms;
     --aipim-duration-base: 0ms;
     --aipim-duration-slow: 0ms;
+  }
+  /* Hero cursor blink */
+  .cursor {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+  /* Scroll reveal */
+  .scroll-reveal,
+  .scroll-reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  /* Drawer parallax (inline styles overridden) */
+  .drawer-exp-card {
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
   }
 }
 
@@ -886,7 +914,10 @@ a:hover {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--aipim-text-secondary);
-  padding: var(--aipim-space-8) var(--aipim-space-4);
+  padding: var(--aipim-space-12) var(--aipim-space-4);
+  min-height: var(--aipim-size-touch-comfortable);
+  display: flex;
+  align-items: center;
   position: relative;
   transition: color var(--aipim-duration-fast) var(--aipim-ease-standard);
 }
@@ -1817,16 +1848,11 @@ a:hover {
   display: grid;
   place-items: center;
   border-radius: var(--aipim-radius-full);
-  background-color: var(--aipim-color-primary-100);
-  color: var(--aipim-color-primary-700);
+  background-color: var(--aipim-tint-primary);
+  color: var(--aipim-tint-text);
   font-size: 1.5rem;
   margin-block-end: var(--aipim-space-16);
   transition: all var(--aipim-duration-fast) var(--aipim-ease-standard);
-}
-
-:root[data-theme="dark"] .contact-icon {
-  background-color: var(--aipim-color-primary-900);
-  color: var(--aipim-color-primary-300);
 }
 
 .contact-card:hover .contact-icon {
@@ -2011,5 +2037,110 @@ a:hover {
 
   .tech-items {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ===================================================================
+   16. SCROLLBAR ESTILOSA (Token-only)
+=================================================================== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--aipim-bg-canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--aipim-border-subtle);
+  border-radius: var(--aipim-radius-full);
+  border: 2px solid var(--aipim-bg-canvas);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--aipim-border-strong);
+}
+::-webkit-scrollbar-corner {
+  background: var(--aipim-bg-canvas);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--aipim-border-subtle) var(--aipim-bg-canvas);
+}
+
+/* ===================================================================
+   17. DARK MODE: PROJECT IMAGES SEM "CAIXAS BRANCAS"
+=================================================================== */
+.project-image {
+  background-color: var(--aipim-bg-canvas);
+}
+.project-image img {
+  background-color: var(--aipim-bg-surface);
+}
+
+/* ===================================================================
+   18. PRINT CSS — Currículo/Portfólio Impresso
+=================================================================== */
+@media print {
+  .main-nav,
+  .hero-cta-group,
+  .project-actions,
+  .theme-toggle-btn,
+  .mobile-menu-btn,
+  .filter-btn,
+  .scroll-reveal,
+  .scroll-reveal-item {
+    display: none !important;
+  }
+  .header {
+    padding-block-start: 0;
+    padding-block-end: var(--aipim-space-32);
+  }
+  .header-content {
+    display: block;
+  }
+  .hero-image-container {
+    display: none;
+  }
+  .project-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: var(--aipim-border-thin) solid var(--aipim-border-subtle);
+  }
+  .project-image {
+    display: none;
+  }
+  .exp-card-inner {
+    break-inside: avoid;
+    box-shadow: none;
+    border: var(--aipim-border-thin) solid var(--aipim-border-subtle);
+  }
+  .cert-card {
+    break-inside: avoid;
+  }
+  .tech-category {
+    break-inside: avoid;
+  }
+  .contact-card {
+    break-inside: avoid;
+  }
+  .section-header {
+    margin-block-end: var(--aipim-space-16);
+  }
+  .section-title {
+    font-size: var(--aipim-text-h3-size);
+  }
+  body {
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+  a {
+    text-decoration: none;
+    color: var(--aipim-text-primary);
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    color: var(--aipim-text-muted);
   }
 }
