@@ -77,19 +77,19 @@
   --aipim-color-error-800: #8f083f;
   --aipim-color-error-900: #66022b;
 
-  /* Neutros Quentes Aipim (Piso de cerâmica e taipa) */
-  --aipim-color-neutral-50: #fdf9f6;
-  --aipim-color-neutral-100: #f7f1ed;
-  --aipim-color-neutral-200: #ece5df;
-  --aipim-color-neutral-300: #dad1ca;
-  --aipim-color-neutral-400: #c0b5ae;
-  --aipim-color-neutral-500: #a39992;
-  --aipim-color-neutral-600: #837a73;
-  --aipim-color-neutral-700: #665d56;
-  --aipim-color-neutral-800: #4a423c;
-  --aipim-color-neutral-900: #302a25;
-  --aipim-color-neutral-950: #1a1511;
-  --aipim-color-neutral-1000: #0e0a07;
+  /* Neutros Técnicos (Limpos, frios — geo, dados, publicação) */
+  --aipim-color-neutral-50:  #fafafa;   /* bg-surface - cards, modais */
+  --aipim-color-neutral-100: #ffffff;   /* bg-canvas  - fundo principal */
+  --aipim-color-neutral-200: #f0f0f0;   /* bg-sunken  - inputs, áreas afundadas */
+  --aipim-color-neutral-300: #e0e0e0;   /* border-subtle - divisores sutis */
+  --aipim-color-neutral-400: #bdbdbd;   /* border-medium - divisores médios */
+  --aipim-color-neutral-500: #9e9e9e;   /* text-muted placeholder */
+  --aipim-color-neutral-600: #757575;   /* text-muted secondary */
+  --aipim-color-neutral-700: #616161;   /* text-secondary */
+  --aipim-color-neutral-800: #424242;   /* text-primary light */
+  --aipim-color-neutral-900: #212121;   /* text-primary */
+  --aipim-color-neutral-950: #121212;   /* bg-canvas dark */
+  --aipim-color-neutral-1000: #0a0a0a;  /* bg-surface dark */
 
   /* Espaçamento */
   --aipim-space-0: 0px;
@@ -267,9 +267,9 @@
   --aipim-tint-text: var(--aipim-color-neutral-950);
   --aipim-tint-text-muted: var(--aipim-color-neutral-800);
 
-  --aipim-shadow-resting: 0px 1px 2px 0px rgba(26, 21, 17, 0.08), 0px 1px 3px 0px rgba(26, 21, 17, 0.06);
-  --aipim-shadow-raised: 0px 4px 12px -2px rgba(26, 21, 17, 0.12), 0px 2px 4px -1px rgba(26, 21, 17, 0.06);
-  --aipim-shadow-overlay: 0px 16px 32px -8px rgba(26, 21, 17, 0.24), 0px 8px 16px -4px rgba(26, 21, 17, 0.12);
+  --aipim-shadow-resting: 0px 1px 2px 0px rgba(18, 18, 18, 0.08), 0px 1px 3px 0px rgba(18, 18, 18, 0.06);
+  --aipim-shadow-raised: 0px 4px 12px -2px rgba(18, 18, 18, 0.12), 0px 2px 4px -1px rgba(18, 18, 18, 0.06);
+  --aipim-shadow-overlay: 0px 16px 32px -8px rgba(18, 18, 18, 0.24), 0px 8px 16px -4px rgba(18, 18, 18, 0.12);
 
   color-scheme: light;
 }
