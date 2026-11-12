@@ -1,0 +1,43 @@
+/* Font Awesome 6.4.0 Subset — SVG Sprite
+   Substitui: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
+   Ícones: 19 solid + 4 brands = 23 total
+   Uso: <svg class="icon"><use href="fonts/fa-sprite.svg#icon-id"></use></svg>
+*/
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.icon-sm { width: 0.875em; height: 0.875em; }
+.icon-lg { width: 1.25em; height: 1.25em; }
+
+/* Mapeamento de classes FA → sprite IDs */
+.fa-bars::before { content: ""; display: none; }
+.fa-arrow-right::before { content: ""; display: none; }
+.fa-chart-line::before { content: ""; display: none; }
+.fa-map-marked-alt::before { content: ""; display: none; }
+.fa-robot::before { content: ""; display: none; }
+.fa-leaf::before { content: ""; display: none; }
+.fa-globe-americas::before { content: ""; display: none; }
+.fa-chart-bar::before { content: ""; display: none; }
+.fa-building::before { content: ""; display: none; }
+.fa-tree::before { content: ""; display: none; }
+.fa-microscope::before { content: ""; display: none; }
+.fa-hard-hat::before { content: ""; display: none; }
+.fa-users::before { content: ""; display: none; }
+.fa-external-link-alt::before { content: ""; display: none; }
+.fa-play::before { content: ""; display: none; }
+.fa-code::before { content: ""; display: none; }
+.fa-envelope::before { content: ""; display: none; }
+.fa-id-card::before { content: ""; display: none; }
+
+.fa-github::before { content: ""; display: none; }
+.fa-linkedin-in::before { content: ""; display: none; }
+.fa-linkedin::before { content: ""; display: none; }
+.fa-whatsapp::before { content: ""; display: none; }
+
+/* Utility para substituir <i class="fas fa-x"> por <svg class="icon"><use href="fonts/fa-sprite.svg#fa-x"></use></svg> */
