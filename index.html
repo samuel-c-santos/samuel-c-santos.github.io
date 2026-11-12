@@ -32,15 +32,14 @@
   <link rel="canonical" href="https://samuel-c-santos.github.io/">
 
   <title>Samuel Santos | Especialista em Geotecnologias</title>
-  <!-- Tipografia do Aipim Design System: Antonio (Headings) e Karla (Body) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Tipografia: IBM Plex Sans (self-host, font-display: swap) -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/IBMPlexSans-Variable.woff2">
+  <link rel="stylesheet" href="fonts/ibm-plex-sans.css">
   
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="fonts/fa-sprite.css">
   
-  <!-- Favicon Aipim Florão — usa token --aipim-action-secondary-bg -->
+  <!-- Favicon Aipim Florão — usa token --aipim-action-primary-bg -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   
   <!-- Prevenção de FOUC de tema (Dark/Light) -->
@@ -76,7 +75,7 @@
       </a>
 
       <button class="mobile-menu-btn" aria-label="Abrir Menu">
-        <i class="fas fa-bars"></i>
+        <svg class="icon"><use href="fonts/fa-sprite.svg#fa-bars"></use></svg>
       </button>
 
       <div class="nav-links">
@@ -87,10 +86,10 @@
         
         <div class="social-links-nav">
           <a href="https://github.com/samuel-c-santos" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Perfil no GitHub">
-            <i class="fab fa-github"></i>
+            <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg>
           </a>
           <a href="https://www.linkedin.com/in/samuelsantos-amb/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Perfil no LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
+            <svg class="icon"><use href="fonts/fa-sprite.svg#fa-linkedin-in"></use></svg>
           </a>
           
           <!-- Botão de Alternância de Tema Claro/Escuro -->
@@ -127,7 +126,7 @@
         </p>
         <div class="hero-cta-group">
           <a href="#projetos" class="aipim-button aipim-button--lg">
-            Ver Projetos <i class="fas fa-arrow-right"></i>
+            Ver Projetos <svg class="icon"><use href="fonts/fa-sprite.svg#fa-arrow-right"></use></svg>
           </a>
           <a href="#contato" class="aipim-button aipim-button--lg aipim-button--outline">
             Fale Comigo
@@ -178,19 +177,19 @@
         </div>
         <div class="skills-highlight scroll-reveal">
             <button class="skill-item scroll-reveal-item aipim-button aipim-button--ghost" tabindex="0" aria-label="Análise de Dados">
-              <i class="fas fa-chart-line"></i>
+              <svg class="icon"><use href="fonts/fa-sprite.svg#fa-chart-line"></use></svg>
               <span>Análise de Dados</span>
             </button>
             <button class="skill-item scroll-reveal-item aipim-button aipim-button--ghost" tabindex="0" aria-label="Geoprocessamento">
-              <i class="fas fa-map-marked-alt"></i>
+              <svg class="icon"><use href="fonts/fa-sprite.svg#fa-map-marked-alt"></use></svg>
               <span>Geoprocessamento</span>
             </button>
             <button class="skill-item scroll-reveal-item aipim-button aipim-button--ghost" tabindex="0" aria-label="Automação">
-              <i class="fas fa-robot"></i>
+              <svg class="icon"><use href="fonts/fa-sprite.svg#fa-robot"></use></svg>
               <span>Automação</span>
             </button>
             <button class="skill-item scroll-reveal-item aipim-button aipim-button--ghost" tabindex="0" aria-label="Meio Ambiente">
-              <i class="fas fa-leaf"></i>
+              <svg class="icon"><use href="fonts/fa-sprite.svg#fa-leaf"></use></svg>
               <span>Meio Ambiente</span>
             </button>
           </div>
@@ -219,7 +218,7 @@
               </div>
             </div>
             <div class="exp-card-icon">
-              <i class="fas fa-globe-americas"></i>
+              <svg class="icon"><use href="fonts/fa-sprite.svg#fa-globe-americas"></use></svg>
             </div>
           </div>
         </div>
@@ -240,7 +239,7 @@
               </div>
             </div>
             <div class="exp-card-icon">
-              <i class="fas fa-chart-bar"></i>
+              <svg class="icon"><use href="fonts/fa-sprite.svg#fa-chart-bar"></use></svg>
             </div>
           </div>
         </div>
@@ -261,7 +260,7 @@
               </div>
             </div>
             <div class="exp-card-icon">
-              <i class="fas fa-leaf"></i>
+              <svg class="icon"><use href="fonts/fa-sprite.svg#fa-leaf"></use></svg>
             </div>
           </div>
         </div>
@@ -282,7 +281,7 @@
               </div>
             </div>
             <div class="exp-card-icon">
-              <i class="fas fa-building"></i>
+              <svg class="icon"><use href="fonts/fa-sprite.svg#fa-building"></use></svg>
             </div>
           </div>
         </div>
@@ -302,7 +301,7 @@
               </div>
             </div>
             <div class="exp-card-icon">
-              <i class="fas fa-tree"></i>
+              <svg class="icon"><use href="fonts/fa-sprite.svg#fa-tree"></use></svg>
             </div>
           </div>
         </div>
@@ -322,7 +321,7 @@
               </div>
             </div>
             <div class="exp-card-icon">
-              <i class="fas fa-microscope"></i>
+              <svg class="icon"><use href="fonts/fa-sprite.svg#fa-microscope"></use></svg>
             </div>
           </div>
         </div>
@@ -342,7 +341,7 @@
               </div>
             </div>
             <div class="exp-card-icon">
-              <i class="fas fa-hard-hat"></i>
+              <svg class="icon"><use href="fonts/fa-sprite.svg#fa-hard-hat"></use></svg>
             </div>
           </div>
         </div>
@@ -451,7 +450,7 @@
                 Roteamento topológico offline sobre a malha de estradas vicinais não oficiais da Amazônia (PrevisIA/Sentinel-2). A solução resolve o problema de mais de 1.800 componentes desconexos e elimina "pontes fantasmas" sobre rios através de validação hidrográfica restritiva com STRtree (SIGERH-PA), serializando o grafo em binário compacto CSR (29,3 MB) para busca Dijkstra client-side sem internet.
               </p>
               <div class="project-authorship">
-                <i class="fas fa-users"></i>
+                <svg class="icon"><use href="fonts/fa-sprite.svg#fa-users"></use></svg>
                 <span>Construção da lógica em Python e geoprocessamento em coautoria com <strong>Priscila Motta</strong>.</span>
               </div>
               <div class="project-tech">
@@ -474,7 +473,7 @@
               </div>
               <div class="project-actions">
                 <a href="https://github.com/samuel-c-santos/amazoniahack" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver repositório
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver repositório
                 </a>
               </div>
             </div>
@@ -516,10 +515,10 @@
               </div>
               <div class="project-actions">
                 <a href="https://github.com/samuel-c-santos/portica-app" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver repositório
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver repositório
                 </a>
                 <a href="https://samuelsantos.site/portica-app/" target="_blank" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Acessar Site
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-external-link-alt"></use></svg> Acessar Site
                 </a>
               </div>
             </div>
@@ -560,10 +559,10 @@
               </div>
               <div class="project-actions">
                 <a href="https://github.com/NGEO-IDEFLOR-Bio/cartografia-queimadas-ucs-pa" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver repositório
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver repositório
                 </a>
                 <a href="https://colab.research.google.com/github/NGEO-IDEFLOR-Bio/cartografia-queimadas-ucs-pa/blob/main/notebooks/colab_runner.ipynb" target="_blank" class="btn-secondary">
-                  <i class="fas fa-play"></i> Abrir Colab
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-play"></use></svg> Abrir Colab
                 </a>
               </div>
             </div>
@@ -608,11 +607,11 @@
               </div>
               <div class="project-actions">
                 <a href="https://github.com/samuel-c-santos/satellite-lst-downscaler" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver repositório
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver repositório
                 </a>
                 <a href="https://colab.research.google.com/github/samuel-c-santos/satellite-lst-downscaler/blob/main/LST_Downscaling_IDEFLORBio_Colab.ipynb"
                   target="_blank" class="btn-secondary">
-                  <i class="fas fa-code"></i> Colab
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-code"></use></svg> Colab
                 </a>
               </div>
             </div>
@@ -657,11 +656,11 @@
               </div>
               <div class="project-actions">
                 <a href="https://github.com/samuel-c-santos/opensr-sentinel-pipeline" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver repositório
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver repositório
                 </a>
                 <a href="https://colab.research.google.com/github/samuel-c-santos/opensr-sentinel-pipeline/blob/main/OpenSR_Producao_Poligono_Colab.ipynb"
                   target="_blank" class="btn-secondary">
-                  <i class="fas fa-code"></i> Colab
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-code"></use></svg> Colab
                 </a>
               </div>
             </div>
@@ -694,10 +693,10 @@
               </div>
               <div class="project-actions">
                 <a href="https://github.com/NGEO-IDEFLOR-Bio/cartografia-tematica" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver código
                 </a>
                 <a href="https://ngeo-ideflor-bio.github.io/cartografia-tematica/" target="_blank" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Acessar
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-external-link-alt"></use></svg> Acessar
                 </a>
               </div>
             </div>
@@ -733,10 +732,10 @@
               </div>
               <div class="project-actions">
                 <a href="https://ngeo-ideflor-bio.github.io/visualizador/" target="_blank" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Acessar
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-external-link-alt"></use></svg> Acessar
                 </a>
                 <a href="https://github.com/NGEO-IDEFLOR-Bio/visualizador" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver código
                 </a>
               </div>
             </div>
@@ -771,10 +770,10 @@
               </div>
               <div class="project-actions">
                 <a href="https://ngeo-ideflor-bio.github.io/guia-uc-para/" target="_blank" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Acessar
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-external-link-alt"></use></svg> Acessar
                 </a>
                 <a href="https://github.com/NGEO-IDEFLOR-Bio/guia-uc-para" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver código
                 </a>
               </div>
             </div>
@@ -811,10 +810,10 @@
               </div>
               <div class="project-actions">
                 <a href="https://github.com/NGEO-IDEFLOR-Bio/viveiros-ideflorbio" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver código
                 </a>
                 <a href="https://ngeo-ideflor-bio.github.io/viveiros-ideflorbio/" target="_blank" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Acessar
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-external-link-alt"></use></svg> Acessar
                 </a>
               </div>
             </div>
@@ -851,7 +850,7 @@
               <div class="project-actions">
                 <a href="https://app.powerbi.com/view?r=eyJrIjoiOTNiMzg3MjQtN2Q0Zi00YjlkLTgxZWQtZTljYmQxMTVjN2JkIiwidCI6ImQ1MmMxYTcyLWUwNzEtNDhhNS04YTJhLTFjNDI5ZjMxYzE0MiJ9"
                   target="_blank" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Acessar
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-external-link-alt"></use></svg> Acessar
                 </a>
               </div>
             </div>
@@ -877,7 +876,7 @@
               </div>
               <div class="project-actions">
                 <a href="https://github.com/samuel-c-santos/auto-review-r" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver código
                 </a>
               </div>
             </div>
@@ -905,10 +904,10 @@
               </div>
               <div class="project-actions">
                 <a href="https://github.com/samuel-c-santos/sprint-kanban-template" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver código
                 </a>
                 <a href="https://sprint-kanban-template.vercel.app/kanban.html" target="_blank" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Demo
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-external-link-alt"></use></svg> Demo
                 </a>
               </div>
             </div>
@@ -934,10 +933,10 @@
               </div>
               <div class="project-actions">
                 <a href="https://github.com/samuel-c-santos/doom-fire" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver código
                 </a>
                 <a href="https://samuelsantos.site/doom-fire/" target="_blank" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Demo
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-external-link-alt"></use></svg> Demo
                 </a>
               </div>
             </div>
@@ -979,7 +978,7 @@
               </div>
               <div class="project-actions">
                 <a href="https://github.com/samuel-c-santos/krigarem_r" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver repositório
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver repositório
                 </a>
               </div>
             </div>
@@ -1007,7 +1006,7 @@
               <div class="project-actions">
                 <a href="https://github.com/samuel-c-santos/s2dr3_inferencia_automatizada_sentinel2" target="_blank"
                   class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver código
                 </a>
               </div>
             </div>
@@ -1037,11 +1036,11 @@
               <div class="project-actions">
                 <a href="https://github.com/NGEO-IDEFLOR-Bio/ngeo_satellite_downloader" target="_blank"
                   class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver código
                 </a>
                 <a href="https://colab.research.google.com/github/NGEO-IDEFLOR-Bio/ngeo_satellite_downloader/blob/main/ngeo_satellite_downloader.ipynb"
                   target="_blank" class="btn-secondary">
-                  <i class="fas fa-code"></i> Colab
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-code"></use></svg> Colab
                 </a>
               </div>
             </div>
@@ -1068,7 +1067,7 @@
               </div>
               <div class="project-actions">
                 <a href="https://github.com/samuel-c-santos/sentinel-time-viewer" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver código
                 </a>
               </div>
             </div>
@@ -1099,10 +1098,10 @@
               <div class="project-actions">
                 <a href="https://github.com/samuel-c-santos/geovisor-belem" target="_blank" rel="noopener"
                   class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver código
                 </a>
                 <a href="https://samuelsantos.site/geovisor-belem/" target="_blank" rel="noopener" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Acessar
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-external-link-alt"></use></svg> Acessar
                 </a>
               </div>
             </div>
@@ -1128,7 +1127,7 @@
               <div class="project-actions">
                 <a href="https://app.powerbi.com/view?r=eyJrIjoiMzJhMTg4NzItMmI5Ny00YjQwLTgzN2UtOWQxMzU1M2JhNDk0IiwidCI6ImJiOWRkMWUwLTgzYmEtNGZmYS1hY2Q3LTQyNzJhZGY4ZGIyNSJ9"
                   target="_blank" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Acessar
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-external-link-alt"></use></svg> Acessar
                 </a>
               </div>
             </div>
@@ -1156,7 +1155,7 @@
               </div>
               <div class="project-actions">
                 <a href="https://samuelsantos.site/cartografia/" target="_blank" class="btn-secondary">
-                  <i class="fas fa-external-link-alt"></i> Acessar
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-external-link-alt"></use></svg> Acessar
                 </a>
               </div>
             </div>
@@ -1194,7 +1193,7 @@
               <div class="project-actions">
                 <a href="https://github.com/samuel-c-santos/manguezais-pa458-monitoramento" target="_blank"
                   class="btn-primary">
-                  <i class="fab fa-github"></i> Ver repositório
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver repositório
                 </a>
               </div>
             </div>
@@ -1223,10 +1222,10 @@
               </div>
               <div class="project-actions">
                 <a href="https://github.com/samuel-c-santos/ArchiSearch" target="_blank" class="btn-primary">
-                  <i class="fab fa-github"></i> Ver código
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-github"></use></svg> Ver código
                 </a>
                 <a href="https://youtu.be/_1-IMBy0Xbw" target="_blank" class="btn-secondary">
-                  <i class="fas fa-play"></i> Demo
+                  <svg class="icon"><use href="fonts/fa-sprite.svg#fa-play"></use></svg> Demo
                 </a>
               </div>
             </div>
@@ -1323,7 +1322,7 @@
       <div class="contact-grid">
         <a href="mailto:samuelsantosambiental@gmail.com" class="contact-card scroll-reveal-item">
           <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
+            <svg class="icon"><use href="fonts/fa-sprite.svg#fa-envelope"></use></svg>
           </div>
           <h3>E-mail</h3>
           <p>samuelsantosambiental@gmail.com</p>
@@ -1331,7 +1330,7 @@
 
         <a href="https://wa.me/5591984741391" target="_blank" class="contact-card scroll-reveal-item">
           <div class="contact-icon">
-            <i class="fab fa-whatsapp"></i>
+            <svg class="icon"><use href="fonts/fa-sprite.svg#fa-whatsapp"></use></svg>
           </div>
           <h3>WhatsApp</h3>
           <p>+55 (91) 98474-1391</p>
@@ -1339,7 +1338,7 @@
 
         <a href="https://www.linkedin.com/in/samuelsantos-amb/" target="_blank" class="contact-card scroll-reveal-item">
           <div class="contact-icon">
-            <i class="fab fa-linkedin"></i>
+            <svg class="icon"><use href="fonts/fa-sprite.svg#fa-linkedin"></use></svg>
           </div>
           <h3>LinkedIn</h3>
           <p>samuelsantos-amb</p>
@@ -1347,7 +1346,7 @@
 
         <a href="https://dot.cards/samuelsantos" target="_blank" class="contact-card scroll-reveal-item">
           <div class="contact-icon">
-            <i class="fas fa-id-card"></i>
+            <svg class="icon"><use href="fonts/fa-sprite.svg#fa-id-card"></use></svg>
           </div>
           <h3>Cartão Digital</h3>
           <p>dot.cards/samuelsantos</p>

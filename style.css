@@ -1,10 +1,10 @@
 /* ===================================================================
    PORTFÓLIO SAMUEL SANTOS — "TERRA & DADOS"
    Tokens e filosofia do AIPIM DESIGN SYSTEM (https://github.com/talis-galhardi/aipim)
-   Tipografia: Antonio (Headings) & Karla (Body) — migração planejada p/ IBM Plex Sans
+   Tipografia: IBM Plex Sans (self-host, font-display: swap)
    Paleta: Azulejo (Primary · água/rios/sensoriamento) · Folha (Secondary · floresta/UCs/Amazônia)
            Cajá 500 (Accent · dado bruto/solo/riqueza) · Terracota (Legacy · não usar)
-   Neutros: cerâmica/taipa quentes (mantidos)
+   Neutros: técnicos frios (branco/cinza/preto suave)
 =================================================================== */
 
 /* ===================================================================
@@ -157,8 +157,8 @@
   --aipim-opacity-scrim: 0.5;
 
   /* Tipografia Aipim: Antonio (Headings) e Karla (Body) */
-  --aipim-font-heading: 'Antonio', Impact, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --aipim-font-body: 'Karla', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --aipim-font-heading: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --aipim-font-body: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   --aipim-text-display-size: clamp(2.75rem, 2.2rem + 2.75vw, 4.5rem);
   --aipim-text-display-line: 1.08;
