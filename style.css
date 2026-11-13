@@ -1289,8 +1289,9 @@ a:hover {
   font-size: var(--aipim-text-body-sm-size);
 }
 
-.skill-item i {
+.skill-item .icon {
   color: var(--aipim-action-primary-bg);
+  fill: currentColor;
 }
 
 /* ===================================================================
@@ -1775,8 +1776,26 @@ a:hover {
 
 .tech-items {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: var(--aipim-space-12);
+}
+
+.tech-item {
+  min-width: 0;
+  white-space: normal;
+  flex-wrap: wrap;
+  overflow-wrap: anywhere;
+}
+
+.tech-item .icon {
+  flex-shrink: 0;
+}
+
+.tech-item span {
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .tech-item {
@@ -1796,12 +1815,15 @@ a:hover {
 .tech-item:hover {
   border-color: var(--aipim-action-secondary-bg);
   background-color: var(--aipim-bg-sunken);
-  transform: translateX(4px);
+  transform: translateY(-2px);
 }
 
-.tech-item i {
+.tech-item .icon {
   font-size: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
   color: var(--aipim-action-secondary-bg);
+  fill: currentColor;
 }
 
 /* ===================================================================
