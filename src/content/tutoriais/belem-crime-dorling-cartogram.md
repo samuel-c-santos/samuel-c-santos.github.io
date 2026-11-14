@@ -3,7 +3,7 @@ title: "Cartograma de Dorling: Visualizando Criminalidade Urbana em Belém (PA)"
 description: "Pipeline em Python e R para extração de dados do SIAC/SEGUP-PA, tratamento geoespacial e renderização de cartograma animado de Dorling com morfing polígono-círculo, eliminando a distorção territorial de mapas coropléticos."
 tags: ["Cartograma", "Dorling", "Python", "R", "Geoprocessamento", "Visualização", "Colab"]
 level: "Avançado"
-thumbnail: "/tutoriais/belem-crime-dorling-cartogram/thumbnail.png"
+thumbnail: "/tutoriais/belem-crime-dorling-cartogram/thumbnail.gif"
 ---
 
 # Cartograma de Dorling para Análise de Criminalidade Urbana em Belém (PA)
