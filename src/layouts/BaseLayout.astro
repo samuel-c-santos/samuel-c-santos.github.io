@@ -9,12 +9,10 @@ const { title = 'Samuel Santos', description = 'Portfólio e tutoriais de geotec
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!-- Tipografia IBM Plex Sans (self-host) -->
     <link rel="preload" as="font" type="font/ttf" crossorigin href="/fonts/IBMPlexSans-Variable/IBMPlexSans-VariableFont_wdth,wght.ttf">
     <link rel="stylesheet" href="/fonts/ibm-plex-sans.css">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/fonts/fa-sprite.css">
-    <!-- Prevenção de FOUC de tema (Dark/Light) -->
     <script is:inline>
       (function () {
         const savedTheme = localStorage.getItem('aipim-theme');
@@ -27,18 +25,94 @@ const { title = 'Samuel Santos', description = 'Portfólio e tutoriais de geotec
     </script>
     <slot name="head" />
   </head>
-  <body>
-    <header>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/tutoriais">Tutoriais</a>
-      </nav>
-    </header>
+  <body>    <nav class="main-nav" aria-label="Navegação Principal">
+    <div class="nav-container">
+      <a href="#top" class="logo-link" aria-label="Samuel Santos - Início">
+        <span class="aipim-symbol-tile" aria-hidden="true" title="Geotecnologias &amp; Análise Espacial">
+          <svg width="32" height="32" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M960 512c0 249.408-203.2 448-448 448-244.778667 0-448-198.592-448-448S262.592 64 512 64s448 198.592 448 448"
+              fill="var(--aipim-action-primary-bg)" />
+            <path
+              d="M507.52 718.08c0-8.96-4.48-13.44-13.44-17.92-26.88-8.96-53.76-8.96-76.16-31.381333-4.48-8.96-4.48-17.92-8.96-26.88-8.96-8.96-31.36-13.44-44.8-17.92h-89.6c-13.44-4.48-22.4-22.4-31.36-35.84 0-4.48 0-13.461333-8.96-13.461334-8.96-4.458667-17.92 4.501333-26.88 0-4.48-4.458667-4.48-8.96-4.48-13.418666 0-13.461333 8.96-26.901333 17.92-35.861334 13.44-8.96 26.88 4.48 40.32 4.48 4.48 0 4.48 0 8.96 4.48 13.44 4.48 17.92 22.4 17.92 35.861334v8.96c0 4.48 4.48 4.48 8.96 4.48 4.48-22.4 4.48-44.821333 8.96-67.2 0-26.88 26.88-53.781333 49.28-62.72 8.96-4.458667 13.44 4.501333 22.4 0 26.88-8.96 94.08-35.84 80.64-71.658667-8.96-31.381333-35.84-62.698667-71.68-58.24-8.96 4.501333-13.44 8.96-22.4 13.461333-13.44 8.96-40.32 35.84-53.76 35.84-22.4-4.48-22.4-35.84-17.92-49.301333 4.48-17.92 44.8-76.138667 71.68-67.178667l17.92 17.92c8.96 4.48 22.4 4.48 35.84 4.48 4.48 0 8.96 0 13.44-4.48 4.48-4.48 4.48-4.48 4.48-8.96 0-13.44-13.44-26.901333-22.4-35.861333s-22.4-17.92-35.84-22.378667c-44.8-13.461333-116.48 4.458667-152.32 35.84-35.84 31.36-62.72 85.12-80.64 129.92-8.96 26.88-17.92 62.698667-22.4 94.08-4.48 22.4-8.96 40.32 4.48 62.698667 13.44 26.88 40.32 53.781333 67.2 71.68 17.92 13.44 53.76 13.44 71.68 35.84 13.44 17.941333 8.96 40.32 8.96 62.72 0 26.88 17.92 49.28 26.88 71.658667 4.48 13.461333 8.96 31.381333 13.44 44.821333 0 4.48 4.48 31.36 4.48 35.84 26.88 13.44 49.28 26.901333 80.64 35.861333 4.48 0 22.4-26.901333 22.4-31.381333 13.44-13.44 22.4-31.36 35.84-40.32 8.96-4.48 17.92-8.96 26.88-17.941333 8.96-8.96 13.44-26.88 17.92-40.32 4.48-8.938667 8.96-26.858667 4.48-40.298667M516.48 305.92c4.48 0 8.96-4.48 17.92-8.96 13.44-8.96 26.901333-22.4 40.32-31.36 13.461333-8.96 26.901333-22.4 35.861333-31.36 13.44-8.96 22.4-26.88 26.88-40.341333 4.48-8.96 17.941333-26.88 13.44-40.32-4.48-8.96-26.88-13.44-35.84-17.92C579.2 126.698667 547.84 122.24 512 122.24c-13.44 0-31.36 4.458667-35.84 17.92-4.48 22.4 13.44 17.92 31.36 22.4 0 0 4.48 35.84 4.48 40.32 4.48 22.421333-8.96 35.84-8.96 58.24 0 13.44 0 35.84 8.96 44.8h4.48zM892.8 619.52c4.501333-8.96 4.501333-22.4 8.96-31.36 4.501333-22.421333 4.501333-44.8 4.501333-67.2 0-44.8-4.501333-89.578667-17.92-129.92-8.96-13.44-13.461333-26.88-17.941333-40.341333-8.96-22.378667-22.4-44.8-40.32-62.698667-17.92-22.4-40.341333-85.12-80.64-67.2-13.44 4.501333-22.4 22.421333-31.36 31.381333l-26.88 40.32c-4.501333 4.48-8.96 13.44-4.501333 17.92 0 4.48 4.501333 4.48 8.96 4.48 8.96 4.501333 13.461333 4.501333 22.421333 8.96 4.48 0 8.96 4.501333 4.48 8.96 0 0 0 4.501333-4.48 4.501334-22.421333 22.4-44.8 40.32-67.2 62.698666-4.48 4.48-8.96 13.44-8.96 17.92s4.48 4.48 4.48 8.96c0 4.501333-4.48 4.501333-8.96 8.96-8.96 4.501333-17.92 8.96-22.4 13.461334-4.48 8.96 0 22.4-4.48 31.36-4.48 22.4-17.941333 40.32-26.901333 62.72-8.96 13.418667-13.418667 26.88-22.378667 40.32 0 17.92-4.501333 31.36 4.458667 44.8 22.421333 31.36 62.72 13.44 94.08 26.901333 8.96 4.458667 17.92 4.458667 22.421333 13.418667 13.418667 13.461333 13.418667 35.861333 17.92 49.301333 4.458667 17.92 8.96 35.84 17.92 53.76 4.48 22.421333 13.44 44.821333 17.92 62.72 40.341333-31.36 76.16-67.178667 103.04-112 26.88-31.424 40.341333-67.242667 53.76-103.104"
+              fill="var(--aipim-bg-surface)"
+              opacity="0.95" />
+          </svg>
+        </span>
+        <span class="logo-text">Samuel Santos</span>
+      </a>
+
+      <button class="mobile-menu-btn" aria-label="Abrir Menu">
+        <svg class="icon"><use href="/fonts/fa-sprite.svg#fa-bars"></use></svg>
+      </button>
+
+      <div class="nav-links">
+        <a href="#experiencias" class="nav-link">Experiência</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="https://samuelsantos.site/tutoriais" class="nav-link">Tutoriais</a>
+        <a href="#certificacoes" class="nav-link">Certificações</a>
+        
+        <div class="social-links-nav">
+          <a href="https://github.com/samuel-c-santos" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Perfil no GitHub">
+            <svg class="icon"><use href="/fonts/fa-sprite.svg#fa-github"></use></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/samuelsantos-amb/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Perfil no LinkedIn">
+            <svg class="icon"><use href="/fonts/fa-sprite.svg#fa-linkedin-in"></use></svg>
+          </a>
+          
+          <!-- Botão de Alternância de Tema Claro/Escuro -->
+          <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Alternar modo claro e escuro">
+            <svg class="aipim-icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+              <path d="M21.5 14.0784C20.3003 14.7189 18.9301 15.0821 17.4751 15.0821C12.7491 15.0821 8.91792 11.2509 8.91792 6.52485C8.91792 5.06986 9.28105 3.69968 9.92163 2.5C5.66765 3.49698 2.5 7.31513 2.5 11.8731C2.5 17.1899 6.8101 21.5 12.1269 21.5C16.6849 21.5 20.503 18.3324 21.5 14.0784Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg class="aipim-icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+              <circle cx="12" cy="12" r="5" stroke-width="1.5"/>
+              <path d="M12 2V4M12 20V22M4 12H2M22 12H20M19.07 4.93L17.66 6.34M6.34 17.66L4.93 19.07M19.07 19.07L17.66 17.66M6.34 6.34L4.93 4.93" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <a href="#contato" class="aipim-button aipim-button--sm">Entrar em Contato</a>
+      </div>
+    </div>
+  </nav>
     <main>
       <slot />
-    </main>
-    <footer>
-      <p>© 2026 Samuel Santos</p>
-    </footer>
-  </body>
+    </main>    <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-florao" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px;">
+          <circle cx="12" cy="12" r="2.5" />
+          <path d="M12 3.5C10.5 6.2 10.5 8.2 12 9.5C13.5 8.2 13.5 6.2 12 3.5Z" />
+          <path d="M12 20.5C10.5 17.8 10.5 15.8 12 14.5C13.5 15.8 13.5 17.8 12 20.5Z" />
+          <path d="M3.5 12C6.2 10.5 8.2 10.5 9.5 12C8.2 13.5 6.2 13.5 3.5 12Z" />
+          <path d="M20.5 12C17.8 10.5 15.8 10.5 14.5 12C15.8 13.5 17.8 13.5 20.5 12Z" />
+          <circle cx="6.5" cy="6.5" r="1.2" opacity="0.75" />
+          <circle cx="17.5" cy="6.5" r="1.2" opacity="0.75" />
+          <circle cx="6.5" cy="17.5" r="1.2" opacity="0.75" />
+          <circle cx="17.5" cy="17.5" r="1.2" opacity="0.75" />
+        </svg>
+      </div>
+      <p class="footer-copy">&copy; 2026 Samuel Santos. Todos os direitos reservados.</p>
+      <p class="footer-attribution">Identidade visual e padrões de design construídos sob as diretrizes do <a href="https://github.com/talis-galhardi/aipim" target="_blank" rel="noopener noreferrer">Aipim Design System</a>.</p>
+    </div>
+  </footer>
+    <script is:inline>
+      // theme toggle
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      if (themeToggleBtn) {
+        function getActiveTheme() {
+          return document.documentElement.getAttribute('data-theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        }
+        function setTheme(theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+          localStorage.setItem('aipim-theme', theme);
+        }
+        themeToggleBtn.addEventListener('click', () => {
+          const currentTheme = getActiveTheme();
+          setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+      }
+    </script>  </body>
 </html>
