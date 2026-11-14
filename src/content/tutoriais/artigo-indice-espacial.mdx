@@ -1,15 +1,16 @@
-﻿---
+---
 title: "O que acontece quando você roda uma consulta espacial sem índice"
 description: "Explicação prática sobre índices espaciais (R-Tree/GiST) e impacto em performance."
 tags: ["PostGIS", "SQL", "Índice Espacial", "Performance"]
 level: "Intermediário"
+thumbnail: "/tutoriais/artigo-indice-espacial/thumbnail.png"
 ---
 
 ![Capa do artigo: Por que sua consulta espacial trava o computador?](/tutoriais/artigo-indice-espacial/capa_artigo.png)
 
 # O que realmente acontece quando você roda uma consulta espacial sem índice
 
-Um banco de dados guarda geometria no disco exatamente como guarda qualquer outro dado: gravando uma linha atrás da outra, na sequência em que elas chegam. 
+Um banco de dados guarda geometria no disco exatamente como guarda qualquer outro dado: gravando uma linha atrás da outra, na sequência em que elas chegam.
 
 O software não tem noção de mapa, de vizinhança ou de proximidade territorial. Para o PostGIS, para o SQLite ou para o QGIS, uma tabela com cinco milhões de propriedades rurais é apenas um arquivo com cinco milhões de linhas desordenadas.
 
@@ -19,11 +20,11 @@ Quando você pede para cruzar essa camada com outra, ou tenta descobrir quais fe
 
 Em tabelas convencionais de texto ou números, comparar um valor é uma operação simples de igualdade. Na geometria não funciona assim.
 
-Para saber se um ponto está dentro de um polígono, o computador precisa rodar algoritmos como o traçado de raios (ray casting). Ele traça uma semirreta imaginária a partir do ponto e conta quantas vezes essa linha cruza as bordas do polígono. 
+Para saber se um ponto está dentro de um polígono, o computador precisa rodar algoritmos como o traçado de raios (ray casting). Ele traça uma semirreta imaginária a partir do ponto e conta quantas vezes essa linha cruza as bordas do polígono.
 
 Se o polígono é um retângulo de 4 vértices, a conta é rápida. Se é um imóvel rural delimitado por curva de rio com 3.000 vértices, cada teste exige centenas de cálculos de produto vetorial e ponto em segmento.
 
-Multiplique esse esforço por milhões de registros espalhados pelo arquivo. O programa é obrigado a buscar cada registro no disco, carregar a lista de coordenadas para a memória e executar essa matemática repetidamente, inclusive para feições que estão a milhares de quilômetros da sua área de interesse. 
+Multiplique esse esforço por milhões de registros espalhados pelo arquivo. O programa é obrigado a buscar cada registro no disco, carregar a lista de coordenadas para a memória e executar essa matemática repetidamente, inclusive para feições que estão a milhares de quilômetros da sua área de interesse.
 
 O computador não trava porque o arquivo é grande. Ele trava porque foi instruído a calcular trigonometria em cinco milhões de geometrias que não tinham a menor chance de encostar no seu alvo.
 
@@ -31,82 +32,4 @@ O computador não trava porque o arquivo é grande. Ele trava porque foi instru�
 
 ## A simplificação geométrica
 
-O índice espacial resolve essa sobrecarga com um atalho: ele desconsidera o formato detalhado do polígono.
-
-Em vez de inspecionar curvas e recortes, o índice calcula o retângulo envolvente de cada feição (Bounding Box ou MBR). São apenas quatro coordenadas de ponto flutuante: x mínimo, y mínimo, x máximo e y máximo.
-
-Descobrir se duas caixas se sobrepõem exige apenas quatro comparações aritméticas entre números:
-
-```
-boxA.maxX >= boxB.minX e boxA.minX <= boxB.maxX e
-boxA.maxY >= boxB.minY e boxA.minY <= boxB.maxY
-```
-
-Um processador executa testes desse tipo em frações microscópicas de tempo.
-
-Essas caixas são organizadas em uma estrutura de dados chamada R-Tree. Caixas individuais de feições vizinhas são agrupadas dentro de caixas maiores. Essas caixas maiores são agrupadas em blocos regionais ainda mais amplos, até convergirem em uma única caixa raiz que delimita a extensão total da camada.
-
-![Como os retângulos do mapa se organizam na árvore](/tutoriais/artigo-indice-espacial/r_tree_estrutura.png)
-
-## Poda de espaço
-
-Durante uma busca, o software consulta primeiro essa árvore de caixas.
-
-Se a caixa da sua pesquisa não encosta na caixa que engloba a região Sul da base, o motor descarta sumariamente aquele ramo inteiro. Ele não abre o nó, não lê as subcaixas e não encosta nas geometrias daquele setor. 
-
-A pesquisa desce apenas pelos ramos cujas caixas têm sobreposição real com a sua área.
-
-![Descarte de ramos da árvore durante a navegação](/tutoriais/artigo-indice-espacial/pulos_na_arvore.png)
-
-Esse processo elimina a esmagadora maioria dos registros antes que eles cheguem perto da memória principal. Apenas o punhado de feições cujas caixas envolventes realmente tocaram o alvo é enviado para a etapa final: o teste exato de interseção com as coordenadas reais dos vértices.
-
-A busca passa de milhões de testes trigonométricos pesados para algumas dezenas de checagens de caixas, seguidas de dois ou três testes exatos no final.
-
-![Comparação direta de volume de trabalho entre as abordagens](/tutoriais/artigo-indice-espacial/comparacao_lado_a_lado.png)
-
-## O caso do Shapefile e do GeoJSON
-
-Esse problema atinge de forma ainda mais severa quem trabalha com formatos de arquivo convencionais.
-
-No caso do Shapefile, existe uma confusão frequente em torno da extensão `.shx`. O `.shx` não é um índice espacial. Ele é apenas uma tabela de deslocamento em bytes (offset), cuja única função é apontar onde cada linha começa dentro do arquivo `.shp`. Ele não guarda nenhuma informação sobre onde a feição se localiza no território. 
-
-Um Shapefile composto apenas pelo quarteto padrão (`.shp`, `.shx`, `.dbf` e `.prj`) não possui índice espacial. Qualquer operação sobre ele obriga o software a varrer o arquivo inteiro. Para que um Shapefile tenha índice, ele depende de arquivos externos opcionais: o `.qix` (gerado pelo QGIS e bibliotecas GDAL) ou o par `.sbn` e `.sbx` (padrão do ArcGIS). Se esses arquivos não forem gerados ou forem esquecidos ao transferir a pasta, a camada volta a depender de varredura linear.
-
-O GeoJSON representa um cenário ainda mais desfavorável para grandes volumes. Sendo um formato de texto puro (ASCII / UTF-8), ele não comporta qualquer estrutura de indexação binária interna. Para realizar uma busca, o software precisa processar o texto linha por linha, converter cada sequência de caracteres numéricos em coordenadas de ponto flutuante na memória e, só então, calcular as interseções ou montar uma árvore temporária na memória RAM. Encerrada a sessão, essa árvore é descartada.
-
-Essa fragilidade é a razão pela qual formatos modernos como o GeoPackage ganharam espaço. Sendo um banco SQLite contido em um único arquivo, o GeoPackage já embute as tabelas da R-Tree internamente (`rtree_camada_geom`). O índice viaja junto com os dados, sem depender de arquivos soltos ou conversões de texto em tempo de execução.
-
-## O custo de manutenção da árvore
-
-Essa velocidade na leitura tem um preço na escrita.
-
-Tabelas sem índice aceitam dados rapidamente porque o banco apenas empilha o novo registro no final do arquivo. Com índice espacial, cada inserção, alteração ou exclusão de feição obriga o sistema a:
-
-1. Calcular o retângulo envolvente da geometria nova.
-2. Navegar na árvore para encontrar a folha que cause a menor expansão de área possível.
-3. Inserir a nova caixa e atualizar as dimensões de todos os nós ancestrais até a raiz.
-4. Se o nó ultrapassar a capacidade máxima, dividir o nó em dois e redistribuir as caixas de forma equilibrada.
-
-Por essa razão, indexar tabelas que recebem fluxo contínuo de dados (como telemetria veicular, posições de sensores ou logs) degrada a performance do sistema. O banco gasta mais tempo balanceando ramos da árvore do que gravando as coordenadas.
-
-Da mesma forma, ao importar bases volumosas, a prática correta é desativar ou remover o índice antes da carga em lote, executar a inserção de todas as linhas e recriar o índice apenas no final.
-
-![Critérios para decidir quando indexar colunas](/tutoriais/artigo-indice-espacial/quando_criar.png)
-
-## Aplicação prática
-
-Nos sistemas mais utilizados, a criação segue comandos diretos.
-
-No PostgreSQL com PostGIS:
-
-```sql
-CREATE INDEX imoveis_geom_idx ON imoveis USING GIST (geom);
-ANALYZE imoveis;
-```
-
-A execução do `ANALYZE` é necessária para atualizar as tabelas de estatísticas internas. Sem isso, o planejador de consultas pode subestimar a distribuição dos dados e optar por uma varredura sequencial mesmo com o índice disponível.
-
-No SQLite e no GeoPackage, o índice espacial materializa uma tabela virtual no próprio arquivo (geralmente com o prefixo `rtree_`). O QGIS expõe essa funcionalidade nas propriedades da camada, no painel de informações da fonte de dados, pelo botão de criação de índice espacial.
-
-O comportamento do hardware é consequência direta da estrutura escolhida. Sem índice, o processador calcula vértices no vazio; com índice, ele apenas navega por limites retangulares até encontrar exatamente onde olhar.
-
+> Continue no repositório original para o conteúdo completo.

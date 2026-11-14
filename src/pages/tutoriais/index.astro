@@ -13,15 +13,16 @@ const allTags = [...new Set(sorted.flatMap((t) => t.data.tags || []))];
 const allLevels = [...new Set(sorted.map((t) => t.data.level).filter(Boolean))];
 ---
 <BaseLayout title="Tutoriais | Samuel Santos" description="Tutoriais técnicos de geotecnologias, QGIS, Python, Google Earth Engine e análise de dados.">
-  <section class="tutoriais-section">
+  <section class="tutoriais-section scroll-reveal">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">Aprenda fazendo</p>
         <h1 class="section-title">Tutoriais</h1>
+        <p class="section-subtitle">Tutoriais técnicos de geotecnologias, QGIS, Python, Google Earth Engine e análise de dados.</p>
       </div>
 
       <div class="filters-bar">
-        <input type="search" id="search-input" placeholder="Buscar tutoriais..." class="search-input" />
+        <input type="search" id="search-input" placeholder="Buscar tutoriais..." class="search-input aipim-input" />
         <div class="filter-group">
           <span class="filter-label">Nível:</span>
           <button class="filter-btn active" data-filter="level" data-value="all">Todos</button>
@@ -38,7 +39,7 @@ const allLevels = [...new Set(sorted.map((t) => t.data.level).filter(Boolean))];
         </div>
         <div class="sort-group">
           <label for="sort-select">Ordenar:</label>
-          <select id="sort-select">
+          <select id="sort-select" class="aipim-select">
             <option value="recent">Mais recentes</option>
             <option value="title">Título (A-Z)</option>
           </select>
@@ -48,18 +49,22 @@ const allLevels = [...new Set(sorted.map((t) => t.data.level).filter(Boolean))];
       <div class="tutorials-grid" id="tutorials-grid">
         {sorted.map((t) => (
           <article
-            class="tutorial-card"
+            class="tutorial-card scroll-reveal-item"
             data-title={t.data.title.toLowerCase()}
             data-description={(t.data.description || '').toLowerCase()}
             data-tags={(t.data.tags || []).join(',')}
             data-level={t.data.level || ''}
             data-date={t.data.date ? t.data.date.getTime() : 0}
           >
-            {t.data.thumbnail && (
-              <a href={`/tutoriais/${t.id}`} class="card-thumb">
+            <a href={`/tutoriais/${t.id}`} class="card-thumb">
+              {t.data.thumbnail ? (
                 <img src={t.data.thumbnail} alt={t.data.title} loading="lazy" />
-              </a>
-            )}
+              ) : (
+                <div class="thumb-placeholder">
+                  <svg class="icon"><use href="/fonts/fa-sprite.svg#fa-book"></use></svg>
+                </div>
+              )}
+            </a>
             <div class="card-body">
               <div class="card-badges">
                 {t.data.level && <span class="badge badge-level">{t.data.level}</span>}
@@ -147,28 +152,38 @@ const allLevels = [...new Set(sorted.map((t) => t.data.level).filter(Boolean))];
   <style>
     .tutoriais-section { padding: 2rem 0; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-    .section-header { margin-bottom: 1.5rem; }
+    .section-header { margin-bottom: 1.5rem; text-align: center; }
     .section-eyebrow { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.7; }
     .section-title { font-size: 2rem; margin: 0.25rem 0; }
-    .filters-bar { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-bottom: 1.5rem; }
+    .section-subtitle { opacity: 0.75; max-width: 640px; margin: 0 auto; }
+    .filters-bar { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-bottom: 1.5rem; padding: 1rem; border: 1px solid var(--aipim-border, #e5e7eb); border-radius: 12px; background: var(--aipim-surface, #fff); }
     .search-input { flex: 1 1 240px; padding: 0.5rem 0.75rem; border: 1px solid var(--aipim-border, #ccc); border-radius: 8px; background: var(--aipim-bg, #fff); color: inherit; }
     .filter-group, .sort-group { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
     .filter-label { font-size: 0.85rem; opacity: 0.7; }
-    .filter-btn { padding: 0.35rem 0.7rem; border: 1px solid var(--aipim-border, #ccc); border-radius: 999px; background: transparent; color: inherit; cursor: pointer; font-size: 0.8rem; }
+    .filter-btn { padding: 0.35rem 0.7rem; border: 1px solid var(--aipim-border, #ccc); border-radius: 999px; background: transparent; color: inherit; cursor: pointer; font-size: 0.8rem; transition: all 0.15s ease; }
+    .filter-btn:hover { background: var(--aipim-surface-alt, #f3f4f6); }
     .filter-btn.active { background: var(--aipim-action-primary-bg, #2563eb); color: #fff; border-color: transparent; }
-    .sort-group select { padding: 0.35rem 0.5rem; border-radius: 8px; }
-    .tutorials-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
-    .tutorial-card { border: 1px solid var(--aipim-border, #e5e7eb); border-radius: 12px; overflow: hidden; background: var(--aipim-surface, #fff); display: flex; flex-direction: column; }
-    .card-thumb img { width: 100%; height: 160px; object-fit: cover; display: block; }
-    .card-body { padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
-    .card-badges { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-    .badge { font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 999px; }
+    .sort-group select { padding: 0.35rem 0.5rem; border-radius: 8px; border: 1px solid var(--aipim-border, #ccc); background: var(--aipim-bg, #fff); color: inherit; }
+    .tutorials-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+    .tutorial-card { border: 1px solid var(--aipim-border, #e5e7eb); border-radius: 14px; overflow: hidden; background: var(--aipim-surface, #fff); display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .tutorial-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .card-thumb { display: block; }
+    .card-thumb img { width: 100%; height: 180px; object-fit: cover; display: block; }
+    .thumb-placeholder { width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; background: var(--aipim-surface-alt, #f3f4f6); }
+    .thumb-placeholder .icon { width: 40px; height: 40px; opacity: 0.4; }
+    .card-body { padding: 1.25rem; display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }
+    .card-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .badge { font-size: 0.72rem; padding: 0.25rem 0.6rem; border-radius: 999px; font-weight: 500; }
     .badge-level { background: var(--aipim-action-primary-bg, #2563eb); color: #fff; }
-    .badge-tag { background: var(--aipim-surface-alt, #f3f4f6); }
-    .card-title { font-size: 1.05rem; margin: 0; }
+    .badge-tag { background: var(--aipim-surface-alt, #f3f4f6); color: inherit; border: 1px solid var(--aipim-border, #e5e7eb); }
+    .card-title { font-size: 1.1rem; margin: 0; line-height: 1.3; }
     .card-title a { color: inherit; text-decoration: none; }
-    .card-desc { font-size: 0.9rem; opacity: 0.8; flex: 1; }
-    .card-date { font-size: 0.75rem; opacity: 0.6; }
-    .no-results { text-align: center; padding: 2rem; opacity: 0.7; }
+    .card-title a:hover { color: var(--aipim-action-primary-bg, #2563eb); }
+    .card-desc { font-size: 0.9rem; opacity: 0.75; flex: 1; line-height: 1.5; }
+    .card-date { font-size: 0.75rem; opacity: 0.55; }
+    .no-results { text-align: center; padding: 3rem; opacity: 0.7; }
+    @media (max-width: 640px) {
+      .filters-bar { flex-direction: column; align-items: stretch; }
+    }
   </style>
 </BaseLayout>
