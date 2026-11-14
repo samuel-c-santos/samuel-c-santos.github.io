@@ -11,12 +11,75 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
 ---
-<BaseLayout title={entry.data.title}>
-  <article>
-    <h1>{entry.data.title}</h1>
-    <p>{entry.data.description}</p>
-    <Content />
+<BaseLayout title={`${entry.data.title} | Samuel Santos`} description={entry.data.description}>
+  <article class="tutorial-detail">
+    <div class="container">
+      <header class="detail-header">
+        <h1>{entry.data.title}</h1>
+        <p class="detail-desc">{entry.data.description}</p>
+        <div class="detail-meta">
+          {entry.data.level && <span class="badge badge-level">{entry.data.level}</span>}
+          {(entry.data.tags || []).map((tag) => (
+            <span class="badge badge-tag">{tag}</span>
+          ))}
+          {entry.data.date && (
+            <time datetime={entry.data.date.toISOString()}>
+              {entry.data.date.toLocaleDateString('pt-BR')}
+            </time>
+          )}
+        </div>
+        {entry.data.thumbnail && (
+          <img src={entry.data.thumbnail} alt={entry.data.title} class="detail-thumb" />
+        )}
+      </header>
+
+      {headings && headings.length > 0 && (
+        <nav class="toc">
+          <h2>Índice</h2>
+          <ul>
+            {headings.filter((h) => h.depth <= 3).map((h) => (
+              <li class={`toc-depth-${h.depth}`}>
+                <a href={`#${h.slug}`}>{h.text}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
+
+      <div class="prose">
+        <Content />
+      </div>
+
+      <p class="back-link"><a href="/tutoriais">← Voltar para tutoriais</a></p>
+    </div>
   </article>
+
+  <style>
+    .tutorial-detail { padding: 2rem 0; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 1rem; }
+    .detail-header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .detail-desc { opacity: 0.8; font-size: 1.05rem; }
+    .detail-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 1rem 0; }
+    .badge { font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 999px; }
+    .badge-level { background: var(--aipim-action-primary-bg, #2563eb); color: #fff; }
+    .badge-tag { background: var(--aipim-surface-alt, #f3f4f6); }
+    .detail-thumb { width: 100%; border-radius: 12px; margin: 1rem 0; }
+    .toc { border: 1px solid var(--aipim-border, #e5e7eb); border-radius: 12px; padding: 1rem 1.25rem; margin: 1.5rem 0; background: var(--aipim-surface, #fff); }
+    .toc h2 { font-size: 1rem; margin: 0 0 0.5rem; }
+    .toc ul { list-style: none; padding: 0; margin: 0; }
+    .toc li { margin: 0.25rem 0; }
+    .toc-depth-2 { padding-left: 0; }
+    .toc-depth-3 { padding-left: 1rem; }
+    .toc a { color: inherit; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    .prose { line-height: 1.7; }
+    .prose :global(h2) { margin-top: 2rem; }
+    .prose :global(h3) { margin-top: 1.5rem; }
+    .prose :global(pre) { padding: 1rem; border-radius: 8px; overflow-x: auto; }
+    .prose :global(code) { font-family: monospace; }
+    .back-link { margin-top: 2rem; }
+    .back-link a { color: inherit; }
+  </style>
 </BaseLayout>

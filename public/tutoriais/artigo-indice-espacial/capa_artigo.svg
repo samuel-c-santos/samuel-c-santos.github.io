@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <!-- Grid pattern -->
+    <pattern id="brutalGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#e8e2d5" stroke-width="1.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Canvas: Warm Cream -->
+  <rect width="1280" height="720" fill="#fdfaf3"/>
+  <rect width="1280" height="720" fill="url(#brutalGrid)"/>
+
+  <!-- Top Banner / Tape -->
+  <g transform="translate(60, 45)">
+    <!-- Shadow -->
+    <rect x="4" y="4" width="340" height="36" fill="#000000"/>
+    <!-- Main Tag -->
+    <rect x="0" y="0" width="340" height="36" fill="#ffe600" stroke="#000000" stroke-width="3"/>
+    <text x="170" y="24" text-anchor="middle" fill="#000000" font-family="system-ui, -apple-system, 'Arial Black', sans-serif" font-size="13.5" font-weight="900" letter-spacing="1">⚡ ENGENHARIA DE DADOS ESPACIAIS</text>
+  </g>
+
+  <!-- LEFT HERO SECTION: Headline -->
+  <g transform="translate(60, 115)">
+    <!-- Big Headline Box Shadow -->
+    <rect x="8" y="8" width="580" height="235" rx="4" fill="#000000"/>
+    <!-- Headline Box -->
+    <rect x="0" y="0" width="580" height="235" rx="4" fill="#ffffff" stroke="#000000" stroke-width="4"/>
+    
+    <text x="35" y="65" fill="#000000" font-family="system-ui, -apple-system, 'Arial Black', Impact, sans-serif" font-size="46" font-weight="900" letter-spacing="-1.5">
+      POR QUE SUA
+    </text>
+    <text x="35" y="125" fill="#000000" font-family="system-ui, -apple-system, 'Arial Black', Impact, sans-serif" font-size="46" font-weight="900" letter-spacing="-1.5">
+      CONSULTA ESPACIAL
+    </text>
+    
+    <!-- Highlighted block for TRAVA TUDO -->
+    <g transform="translate(35, 145)">
+      <rect x="4" y="4" width="375" height="60" fill="#000000"/>
+      <rect x="0" y="0" width="375" height="60" fill="#ff4d4d" stroke="#000000" stroke-width="3.5"/>
+      <text x="187" y="44" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, 'Arial Black', Impact, sans-serif" font-size="40" font-weight="900" letter-spacing="-1">
+        TRAVA O PC?
+      </text>
+    </g>
+  </g>
+
+  <!-- Subtitle and Description Box -->
+  <g transform="translate(60, 375)">
+    <!-- Shadow -->
+    <rect x="6" y="6" width="580" height="175" rx="4" fill="#000000"/>
+    <!-- Box -->
+    <rect x="0" y="0" width="580" height="175" rx="4" fill="#ffffff" stroke="#000000" stroke-width="3.5"/>
+    
+    <text x="30" y="40" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="18.5" font-weight="800">
+      O que acontece na CPU e no disco sem índice:
+    </text>
+
+    <!-- Checklist / Bullets in Brutalist Style -->
+    <g transform="translate(30, 68)" font-family="system-ui, -apple-system, monospace" font-size="13.5" font-weight="700">
+      <!-- Item 1 -->
+      <rect x="0" y="2" width="16" height="16" fill="#ff4d4d" stroke="#000000" stroke-width="2"/>
+      <text x="26" y="15" fill="#000000">O mito de que o arquivo .shx é um índice</text>
+      
+      <!-- Item 2 -->
+      <rect x="0" y="32" width="16" height="16" fill="#ffe600" stroke="#000000" stroke-width="2"/>
+      <text x="26" y="45" fill="#000000">GeoJSON: o pior formato para grandes volumes</text>
+
+      <!-- Item 3 -->
+      <rect x="0" y="62" width="16" height="16" fill="#00f076" stroke="#000000" stroke-width="2"/>
+      <text x="26" y="75" fill="#000000">Como a R-Tree poda milhões de feições em 15ms</text>
+    </g>
+  </g>
+
+  <!-- Badges footer -->
+  <g transform="translate(60, 580)">
+    <!-- Pill PostGIS -->
+    <g transform="translate(0, 0)">
+      <rect x="3" y="3" width="105" height="38" fill="#000000"/>
+      <rect x="0" y="0" width="105" height="38" fill="#a78bfa" stroke="#000000" stroke-width="3"/>
+      <text x="52" y="24" text-anchor="middle" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900">PostGIS</text>
+    </g>
+    <!-- Pill QGIS -->
+    <g transform="translate(120, 0)">
+      <rect x="3" y="3" width="90" height="38" fill="#000000"/>
+      <rect x="0" y="0" width="90" height="38" fill="#00f076" stroke="#000000" stroke-width="3"/>
+      <text x="45" y="24" text-anchor="middle" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900">QGIS</text>
+    </g>
+    <!-- Pill GeoPackage -->
+    <g transform="translate(225, 0)">
+      <rect x="3" y="3" width="140" height="38" fill="#000000"/>
+      <rect x="0" y="0" width="140" height="38" fill="#38bdf8" stroke="#000000" stroke-width="3"/>
+      <text x="70" y="24" text-anchor="middle" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900">GeoPackage</text>
+    </g>
+    <!-- Pill GeoPandas -->
+    <g transform="translate(380, 0)">
+      <rect x="3" y="3" width="130" height="38" fill="#000000"/>
+      <rect x="0" y="0" width="130" height="38" fill="#fb923c" stroke="#000000" stroke-width="3"/>
+      <text x="65" y="24" text-anchor="middle" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900">GeoPandas</text>
+    </g>
+  </g>
+
+  <!-- RIGHT HERO SECTION: Brutalist Visual Demonstration (Map + Tree) -->
+  <g transform="translate(680, 50)">
+    <!-- Big Shadow -->
+    <rect x="10" y="10" width="530" height="605" rx="6" fill="#000000"/>
+    <!-- Outer Card -->
+    <rect x="0" y="0" width="530" height="605" rx="6" fill="#ffffff" stroke="#000000" stroke-width="4.5"/>
+    
+    <!-- Card Header Tape -->
+    <rect x="0" y="0" width="530" height="48" fill="#000000"/>
+    <text x="20" y="31" fill="#ffffff" font-family="system-ui, -apple-system, monospace" font-size="14" font-weight="900" letter-spacing="1">MECÂNICA DE BUSCA: R-TREE</text>
+    <rect x="445" y="12" width="65" height="24" fill="#00f076" stroke="#ffffff" stroke-width="1.5"/>
+    <text x="477" y="28" text-anchor="middle" fill="#000000" font-family="monospace" font-size="11" font-weight="900">O(log N)</text>
+
+    <!-- MAP CONTAINER -->
+    <g transform="translate(25, 75)">
+      <!-- Map Background Frame -->
+      <rect x="4" y="4" width="480" height="310" fill="#000000"/>
+      <rect x="0" y="0" width="480" height="310" fill="#f4efe6" stroke="#000000" stroke-width="3.5"/>
+      
+      <!-- SUB-REGION 1: DISCARDED WEST REGION -->
+      <rect x="20" y="20" width="205" height="270" fill="#fee2e2" stroke="#000000" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <g transform="translate(30, 35)">
+        <rect x="2" y="2" width="145" height="24" fill="#000000"/>
+        <rect x="0" y="0" width="145" height="24" fill="#ff4d4d" stroke="#000000" stroke-width="2"/>
+        <text x="72" y="16" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="10.5" font-weight="900">RAMO DESCARTADO</text>
+      </g>
+      
+      <!-- Polygons in discarded -->
+      <polygon points="45,90 90,80 110,130 65,140" fill="#fca5a5" stroke="#000000" stroke-width="2"/>
+      <polygon points="120,160 180,150 195,210 145,225" fill="#fca5a5" stroke="#000000" stroke-width="2"/>
+      <polygon points="50,220 100,200 115,260 70,270" fill="#fca5a5" stroke="#000000" stroke-width="2"/>
+
+      <!-- Stamp: IGNORADO -->
+      <g transform="translate(60, 140) rotate(-12)">
+        <rect x="4" y="4" width="135" height="48" fill="#000000"/>
+        <rect x="0" y="0" width="135" height="48" fill="#ff4d4d" stroke="#000000" stroke-width="3"/>
+        <text x="67" y="32" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, 'Arial Black', sans-serif" font-size="20" font-weight="900">IGNORADO</text>
+      </g>
+
+      <!-- SUB-REGION 2: ACTIVE EAST REGION -->
+      <rect x="245" y="20" width="215" height="270" fill="#dcfce7" stroke="#000000" stroke-width="3"/>
+      <g transform="translate(255, 35)">
+        <rect x="2" y="2" width="135" height="24" fill="#000000"/>
+        <rect x="0" y="0" width="135" height="24" fill="#00f076" stroke="#000000" stroke-width="2"/>
+        <text x="67" y="16" text-anchor="middle" fill="#000000" font-family="monospace" font-size="10.5" font-weight="900">RAMO ATIVO</text>
+      </g>
+
+      <!-- Sub BBox inside East -->
+      <rect x="260" y="80" width="185" height="190" fill="#bbf7d0" stroke="#000000" stroke-width="2" stroke-dasharray="4 3"/>
+
+      <!-- Target Real Geometry -->
+      <polygon points="280,150 350,110 420,140 395,215 315,225" fill="#22c55e" stroke="#000000" stroke-width="3"/>
+      
+      <!-- Query Box -->
+      <rect x="315" y="130" width="115" height="100" fill="#ffe600" fill-opacity="0.35" stroke="#000000" stroke-width="3"/>
+      
+      <g transform="translate(325, 145)">
+        <rect x="2" y="2" width="95" height="22" fill="#000000"/>
+        <rect x="0" y="0" width="95" height="22" fill="#ffe600" stroke="#000000" stroke-width="1.8"/>
+        <text x="47" y="15" text-anchor="middle" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="900">SUA BUSCA</text>
+      </g>
+    </g>
+
+    <!-- BOTTOM COMPARISON METRICS -->
+    <g transform="translate(25, 410)">
+      <!-- Left Box: Sem Índice -->
+      <g transform="translate(0, 0)">
+        <rect x="4" y="4" width="225" height="155" fill="#000000"/>
+        <rect x="0" y="0" width="225" height="155" fill="#ffffff" stroke="#000000" stroke-width="3.5"/>
+        
+        <rect x="0" y="0" width="225" height="32" fill="#fee2e2" stroke="#000000" stroke-width="2"/>
+        <text x="15" y="21" fill="#b91c1c" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="900">SEM ÍNDICE (FULL SCAN)</text>
+        
+        <text x="15" y="60" fill="#000000" font-family="monospace" font-size="11.5">Linhas lidas:</text>
+        <text x="15" y="85" fill="#ff4d4d" font-family="system-ui, -apple-system, 'Arial Black', sans-serif" font-size="20" font-weight="900">5.000.000</text>
+        
+        <text x="15" y="115" fill="#000000" font-family="monospace" font-size="11.5">Tempo:</text>
+        <text x="15" y="140" fill="#ff4d4d" font-family="system-ui, -apple-system, 'Arial Black', sans-serif" font-size="17" font-weight="900">18 minutos 🐢</text>
+      </g>
+
+      <!-- Right Box: Com Índice -->
+      <g transform="translate(255, 0)">
+        <rect x="4" y="4" width="225" height="155" fill="#000000"/>
+        <rect x="0" y="0" width="225" height="155" fill="#00f076" stroke="#000000" stroke-width="3.5"/>
+        
+        <rect x="0" y="0" width="225" height="32" fill="#000000"/>
+        <text x="15" y="21" fill="#00f076" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="900">COM R-TREE / GIST</text>
+        
+        <text x="15" y="60" fill="#000000" font-family="monospace" font-size="11.5">Testes exatos:</text>
+        <text x="15" y="85" fill="#000000" font-family="system-ui, -apple-system, 'Arial Black', sans-serif" font-size="20" font-weight="900">2 feições</text>
+        
+        <text x="15" y="115" fill="#000000" font-family="monospace" font-size="11.5">Tempo:</text>
+        <text x="15" y="140" fill="#000000" font-family="system-ui, -apple-system, 'Arial Black', sans-serif" font-size="17" font-weight="900">14 milissegundos ⚡</text>
+      </g>
+    </g>
+  </g>
+</svg>

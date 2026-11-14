@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <pattern id="gridRegra" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#ebe5d8" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="#fdfaf3"/>
+  <rect width="800" height="520" fill="url(#gridRegra)"/>
+
+  <!-- Top Banner / Sticker -->
+  <g transform="translate(40, 22)">
+    <rect x="4" y="4" width="260" height="32" fill="#000000"/>
+    <rect x="0" y="0" width="260" height="32" fill="#fb923c" stroke="#000000" stroke-width="2.5"/>
+    <text x="130" y="21" text-anchor="middle" fill="#000000" font-family="system-ui, -apple-system, monospace" font-size="11.5" font-weight="900" letter-spacing="1">ENGENHARIA: TRADE-OFFS</text>
+
+    <text x="720" y="22" text-anchor="end" fill="#000000" font-family="monospace" font-size="13" font-weight="900">Leitura vs Escrita</text>
+  </g>
+
+  <!-- Title -->
+  <text x="40" y="82" fill="#000000" font-family="system-ui, -apple-system, 'Arial Black', Impact, sans-serif" font-size="22" font-weight="900" letter-spacing="-0.5">
+    Critério Técnico: Onde Vale a Pena Criar Índice?
+  </text>
+
+  <!-- LEFT PANEL: ONDE VALE A PENA -->
+  <g transform="translate(40, 102)">
+    <!-- Shadow -->
+    <rect x="6" y="6" width="345" height="318" fill="#000000"/>
+    <!-- Box -->
+    <rect x="0" y="0" width="345" height="318" fill="#ffffff" stroke="#000000" stroke-width="3.5"/>
+
+    <!-- Header -->
+    <rect x="0" y="0" width="345" height="38" fill="#00f076"/>
+    <line x1="0" y1="38" x2="345" y2="38" stroke="#000000" stroke-width="2.5"/>
+    <text x="16" y="24" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="900">✓ CRIE ÍNDICE (LEITURA FREQUENTE)</text>
+
+    <!-- Item 1: Geometria -->
+    <g transform="translate(15, 50)">
+      <rect x="0" y="0" width="315" height="52" fill="#f4efe6" stroke="#000000" stroke-width="2"/>
+      <rect x="8" y="8" width="24" height="24" fill="#00f076" stroke="#000000" stroke-width="1.5"/>
+      <text x="20" y="24" text-anchor="middle" fill="#000000" font-family="sans-serif" font-size="13" font-weight="900">✓</text>
+      <text x="40" y="22" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="900">Geometria (geom / shape)</text>
+      <rect x="235" y="8" width="72" height="18" fill="#ffe600" stroke="#000000" stroke-width="1.2"/>
+      <text x="271" y="21" text-anchor="middle" fill="#000000" font-family="monospace" font-size="9" font-weight="900">SEMPRE</text>
+      <text x="40" y="40" fill="#555555" font-family="system-ui, -apple-system, sans-serif" font-size="10">Spatial joins, buffers e visualização</text>
+    </g>
+
+    <!-- Item 2: Status / Filtros -->
+    <g transform="translate(15, 112)">
+      <rect x="0" y="0" width="315" height="52" fill="#f4efe6" stroke="#000000" stroke-width="2"/>
+      <rect x="8" y="8" width="24" height="24" fill="#00f076" stroke="#000000" stroke-width="1.5"/>
+      <text x="20" y="24" text-anchor="middle" fill="#000000" font-family="sans-serif" font-size="13" font-weight="900">✓</text>
+      <text x="40" y="22" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="900">Status &amp; Categorias (WHERE)</text>
+      <rect x="245" y="8" width="62" height="18" fill="#38bdf8" stroke="#000000" stroke-width="1.2"/>
+      <text x="276" y="21" text-anchor="middle" fill="#000000" font-family="monospace" font-size="9" font-weight="900">B-TREE</text>
+      <text x="40" y="40" fill="#555555" font-family="system-ui, -apple-system, sans-serif" font-size="10">Campos usados para filtrar relatórios</text>
+    </g>
+
+    <!-- Item 3: Chaves de Ligação -->
+    <g transform="translate(15, 174)">
+      <rect x="0" y="0" width="315" height="52" fill="#f4efe6" stroke="#000000" stroke-width="2"/>
+      <rect x="8" y="8" width="24" height="24" fill="#00f076" stroke="#000000" stroke-width="1.5"/>
+      <text x="20" y="24" text-anchor="middle" fill="#000000" font-family="sans-serif" font-size="13" font-weight="900">✓</text>
+      <text x="40" y="22" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="900">Chaves de Ligação (JOINs)</text>
+      <rect x="245" y="8" width="62" height="18" fill="#38bdf8" stroke="#000000" stroke-width="1.2"/>
+      <text x="276" y="21" text-anchor="middle" fill="#000000" font-family="monospace" font-size="9" font-weight="900">B-TREE</text>
+      <text x="40" y="40" fill="#555555" font-family="system-ui, -apple-system, sans-serif" font-size="10">Códigos IBGE, ID de bacias hidrográficas</text>
+    </g>
+
+    <text x="172" y="258" text-anchor="middle" fill="#008a40" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800">
+      Acelera drasticamente a leitura e o filtro
+    </text>
+  </g>
+
+  <!-- RIGHT PANEL: ONDE EVITAR -->
+  <g transform="translate(415, 102)">
+    <!-- Shadow -->
+    <rect x="6" y="6" width="345" height="318" fill="#000000"/>
+    <!-- Box -->
+    <rect x="0" y="0" width="345" height="318" fill="#ffffff" stroke="#000000" stroke-width="3.5"/>
+
+    <!-- Header -->
+    <rect x="0" y="0" width="345" height="38" fill="#ff4d4d"/>
+    <line x1="0" y1="38" x2="345" y2="38" stroke="#000000" stroke-width="2.5"/>
+    <text x="16" y="24" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="900">✕ EVITE (CUSTO DE ESCRITA / INSERÇÃO)</text>
+
+    <!-- Item 1: Logs / Telemetria -->
+    <g transform="translate(15, 50)">
+      <rect x="0" y="0" width="315" height="52" fill="#fee2e2" stroke="#000000" stroke-width="2"/>
+      <rect x="8" y="8" width="24" height="24" fill="#ff4d4d" stroke="#000000" stroke-width="1.5"/>
+      <text x="20" y="24" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="900">✕</text>
+      <text x="40" y="22" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="900">Telemetria &amp; Logs Contínuos</text>
+      <text x="40" y="40" fill="#b91c1c" font-family="system-ui, -apple-system, sans-serif" font-size="10">Milhares de inserts/s: rebalancear trava o banco</text>
+    </g>
+
+    <!-- Item 2: Colunas nunca consultadas -->
+    <g transform="translate(15, 112)">
+      <rect x="0" y="0" width="315" height="52" fill="#fee2e2" stroke="#000000" stroke-width="2"/>
+      <rect x="8" y="8" width="24" height="24" fill="#ff4d4d" stroke="#000000" stroke-width="1.5"/>
+      <text x="20" y="24" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="900">✕</text>
+      <text x="40" y="22" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="900">Colunas Apenas Descritivas</text>
+      <text x="40" y="40" fill="#b91c1c" font-family="system-ui, -apple-system, sans-serif" font-size="10">Campos longos de observação e texto livre</text>
+    </g>
+
+    <!-- Item 3: Cargas em massa -->
+    <g transform="translate(15, 174)">
+      <rect x="0" y="0" width="315" height="52" fill="#ffe600" stroke="#000000" stroke-width="2"/>
+      <rect x="8" y="8" width="24" height="24" fill="#000000" stroke="#000000" stroke-width="1.5"/>
+      <text x="20" y="24" text-anchor="middle" fill="#ffe600" font-family="sans-serif" font-size="13" font-weight="900">!</text>
+      <text x="40" y="22" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="900">Durante Cargas em Massa (Bulk)</text>
+      <text x="40" y="40" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="10">Derrube o índice antes do dump e recrie ao final</text>
+    </g>
+
+    <text x="172" y="258" text-anchor="middle" fill="#b91c1c" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800">
+      Cada índice adiciona sobrecarga de gravação e espaço em disco
+    </text>
+  </g>
+
+  <!-- Bottom Quote Bar (Multiline with clean padding) -->
+  <g transform="translate(40, 438)">
+    <rect x="4" y="4" width="720" height="62" fill="#000000"/>
+    <rect x="0" y="0" width="720" height="62" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+    
+    <text x="20" y="26" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="800">
+      A Regra Prática: <tspan font-weight="400">se a coluna entra em WHERE, JOIN ou ST_Intersects, crie o índice.</tspan>
+    </text>
+    <text x="20" y="46" fill="#444444" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400">
+      Se ela só entra em INSERT ou telemetria contínua, deixe sem para não engasgar a gravação.
+    </text>
+  </g>
+</svg>

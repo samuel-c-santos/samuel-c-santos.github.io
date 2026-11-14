@@ -1,0 +1,12 @@
+# Esta pasta contém as imagens do tutorial
+
+Adicione aqui:
+- hero-image.png (imagem principal do hero section)
+- step-1.png, step-2.png, etc. (screenshots dos passos)
+- favicon.svg ou favicon.png (ícone do site)
+
+## Dicas:
+- Otimize as imagens antes de adicionar (use TinyPNG ou similar)
+- Use nomes descritivos
+- Formato recomendado: PNG para screenshots, WebP para fotos
+- Resolução recomendada para hero: 800x500px

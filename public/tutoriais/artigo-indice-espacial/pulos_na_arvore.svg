@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <pattern id="gridJump" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#ebe5d8" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="#fdfaf3"/>
+  <rect width="800" height="520" fill="url(#gridJump)"/>
+
+  <!-- Top Banner / Sticker -->
+  <g transform="translate(40, 22)">
+    <rect x="4" y="4" width="240" height="32" fill="#000000"/>
+    <rect x="0" y="0" width="240" height="32" fill="#00f076" stroke="#000000" stroke-width="2.5"/>
+    <text x="120" y="21" text-anchor="middle" fill="#000000" font-family="system-ui, -apple-system, monospace" font-size="11.5" font-weight="900" letter-spacing="1">PODA DE RAMOS (PRUNING)</text>
+
+    <text x="720" y="22" text-anchor="end" fill="#000000" font-family="monospace" font-size="13" font-weight="900">Complexidade: O(log N)</text>
+  </g>
+
+  <!-- Title -->
+  <text x="40" y="82" fill="#000000" font-family="system-ui, -apple-system, 'Arial Black', Impact, sans-serif" font-size="22" font-weight="900" letter-spacing="-0.5">
+    3 Pulos na Árvore e o Alvo está Isolado
+  </text>
+
+  <!-- LEFT PANEL: Poda no Espaço 2D -->
+  <g transform="translate(40, 102)">
+    <!-- Shadow -->
+    <rect x="6" y="6" width="345" height="318" fill="#000000"/>
+    <!-- Box -->
+    <rect x="0" y="0" width="345" height="318" fill="#ffffff" stroke="#000000" stroke-width="3.5"/>
+
+    <!-- Header -->
+    <rect x="0" y="0" width="345" height="36" fill="#000000"/>
+    <text x="16" y="23" fill="#ffffff" font-family="system-ui, -apple-system, monospace" font-size="11" font-weight="900">PODA NO MAPA</text>
+
+    <!-- Map Canvas -->
+    <g transform="translate(15, 48)">
+      <rect x="0" y="0" width="315" height="215" fill="#f4efe6" stroke="#000000" stroke-width="2.5"/>
+
+      <!-- Bloco B DESCARTADO (Vermelho brutalista com X gigante) -->
+      <rect x="162" y="12" width="140" height="190" fill="#fee2e2" stroke="#000000" stroke-width="2.2" stroke-dasharray="4 3"/>
+      
+      <g transform="translate(170, 75) rotate(-10)">
+        <rect x="3" y="3" width="120" height="50" fill="#000000"/>
+        <rect x="0" y="0" width="120" height="50" fill="#ff4d4d" stroke="#000000" stroke-width="2.5"/>
+        <text x="60" y="32" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, 'Arial Black', sans-serif" font-size="18" font-weight="900">PODA!</text>
+      </g>
+      <text x="232" y="152" text-anchor="middle" fill="#b91c1c" font-family="monospace" font-size="9" font-weight="900">2.500.000 feições</text>
+      <text x="232" y="165" text-anchor="middle" fill="#000000" font-family="monospace" font-size="8.5">descartadas de vez</text>
+
+      <!-- Bloco A INVESTIGADO (Verde) -->
+      <rect x="12" y="12" width="138" height="190" fill="#dcfce7" stroke="#000000" stroke-width="2.5"/>
+      <rect x="18" y="18" width="75" height="18" fill="#00f076" stroke="#000000" stroke-width="1.2"/>
+      <text x="55" y="31" text-anchor="middle" fill="#000000" font-family="monospace" font-size="9" font-weight="900">BLOCO A ✓</text>
+
+      <!-- Caixa 1 fora -->
+      <rect x="22" y="44" width="118" height="60" fill="#ffffff" stroke="#000000" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <text x="81" y="78" text-anchor="middle" fill="#666666" font-family="monospace" font-size="8.5">Caixa 1 (Fora ✕)</text>
+
+      <!-- Caixa 2 CANDIDATA -->
+      <rect x="22" y="112" width="118" height="80" fill="#bbf7d0" stroke="#000000" stroke-width="2.5"/>
+      <polygon points="35,130 80,122 105,150 75,175 45,160" fill="#22c55e" stroke="#000000" stroke-width="1.8"/>
+
+      <!-- Sua consulta amarela -->
+      <rect x="45" y="135" width="85" height="50" fill="#ffe600" fill-opacity="0.4" stroke="#000000" stroke-width="2.5"/>
+      <text x="87" y="165" text-anchor="middle" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="900">SUA CONSULTA</text>
+    </g>
+
+    <text x="172" y="295" text-anchor="middle" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800">
+      Resta apenas 1 polígono candidato para o cálculo fino!
+    </text>
+  </g>
+
+  <!-- RIGHT PANEL: O Caminho Percorrido na Árvore -->
+  <g transform="translate(415, 102)">
+    <!-- Shadow -->
+    <rect x="6" y="6" width="345" height="318" fill="#000000"/>
+    <!-- Box -->
+    <rect x="0" y="0" width="345" height="318" fill="#ffffff" stroke="#000000" stroke-width="3.5"/>
+
+    <!-- Header -->
+    <rect x="0" y="0" width="345" height="36" fill="#000000"/>
+    <text x="16" y="23" fill="#ffffff" font-family="system-ui, -apple-system, monospace" font-size="11" font-weight="900">NAVEGAÇÃO NA ÁRVORE</text>
+
+    <!-- Tree Navigation -->
+    <g transform="translate(15, 48)">
+      <!-- Inactive lines -->
+      <g stroke="#cccccc" stroke-width="2" fill="none" stroke-dasharray="3 3">
+        <line x1="157" y1="36" x2="240" y2="76"/>
+        <line x1="75" y1="108" x2="42" y2="142"/>
+        <line x1="240" y1="108" x2="207" y2="142"/>
+        <line x1="240" y1="108" x2="273" y2="142"/>
+      </g>
+
+      <!-- ACTIVE PATH (Linha grossa preta) -->
+      <g stroke="#000000" stroke-width="4" fill="none">
+        <line x1="157" y1="36" x2="75" y2="76"/>
+        <line x1="75" y1="108" x2="108" y2="142"/>
+        <line x1="108" y1="172" x2="108" y2="196"/>
+      </g>
+
+      <!-- Raiz -->
+      <g transform="translate(107, 4)">
+        <rect x="2" y="2" width="100" height="32" fill="#000000"/>
+        <rect x="0" y="0" width="100" height="32" fill="#00f076" stroke="#000000" stroke-width="2.2"/>
+        <text x="50" y="21" text-anchor="middle" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="900">1. RAIZ ✓</text>
+      </g>
+
+      <!-- Nó A (Ativo) -->
+      <g transform="translate(25, 76)">
+        <rect x="2" y="2" width="100" height="32" fill="#000000"/>
+        <rect x="0" y="0" width="100" height="32" fill="#00f076" stroke="#000000" stroke-width="2.2"/>
+        <text x="50" y="21" text-anchor="middle" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="900">2. BLOCO A ✓</text>
+      </g>
+
+      <!-- Nó B (Podado) -->
+      <g transform="translate(190, 76)">
+        <rect x="1" y="1" width="100" height="32" fill="#f4efe6"/>
+        <rect x="0" y="0" width="100" height="32" fill="#fee2e2" stroke="#ff4d4d" stroke-width="1.8"/>
+        <text x="50" y="21" text-anchor="middle" fill="#b91c1c" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">BLOCO B ✕</text>
+      </g>
+
+      <!-- Folhas -->
+      <g transform="translate(12, 142)">
+        <rect x="0" y="0" width="60" height="28" fill="#f4efe6" stroke="#cccccc" stroke-width="1"/>
+        <text x="30" y="18" text-anchor="middle" fill="#888888" font-family="monospace" font-size="9.5">Caixa 1 ✕</text>
+      </g>
+
+      <g transform="translate(78, 142)">
+        <rect x="2" y="2" width="60" height="28" fill="#000000"/>
+        <rect x="0" y="0" width="60" height="28" fill="#00f076" stroke="#000000" stroke-width="2"/>
+        <text x="30" y="18" text-anchor="middle" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="900">3. FOLHA ✓</text>
+      </g>
+
+      <!-- Target Box -->
+      <g transform="translate(20, 196)">
+        <rect x="3" y="3" width="275" height="46" fill="#000000"/>
+        <rect x="0" y="0" width="275" height="46" fill="#ffe600" stroke="#000000" stroke-width="2.5"/>
+        <text x="137" y="20" text-anchor="middle" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="900">ÚNICO CANDIDATO AO ST_INTERSECTS</text>
+        <text x="137" y="36" text-anchor="middle" fill="#000000" font-family="monospace" font-size="9">99.999% dos dados ignorados antes do disco</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Quote Bar (Multiline with clean padding) -->
+  <g transform="translate(40, 438)">
+    <rect x="4" y="4" width="720" height="62" fill="#000000"/>
+    <rect x="0" y="0" width="720" height="62" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+    
+    <text x="20" y="26" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="800">
+      Filtro em Dois Estágios: <tspan font-weight="400">o 1º estágio descarta 99.9% dos dados usando retângulos baratos.</tspan>
+    </text>
+    <text x="20" y="46" fill="#444444" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400">
+      O 2º estágio executa o cálculo exato de polígono apenas nos poucos sobreviventes.
+    </text>
+  </g>
+</svg>

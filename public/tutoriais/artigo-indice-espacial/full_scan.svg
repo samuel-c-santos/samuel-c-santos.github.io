@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <pattern id="gridScan" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#ebe5d8" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="#fdfaf3"/>
+  <rect width="800" height="520" fill="url(#gridScan)"/>
+
+  <!-- Top Banner / Sticker -->
+  <g transform="translate(40, 22)">
+    <rect x="4" y="4" width="230" height="32" fill="#000000"/>
+    <rect x="0" y="0" width="230" height="32" fill="#ff4d4d" stroke="#000000" stroke-width="2.5"/>
+    <text x="115" y="21" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, monospace" font-size="11.5" font-weight="900" letter-spacing="1">SEM ÍNDICE • FULL SCAN</text>
+
+    <text x="720" y="22" text-anchor="end" fill="#000000" font-family="monospace" font-size="13" font-weight="900">Complexidade: O(N)</text>
+  </g>
+
+  <!-- Title -->
+  <text x="40" y="82" fill="#000000" font-family="system-ui, -apple-system, 'Arial Black', Impact, sans-serif" font-size="22" font-weight="900" letter-spacing="-0.5">
+    Varredura Sequencial: O computador lê um por um
+  </text>
+
+  <!-- LEFT PANEL: A fila de registros no disco -->
+  <g transform="translate(40, 102)">
+    <!-- Shadow -->
+    <rect x="6" y="6" width="345" height="318" fill="#000000"/>
+    <!-- Box -->
+    <rect x="0" y="0" width="345" height="318" fill="#ffffff" stroke="#000000" stroke-width="3.5"/>
+    
+    <!-- Header -->
+    <rect x="0" y="0" width="345" height="36" fill="#000000"/>
+    <text x="16" y="23" fill="#ffffff" font-family="system-ui, -apple-system, monospace" font-size="11" font-weight="900">REGISTROS NO ARQUIVO .SHP / TABELA</text>
+
+    <!-- Row 1: Testado (Descartado) -->
+    <g transform="translate(15, 48)">
+      <rect x="0" y="0" width="315" height="32" fill="#fee2e2" stroke="#000000" stroke-width="1.8"/>
+      <text x="12" y="21" fill="#000000" font-family="monospace" font-size="11" font-weight="700">Linha 001: Polígono CAR A</text>
+      <rect x="275" y="6" width="30" height="20" fill="#ff4d4d" stroke="#000000" stroke-width="1.2"/>
+      <text x="290" y="20" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="900">✕</text>
+    </g>
+
+    <!-- Row 2: Testado (Descartado) -->
+    <g transform="translate(15, 88)">
+      <rect x="0" y="0" width="315" height="32" fill="#fee2e2" stroke="#000000" stroke-width="1.8"/>
+      <text x="12" y="21" fill="#000000" font-family="monospace" font-size="11" font-weight="700">Linha 002: Polígono CAR B</text>
+      <rect x="275" y="6" width="30" height="20" fill="#ff4d4d" stroke="#000000" stroke-width="1.2"/>
+      <text x="290" y="20" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="900">✕</text>
+    </g>
+
+    <!-- Row 3: Testado (Descartado) -->
+    <g transform="translate(15, 128)">
+      <rect x="0" y="0" width="315" height="32" fill="#fee2e2" stroke="#000000" stroke-width="1.8"/>
+      <text x="12" y="21" fill="#000000" font-family="monospace" font-size="11" font-weight="700">Linha 003: Polígono CAR C</text>
+      <rect x="275" y="6" width="30" height="20" fill="#ff4d4d" stroke="#000000" stroke-width="1.2"/>
+      <text x="290" y="20" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="900">✕</text>
+    </g>
+
+    <!-- Row 4: ATUALMENTE SENDO CALCULADO -->
+    <g transform="translate(15, 168)">
+      <rect x="3" y="3" width="315" height="38" fill="#000000"/>
+      <rect x="0" y="0" width="315" height="38" fill="#ffe600" stroke="#000000" stroke-width="2.5"/>
+      <text x="12" y="24" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="900">Linha 004: CALCULANDO VÉRTICES...</text>
+    </g>
+
+    <!-- Row 5: Fila -->
+    <g transform="translate(15, 216)">
+      <rect x="0" y="0" width="315" height="26" fill="#f4efe6" stroke="#000000" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <text x="12" y="17" fill="#666666" font-family="monospace" font-size="10.5">Linha 005: Aguardando fila...</text>
+    </g>
+
+    <!-- Footer da fila -->
+    <g transform="translate(15, 252)">
+      <rect x="2" y="2" width="315" height="48" fill="#000000"/>
+      <rect x="0" y="0" width="315" height="48" fill="#ff4d4d" stroke="#000000" stroke-width="2"/>
+      <text x="157" y="20" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="900">+4.999.995 linhas para inspecionar</text>
+      <text x="157" y="36" text-anchor="middle" fill="#fee2e2" font-family="monospace" font-size="9.5">O motor precisa puxar todas do disco</text>
+    </g>
+  </g>
+
+  <!-- RIGHT PANEL: O mapa do desperdício de cálculo -->
+  <g transform="translate(415, 102)">
+    <!-- Shadow -->
+    <rect x="6" y="6" width="345" height="318" fill="#000000"/>
+    <!-- Box -->
+    <rect x="0" y="0" width="345" height="318" fill="#ffffff" stroke="#000000" stroke-width="3.5"/>
+
+    <!-- Header -->
+    <rect x="0" y="0" width="345" height="36" fill="#000000"/>
+    <text x="16" y="23" fill="#ffffff" font-family="system-ui, -apple-system, monospace" font-size="11" font-weight="900">O DESPERDÍCIO NO TERRITÓRIO</text>
+
+    <!-- Map Canvas -->
+    <g transform="translate(15, 46)">
+      <rect x="0" y="0" width="315" height="175" fill="#f4efe6" stroke="#000000" stroke-width="2"/>
+      
+      <!-- Polígono 1 longe -->
+      <polygon points="30,30 75,20 60,65 25,55" fill="#fca5a5" stroke="#000000" stroke-width="1.8"/>
+      <text x="45" y="48" fill="#000000" font-family="monospace" font-size="9" font-weight="900">✕ 2.000km</text>
+
+      <!-- Polígono 2 longe -->
+      <polygon points="170,40 230,30 215,80 160,70" fill="#fca5a5" stroke="#000000" stroke-width="1.8"/>
+      <text x="190" y="58" fill="#000000" font-family="monospace" font-size="9" font-weight="900">✕ Desperdiçado</text>
+
+      <!-- Polígono 3 longe -->
+      <polygon points="210,105 270,95 285,145 235,155" fill="#fca5a5" stroke="#000000" stroke-width="1.8"/>
+      <text x="245" y="128" fill="#000000" font-family="monospace" font-size="9" font-weight="900">✕ Inútil</text>
+
+      <!-- Área de interesse do usuário -->
+      <rect x="65" y="90" width="95" height="65" fill="#ffe600" fill-opacity="0.4" stroke="#000000" stroke-width="2.5"/>
+      <rect x="75" y="100" width="75" height="24" fill="#ffe600" stroke="#000000" stroke-width="1.5"/>
+      <text x="112" y="116" text-anchor="middle" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="900">SUA CONSULTA</text>
+    </g>
+
+    <!-- Hardware impact sticker -->
+    <g transform="translate(15, 232)">
+      <rect x="2" y="2" width="315" height="68" fill="#000000"/>
+      <rect x="0" y="0" width="315" height="68" fill="#fee2e2" stroke="#000000" stroke-width="2"/>
+      <text x="14" y="20" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="900">SINTOMA CLÁSSICO DE TRAVAMENTO:</text>
+      <text x="14" y="38" fill="#b91c1c" font-family="monospace" font-size="10.5" font-weight="700">CPU a 100% • Gargalo de leitura no disco</text>
+      <text x="14" y="55" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="9.5">O programa calcula trigonometria em polígonos irrelevantes.</text>
+    </g>
+  </g>
+
+  <!-- Bottom Quote Bar (Multiline with clean padding) -->
+  <g transform="translate(40, 438)">
+    <rect x="4" y="4" width="720" height="62" fill="#000000"/>
+    <rect x="0" y="0" width="720" height="62" fill="#ffffff" stroke="#000000" stroke-width="3"/>
+    
+    <text x="20" y="26" fill="#000000" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="800">
+      A física do problema: <tspan font-weight="400">sem índice, a geometria é gravada na ordem de inserção.</tspan>
+    </text>
+    <text x="20" y="46" fill="#444444" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400">
+      O computador não tem intuição territorial e é forçado a testar tudo do início ao fim.
+    </text>
+  </g>
+</svg>
