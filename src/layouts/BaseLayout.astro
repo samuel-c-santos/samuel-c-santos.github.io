@@ -1,0 +1,44 @@
+---
+const { title = 'Samuel Santos', description = 'Portfólio e tutoriais de geotecnologias' } = Astro.props;
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Tipografia IBM Plex Sans (self-host) -->
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/fonts/IBMPlexSans-Variable/IBMPlexSans-VariableFont_wdth,wght.ttf">
+    <link rel="stylesheet" href="/fonts/ibm-plex-sans.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/fonts/fa-sprite.css">
+    <!-- Prevenção de FOUC de tema (Dark/Light) -->
+    <script is:inline>
+      (function () {
+        const savedTheme = localStorage.getItem('aipim-theme');
+        if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+    <slot name="head" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/tutoriais">Tutoriais</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>© 2026 Samuel Santos</p>
+    </footer>
+  </body>
+</html>
