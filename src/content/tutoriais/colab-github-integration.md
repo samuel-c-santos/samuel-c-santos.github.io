@@ -1,37 +1,90 @@
 ---
-title: "Google Colab + GitHub: Análises Reprodutíveis sem Configurar Ambiente"
-description: "Como usar o Google Colab como interface para compartilhabilidade e reprodutibilidade de análises geoespaciais, sem que o usuário precise configurar ambiente local. Estudo de caso: Cartografia de Queimadas em UCs do Pará."
-tags: ["Google Colab", "GitHub", "Reprodutibilidade", "Python", "Geoprocessamento"]
+title: "Google Colab como Front-end: Rodando Repositórios GitHub na Nuvem"
+description: "Guia prático de como usar o Google Colab como interface para executar scripts e notebooks hospedados no GitHub, preparando o ambiente automaticamente, interagindo com o código e entregando resultados — sem configuração local."
+tags: ["Google Colab", "GitHub", "Python", "Reprodutibilidade", "Automação"]
 level: "Iniciante"
 thumbnail: "/tutoriais/colab-github-integration/thumbnail.png"
 ---
 
-# Google Colab + GitHub: Análises Reprodutíveis sem Configurar Ambiente
+# Google Colab como Front-end: Rodando Repositórios GitHub na Nuvem
 
 ## O problema
 
 Análises geoespaciais costumam exigir instalação de bibliotecas (GDAL, GeoPandas, Rasterio, Earth Engine), configuração de credenciais e ambientes virtuais. Para um usuário não avançado, isso é uma barreira enorme. O resultado: análises que não são reproduzidas, dependência de um único técnico e perda de conhecimento.
 
-## A solução: Colab + GitHub
+## A solução
 
-O **Google Colab** é um ambiente Jupyter na nuvem, gratuito, com bibliotecas geoespaciais pré-instaladas e acesso a GPU/TPU. O **GitHub** hospeda o código. A integração entre os dois permite:
+Usar o **Google Colab** como **front-end** para um repositório do **GitHub**: o usuário abre o notebook no Colab, o ambiente é preparado automaticamente (clone do repo + instalação de dependências), e ele interage com os scripts por formulários ou células, recebendo os resultados (mapas, tabelas, relatórios) sem precisar configurar nada localmente.
 
-- **Zero instalação local:** o usuário só precisa de um navegador.
-- **Reprodutibilidade:** qualquer pessoa pode abrir o notebook e rodar a mesma análise.
-- **Compartilhabilidade:** link direto "Open in Colab" no README do repositório.
-- **Versionamento:** o código vive no GitHub, com histórico e colaboração.
+## Fluxo completo
 
-## Fluxo de trabalho
+### 1. Clonar o repositório no Colab
 
-1. **Desenvolva** o notebook localmente (ou no Colab).
-2. **Salve** o `.ipynb` no repositório GitHub.
-3. **Adicione** o badge "Open in Colab" no README:
-   ```markdown
-   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SEU_USUARIO/SEU_REPO/blob/main/notebook.ipynb)
-   ```
-4. **O usuário final** clica no badge, o notebook abre no Colab, e executa as células.
+A primeira célula do notebook clona o repo e entra na pasta:
 
-## Estudo de caso: Cartografia de Queimadas em UCs do Pará
+```python
+!git clone https://github.com/SEU_USUARIO/SEU_REPO.git
+%cd SEU_REPO
+```
+
+### 2. Preparar o ambiente automaticamente
+
+Instale as dependências declaradas no `requirements.txt` do repo:
+
+```python
+!pip install -q -r requirements.txt
+```
+
+Se o repo usa pacotes do sistema (GDAL, etc.), instale via apt:
+
+```python
+!apt-get install -y -q gdal-bin libgdal-dev
+```
+
+### 3. Montar o Google Drive (para salvar resultados)
+
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+```
+
+Isso permite salvar outputs (GeoTIFF, PDF, Excel) diretamente no Drive do usuário.
+
+### 4. Interagir com os scripts
+
+O notebook pode expor formulários nativos do Colab (`#@param`) para o usuário escolher parâmetros (área, período, sensor) sem tocar no código:
+
+```python
+#@title Parâmetros da análise
+area = "Belém" #@param {type:"string"}
+periodo = "2024" #@param {type:"string"}
+sensor = "Sentinel-2" #@param ["Sentinel-2", "Landsat", "CBERS-4A"]
+```
+
+Ou usar `ipywidgets` para dropdowns, sliders e botões.
+
+### 5. Executar os scripts do repositório
+
+Importe e execute os módulos do repo clonado:
+
+```python
+import sys
+sys.path.insert(0, '/content/SEU_REPO/src')
+from sensors import download_sentinel
+from exporter import export_geotiff
+
+resultado = download_sentinel(area, periodo, sensor)
+export_geotiff(resultado, '/content/drive/MyDrive/outputs/')
+```
+
+### 6. Entregar os resultados
+
+- **Download direto:** `files.download('resultado.tif')`
+- **Salvar no Drive:** já montado na etapa 3.
+- **Visualização no notebook:** `IPython.display.Image`, `folium`, `geemap`.
+- **Relatório PDF:** gerar e disponibilizar para download.
+
+## Exemplo real: Cartografia de Queimadas em UCs do Pará
 
 O projeto [cartografia-queimadas-ucs-pa](https://github.com/NGEO-IDEFLOR-Bio/cartografia-queimadas-ucs-pa) usa exatamente esse padrão:
 
@@ -54,13 +107,16 @@ O projeto [cartografia-queimadas-ucs-pa](https://github.com/NGEO-IDEFLOR-Bio/car
 3. **Documente cada célula** com markdown explicativo.
 4. **Teste o notebook do zero** (Runtime → Restart and run all) antes de compartilhar.
 5. **Versione no GitHub** para rastreabilidade.
+6. **Use `requirements.txt`** para declarar dependências.
+7. **Monte o Drive** para persistir resultados.
 
 ## Conclusão
 
-A combinação Colab + GitHub é uma das formas mais eficazes de democratizar análises geoespaciais. Usuários não avançados conseguem rodar análises complexas sem configurar nada, e a reprodutibilidade é garantida. O projeto de Cartografia de Queimadas em UCs do Pará é um exemplo real de sucesso dessa abordagem.
+A combinação Colab + GitHub, com o Colab atuando como front-end, é uma das formas mais eficazes de democratizar análises geoespaciais. Usuários não avançados conseguem rodar análises complexas sem configurar nada, e a reprodutibilidade é garantida. O projeto de Cartografia de Queimadas em UCs do Pará é um exemplo real de sucesso dessa abordagem.
 
 ## Referências
 
 - Google Colab: https://colab.research.google.com
 - Projeto cartografia-queimadas-ucs-pa: https://github.com/NGEO-IDEFLOR-Bio/cartografia-queimadas-ucs-pa
 - Badge "Open in Colab": https://colab.research.google.com/github
+- NGEO Satellite Downloader: https://github.com/NGEO-IDEFLOR-Bio/ngeo_satellite_downloader
