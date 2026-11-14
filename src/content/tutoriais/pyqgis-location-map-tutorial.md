@@ -15,7 +15,9 @@ Aprenda a criar mapas de localização padronizados automaticamente usando Pytho
 
 Assista a uma demonstração completa do processo de automação:
 
-[![Demonstração: Automação de Mapas no QGIS](https://img.youtube.com/vi/mlcSLiDJbI4/0.jpg)](https://www.youtube.com/watch?v=mlcSLiDJbI4)
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 8px; margin: 1.5rem 0;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/mlcSLiDJbI4" title="Demonstração: Automação de Mapas no QGIS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ## Introdução
 
