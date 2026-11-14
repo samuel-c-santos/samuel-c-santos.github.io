@@ -27,7 +27,7 @@ const { title = 'Samuel Santos', description = 'Portfólio e tutoriais de geotec
   </head>
   <body>    <nav class="main-nav" aria-label="Navegação Principal">
     <div class="nav-container">
-      <a href="#top" class="logo-link" aria-label="Samuel Santos - Início">
+      <a href="/#top" class="logo-link" aria-label="Samuel Santos - Início">
         <span class="aipim-symbol-tile" aria-hidden="true" title="Geotecnologias &amp; Análise Espacial">
           <svg width="32" height="32" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -47,10 +47,10 @@ const { title = 'Samuel Santos', description = 'Portfólio e tutoriais de geotec
       </button>
 
       <div class="nav-links">
-        <a href="#experiencias" class="nav-link">Experiência</a>
-        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="/#experiencias" class="nav-link">Experiência</a>
+        <a href="/#projetos" class="nav-link">Projetos</a>
         <a href="https://samuelsantos.site/tutoriais" class="nav-link">Tutoriais</a>
-        <a href="#certificacoes" class="nav-link">Certificações</a>
+        <a href="/#certificacoes" class="nav-link">Certificações</a>
         
         <div class="social-links-nav">
           <a href="https://github.com/samuel-c-santos" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Perfil no GitHub">
@@ -72,7 +72,7 @@ const { title = 'Samuel Santos', description = 'Portfólio e tutoriais de geotec
           </button>
         </div>
 
-        <a href="#contato" class="aipim-button aipim-button--sm">Entrar em Contato</a>
+        <a href="/#contato" class="aipim-button aipim-button--sm">Entrar em Contato</a>
       </div>
     </div>
   </nav>
@@ -114,5 +114,76 @@ const { title = 'Samuel Santos', description = 'Portfólio e tutoriais de geotec
           setTheme(currentTheme === 'dark' ? 'light' : 'dark');
         });
       }
-    </script>  </body>
+    </script>  
+    <script is:inline>
+// --- SCRIPT DO MENU MOBILE (com focus trap + ESC) ---
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const icon = mobileBtn.querySelector('i');
+    let lastFocusedElement = null;
+
+    function openMenu() {
+      navLinks.classList.add('active');
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+      mobileBtn.setAttribute('aria-expanded', 'true');
+      lastFocusedElement = document.activeElement;
+      // Focus trap: focus first focusable element
+      const focusable = navLinks.querySelectorAll('a, button');
+      if (focusable.length) focusable[0].focus();
+    }
+
+    function closeMenu() {
+      navLinks.classList.remove('active');
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+      mobileBtn.setAttribute('aria-expanded', 'false');
+      if (lastFocusedElement) lastFocusedElement.focus();
+    }
+
+    mobileBtn.addEventListener('click', () => {
+      if (navLinks.classList.contains('active')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    // Focus trap: Tab cycles within menu
+    navLinks.addEventListener('keydown', (e) => {
+      if (!navLinks.classList.contains('active')) return;
+      const focusable = navLinks.querySelectorAll('a, button');
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.key === 'Tab') {
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+      if (e.key === 'Escape') {
+        closeMenu();
+      }
+    });
+
+    // Fecha o menu automaticamente ao clicar em um link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close on click outside
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('active') && 
+          !navLinks.contains(e.target) && 
+          !mobileBtn.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    
+    </script>
+  </body>
 </html>
