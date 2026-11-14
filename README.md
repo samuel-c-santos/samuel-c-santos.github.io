@@ -1,43 +1,63 @@
-# Astro Starter Kit: Minimal
+# Portfólio Profissional - Samuel Santos
 
-```sh
-npm create astro@latest -- --template minimal
+Portfólio profissional + tutoriais de geotecnologias, desenvolvido com Astro e publicado via GitHub Pages.
+
+Site: https://samuelsantos.site
+
+## Estrutura do Projeto
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
-├── public/
+├── public/              # Assets estáticos (imagens, fontes, CSS)
+│   ├── fonts/           # IBM Plex Sans + sprite Font Awesome
+│   ├── images/          # Imagens otimizadas (WebP/AVIF)
+│   ├── files/           # Originais de fallback
+│   ├── styles/          # style.css (tokens Aipim)
+│   └── tutoriais/       # Imagens dos tutoriais
 ├── src/
+│   ├── content/
+│   │   └── tutoriais/   # Tutoriais em Markdown
+│   ├── layouts/
+│   │   └── BaseLayout.astro
 │   └── pages/
-│       └── index.astro
-└── package.json
+│       ├── index.astro  # Home (portfólio)
+│       └── tutoriais/
+│           ├── index.astro      # Listagem
+│           └── [slug].astro     # Detalhe
+├── astro.config.mjs
+├── package.json
+└── ROADMAP.md
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Comandos
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Todos os comandos são executados na raiz do projeto, em um terminal:
 
-Any static assets, like images, can be placed in the `public/` directory.
+| Comando | Ação |
+|---|---|
+| `npm install` | Instala as dependências |
+| `npm run dev` | Inicia o servidor local em localhost:4321 |
+| `npm run build` | Gera o site de produção em ./dist/ |
+| `npm run preview` | Pré-visualiza o build localmente |
+| `npm run astro -- --help` | Ajuda da CLI do Astro |
 
-## 🧞 Commands
+## Deploy
 
-All commands are run from the root of the project, from a terminal:
+O deploy é feito via GitHub Actions (`.github/workflows/deploy.yml`), publicando no GitHub Pages com domínio customizado `samuelsantos.site`.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Tutoriais
 
-## 👀 Want to learn more?
+Os tutoriais são gerenciados via Content Collections do Astro. Cada tutorial é um arquivo `.md` em `src/content/tutoriais/` com frontmatter (title, description, date, tags, level, thumbnail).
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Para adicionar um novo tutorial:
+1. Crie um arquivo `.md` em `src/content/tutoriais/`.
+2. Adicione o frontmatter com os campos obrigatórios.
+3. Coloque as imagens em `public/tutoriais/<slug>/`.
+4. O build gera automaticamente a rota `/tutoriais/<slug>`.
+
+## Contato
+
+- Email: samuelsantosambiental@gmail.com
+- LinkedIn: https://www.linkedin.com/in/samuelsantos-amb/
+- GitHub: https://github.com/samuel-c-santos
+- Site: https://samuelsantos.site
