@@ -13,7 +13,7 @@ const allTags = [...new Set(sorted.flatMap((t) => t.data.tags || []))];
 const allLevels = [...new Set(sorted.map((t) => t.data.level).filter(Boolean))];
 ---
 <BaseLayout title="Tutoriais | Samuel Santos" description="Tutoriais técnicos de geotecnologias, QGIS, Python, Google Earth Engine e análise de dados.">
-  <section class="tutoriais-section scroll-reveal">
+  <section class="tutoriais-section">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">Aprenda fazendo</p>
@@ -49,7 +49,7 @@ const allLevels = [...new Set(sorted.map((t) => t.data.level).filter(Boolean))];
       <div class="tutorials-grid" id="tutorials-grid">
         {sorted.map((t) => (
           <article
-            class="tutorial-card scroll-reveal-item"
+            class="tutorial-card"
             data-title={t.data.title.toLowerCase()}
             data-description={(t.data.description || '').toLowerCase()}
             data-tags={(t.data.tags || []).join(',')}
