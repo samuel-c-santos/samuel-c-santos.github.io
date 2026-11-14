@@ -59,11 +59,13 @@ const { Content, headings } = await render(entry);
   </article>
 
   <style>
-    .page-header { padding: 3rem 0 2rem; background-color: var(--aipim-bg-canvas); border-bottom: 1px solid var(--aipim-border-subtle); text-align: center; }
-    .page-header--detail .page-title { font-size: 2rem; }
-    .page-eyebrow { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; opacity: 0.6; margin-bottom: 0.5rem; }
-    .page-title { font-size: 2.5rem; margin: 0 0 0.75rem; font-weight: 700; }
-    .page-subtitle { opacity: 0.75; max-width: 640px; margin: 0 auto 1rem; font-size: 1.05rem; line-height: 1.5; }
+    .page-header { padding: 4rem 0 3rem; background: linear-gradient(180deg, var(--aipim-bg-surface) 0%, var(--aipim-bg-canvas) 100%); text-align: center; position: relative; }
+    .page-header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, var(--aipim-color-primary-100, #e4f0ff) 0%, transparent 60%); opacity: 0.4; pointer-events: none; }
+    .page-header .container { position: relative; z-index: 1; }
+    .page-header--detail .page-title { font-size: 2.25rem; }
+    .page-eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.16em; opacity: 0.55; margin-bottom: 0.75rem; font-weight: 600; }
+    .page-title { font-size: 3rem; margin: 0 0 1rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+    .page-subtitle { opacity: 0.7; max-width: 640px; margin: 0 auto 1rem; font-size: 1.05rem; line-height: 1.6; }
     .detail-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; justify-content: center; margin: 1rem 0; }
     .badge { font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 999px; }
     .badge-level { background: var(--aipim-action-primary-bg, #2563eb); color: #fff; }
