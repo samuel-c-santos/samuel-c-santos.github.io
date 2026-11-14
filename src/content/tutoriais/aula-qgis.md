@@ -3,6 +3,7 @@ title: "Fundamentos de Cartografia e Geoprocessamento para QGIS"
 description: "Conceitos essenciais de Sistemas de Informação Geográfica, cartografia e geoprocessamento aplicados ao QGIS."
 tags: ["QGIS", "Cartografia", "GIS", "Geoprocessamento"]
 level: "Iniciante"
+thumbnail: "/tutoriais/aula-qgis/thumbnail.png"
 ---
 
 ## O que é um Sistema de Informação Geográfica (SIG/GIS)

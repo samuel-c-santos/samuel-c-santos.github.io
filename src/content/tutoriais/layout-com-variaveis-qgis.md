@@ -3,6 +3,7 @@ title: "Automação de Layout no QGIS com PyQGIS"
 description: "Automatize a criação de layouts cartográficos dinâmicos no QGIS usando variáveis calculadas em Python (PyQGIS)."
 tags: ["QGIS", "PyQGIS", "Python", "Layout", "Cartografia"]
 level: "Intermediário"
+thumbnail: "/tutoriais/layout-com-variaveis-qgis/thumbnail.png"
 ---
 
 ## Problema
