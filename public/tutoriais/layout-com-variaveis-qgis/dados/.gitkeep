@@ -1,0 +1,19 @@
+# Esta pasta contém os dados e arquivos de exemplo do tutorial
+
+Adicione aqui:
+- Arquivos CSV, JSON, XML, etc.
+- Scripts de exemplo (.py, .js, etc.)
+- Arquivos de configuração
+- Dados geoespaciais (shapefiles, GeoJSON, etc.)
+
+## Estrutura sugerida:
+```
+dados/
+├── exemplos/
+│   ├── arquivo-exemplo-1.csv
+│   └── arquivo-exemplo-2.json
+├── scripts/
+│   └── script-principal.py
+└── config/
+    └── configuracao.yaml
+```

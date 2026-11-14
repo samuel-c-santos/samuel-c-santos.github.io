@@ -40,7 +40,7 @@ O primeiro passo é converter o raster MapBiomas para formato vetorial. Isso per
 Embora o formato raster seja ideal para álgebra de mapas, a vetorização torna-se necessária para operações de superposição complexas, como o cruzamento com o CAR (Cadastro Ambiental Rural) ou recortes por limites administrativos. O ponto crítico nesta etapa é garantir que a conversão mantenha o **Code ID** original do pixel na tabela de atributos da nova geometria.
 
 **No QGIS:**
-1. Carregue seu raster MapBiomas (`mapbiomas-brazil-collection-100-braganca-2024.tif`) — [baixe o arquivo deste tutorial](https://github.com/samuel-c-santos/tutorial-pyqgis-mapbiomas/raw/main/tif/mapbiomas-brazil-collection-100-braganca-2024.tif)
+1. Carregue seu raster MapBiomas (`mapbiomas-brazil-collection-100-braganca-2024.tif`) — [baixe o arquivo deste tutorial](/tutoriais/pyqgis-style-mapbiomas/tif/mapbiomas-brazil-collection-100-braganca-2024.tif)
 2. Acesse: **Raster → Conversão → Poligonizar (Raster para Vetor)**
 
 ![Menu de poligonização no QGIS](/tutoriais/pyqgis-style-mapbiomas/img/1.raster-poligonizar.png)
@@ -80,7 +80,7 @@ Aplique o filtro e exporte apenas as feições filtradas para uma nova camada te
 Agora vamos enriquecer nossos dados conectando o campo `DN` com a legenda oficial do MapBiomas.
 
 **Preparar a legenda:**
-1. Utilize o arquivo [Legenda-Colecao-10-Legend-Code.csv](https://github.com/samuel-c-santos/tutorial-pyqgis-mapbiomas/raw/main/Legenda-Colecao-10-Legend-Code.csv) ([versão PDF oficial](https://github.com/samuel-c-santos/tutorial-pyqgis-mapbiomas/raw/main/Legenda-Colecao-10-Legend-Code.pdf)). Este CSV é uma extração do PDF oficial da legenda da Coleção 10 do MapBiomas.
+1. Utilize o arquivo [Legenda-Colecao-10-Legend-Code.csv](/tutoriais/pyqgis-style-mapbiomas/Legenda-Colecao-10-Legend-Code.csv) ([versão PDF oficial](/tutoriais/pyqgis-style-mapbiomas/Legenda-Colecao-10-Legend-Code.pdf)). Este CSV é uma extração do PDF oficial da legenda da Coleção 10 do MapBiomas.
 2. Adicione o CSV ao QGIS como camada
 
 **Configurar o Join:**
@@ -127,7 +127,7 @@ Vamos usar o console Python do QGIS para aplicar a simbologia em todas as camada
 ![Mostrando editor Python](/tutoriais/pyqgis-style-mapbiomas/img/10.mostrar-editor.png)
 
 **Carregar o Script:**
-1. Baixe o script: [Download script_simbologia_pyqgis.py](https://github.com/samuel-c-santos/tutorial-pyqgis-mapbiomas/raw/main/script_simbologia_pyqgis.py)
+1. Baixe o script: [Download script_simbologia_pyqgis.py](/tutoriais/pyqgis-style-mapbiomas/script_simbologia_pyqgis.py)
 2. No editor, clique em **"Abrir Script"** e selecione o arquivo baixado
 
 ![Abrindo o script](/tutoriais/pyqgis-style-mapbiomas/img/11.abrir-script.png)

@@ -70,7 +70,7 @@ Na barra de ferramentas do editor, clique no ícone da **Pasta (Abrir Script)**.
 
 ### Selecionar o Arquivo do Script
 
-Navegue até a pasta onde você salvou os arquivos (Passo 1), selecione o arquivo do script principal ([Setup_Mapas_Municipais.py](https://github.com/samuel-c-santos/pyqgis-location-map-tutorial/blob/main/Setup_Mapas_Municipais.py)) e clique em Abrir.
+Navegue até a pasta onde você salvou os arquivos (Passo 1), selecione o arquivo do script principal ([Setup_Mapas_Municipais.py](/tutoriais/pyqgis-location-map-tutorial/Setup_Mapas_Municipais.py)) e clique em Abrir.
 
 ![Selecionando o script de configuração](/tutoriais/pyqgis-location-map-tutorial/img/5.navegue_ate_o_arquivo_de_configuracao.png)
 
