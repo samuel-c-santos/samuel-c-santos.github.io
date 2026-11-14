@@ -32,4 +32,4 @@ O computador não trava porque o arquivo é grande. Ele trava porque foi instru�
 
 ## A simplificação geométrica
 
-> Continue no repositório original para o conteúdo completo.
+> Continue no repositório original para o conteúdo completo: https://github.com/samuel-c-santos/artigo-indice-espacial
