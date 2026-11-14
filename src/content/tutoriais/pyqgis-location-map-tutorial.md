@@ -168,7 +168,7 @@ Finalize seu trabalho clicando nos ícones da barra superior para **Exportar com
 
 ## Download dos Arquivos
 
-Acesse o repositório no GitHub com todos os scripts, dados de exemplo e templates necessários: [Ver no GitHub](https://github.com/samuel-c-santos/pyqgis-location-map-tutorial).
+Os arquivos do tutorial (script Python, template de layout e imagens) estao disponiveis na pasta local do tutorial. O pacote completo de dados (shapefiles) pode ser baixado do Google Drive (link acima).
 
 ## Conclusão
 

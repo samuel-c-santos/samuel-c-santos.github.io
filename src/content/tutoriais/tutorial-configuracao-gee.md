@@ -249,7 +249,7 @@ Map.addLayer(outline, { palette: 'red' }, 'Estado do Pará (Contorno)');
 
 ## Download dos Arquivos
 
-Acesse o repositório no GitHub para baixar o script JavaScript completo e shapefiles de exemplo para praticar: [Ver no GitHub](https://github.com/samuel-c-santos/tutorial-gee-primeiros-passos).
+Os arquivos do tutorial (imagens e exemplos) estao disponiveis na pasta local do tutorial.
 
 ## Conclusão
 

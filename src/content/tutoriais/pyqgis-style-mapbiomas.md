@@ -201,7 +201,7 @@ Agora que você domina essa técnica, pode explorar variações como:
 
 ## Download dos Arquivos
 
-Acesse o repositório no GitHub para baixar o script, dados de exemplo e a legenda oficial: [Ver no GitHub](https://github.com/samuel-c-santos/tutorial-pyqgis-mapbiomas).
+Os arquivos do tutorial (script Python, legenda CSV/PDF, shapefiles e imagens) estao disponiveis na pasta local do tutorial.
 
 ## Conclusão
 
