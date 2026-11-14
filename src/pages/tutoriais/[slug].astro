@@ -14,27 +14,29 @@ const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 ---
 <BaseLayout title={`${entry.data.title} | Samuel Santos`} description={entry.data.description}>
+  <header class="page-header page-header--detail">
+    <div class="container">
+      <p class="page-eyebrow">{entry.data.level || 'Tutorial'}</p>
+      <h1 class="page-title">{entry.data.title}</h1>
+      <p class="page-subtitle">{entry.data.description}</p>
+      <div class="detail-meta">
+        {(entry.data.tags || []).map((tag) => (
+          <span class="badge badge-tag">{tag}</span>
+        ))}
+        {entry.data.date && (
+          <time datetime={entry.data.date.toISOString()}>
+            {entry.data.date.toLocaleDateString('pt-BR')}
+          </time>
+        )}
+      </div>
+      {entry.data.thumbnail && (
+        <img src={entry.data.thumbnail} alt={entry.data.title} class="detail-thumb" />
+      )}
+    </div>
+  </header>
+
   <article class="tutorial-detail">
     <div class="container">
-      <header class="detail-header">
-        <h1>{entry.data.title}</h1>
-        <p class="detail-desc">{entry.data.description}</p>
-        <div class="detail-meta">
-          {entry.data.level && <span class="badge badge-level">{entry.data.level}</span>}
-          {(entry.data.tags || []).map((tag) => (
-            <span class="badge badge-tag">{tag}</span>
-          ))}
-          {entry.data.date && (
-            <time datetime={entry.data.date.toISOString()}>
-              {entry.data.date.toLocaleDateString('pt-BR')}
-            </time>
-          )}
-        </div>
-        {entry.data.thumbnail && (
-          <img src={entry.data.thumbnail} alt={entry.data.title} class="detail-thumb" />
-        )}
-      </header>
-
       {headings && headings.length > 0 && (
         <nav class="toc">
           <h2>Índice</h2>
@@ -57,15 +59,18 @@ const { Content, headings } = await render(entry);
   </article>
 
   <style>
-    .tutorial-detail { padding: 2rem 0; }
-    .container { max-width: 800px; margin: 0 auto; padding: 0 1rem; }
-    .detail-header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-    .detail-desc { opacity: 0.8; font-size: 1.05rem; }
-    .detail-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 1rem 0; }
+    .page-header { padding: 3rem 0 2rem; background-color: var(--aipim-bg-canvas); border-bottom: 1px solid var(--aipim-border-subtle); text-align: center; }
+    .page-header--detail .page-title { font-size: 2rem; }
+    .page-eyebrow { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; opacity: 0.6; margin-bottom: 0.5rem; }
+    .page-title { font-size: 2.5rem; margin: 0 0 0.75rem; font-weight: 700; }
+    .page-subtitle { opacity: 0.75; max-width: 640px; margin: 0 auto 1rem; font-size: 1.05rem; line-height: 1.5; }
+    .detail-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; justify-content: center; margin: 1rem 0; }
     .badge { font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 999px; }
     .badge-level { background: var(--aipim-action-primary-bg, #2563eb); color: #fff; }
     .badge-tag { background: var(--aipim-surface-alt, #f3f4f6); }
-    .detail-thumb { width: 100%; border-radius: 12px; margin: 1rem 0; }
+    .detail-thumb { width: 100%; max-width: 720px; border-radius: 12px; margin: 1.5rem auto 0; display: block; }
+    .tutorial-detail { padding: 2rem 0 3rem; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 1rem; }
     .toc { border: 1px solid var(--aipim-border, #e5e7eb); border-radius: 12px; padding: 1rem 1.25rem; margin: 1.5rem 0; background: var(--aipim-surface, #fff); }
     .toc h2 { font-size: 1rem; margin: 0 0 0.5rem; }
     .toc ul { list-style: none; padding: 0; margin: 0; }

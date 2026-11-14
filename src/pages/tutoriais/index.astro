@@ -13,14 +13,16 @@ const allTags = [...new Set(sorted.flatMap((t) => t.data.tags || []))];
 const allLevels = [...new Set(sorted.map((t) => t.data.level).filter(Boolean))];
 ---
 <BaseLayout title="Tutoriais | Samuel Santos" description="Tutoriais técnicos de geotecnologias, QGIS, Python, Google Earth Engine e análise de dados.">
+  <header class="page-header">
+    <div class="container">
+      <p class="page-eyebrow">Aprenda fazendo</p>
+      <h1 class="page-title">Tutoriais</h1>
+      <p class="page-subtitle">Tutoriais técnicos de geotecnologias, QGIS, Python, Google Earth Engine e análise de dados.</p>
+    </div>
+  </header>
+
   <section class="tutoriais-section">
     <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Aprenda fazendo</p>
-        <h1 class="section-title">Tutoriais</h1>
-        <p class="section-subtitle">Tutoriais técnicos de geotecnologias, QGIS, Python, Google Earth Engine e análise de dados.</p>
-      </div>
-
       <div class="filters-bar">
         <input type="search" id="search-input" placeholder="Buscar tutoriais..." class="search-input aipim-input" />
         <div class="filter-group">
@@ -150,12 +152,12 @@ const allLevels = [...new Set(sorted.map((t) => t.data.level).filter(Boolean))];
   </script>
 
   <style>
-    .tutoriais-section { padding: 3rem 0 2rem; }
+    .page-header { padding: 3rem 0 2rem; background-color: var(--aipim-bg-canvas); border-bottom: 1px solid var(--aipim-border-subtle); text-align: center; }
+    .page-eyebrow { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; opacity: 0.6; margin-bottom: 0.5rem; }
+    .page-title { font-size: 2.5rem; margin: 0 0 0.75rem; font-weight: 700; }
+    .page-subtitle { opacity: 0.75; max-width: 640px; margin: 0 auto; font-size: 1.05rem; line-height: 1.5; }
+    .tutoriais-section { padding: 2rem 0 3rem; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-    .section-header { margin-bottom: 1.5rem; text-align: center; margin-block-start: 1rem; }
-    .section-eyebrow { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.7; }
-    .section-title { font-size: 2rem; margin: 0.25rem 0; text-align: center; }
-    .section-subtitle { opacity: 0.75; max-width: 640px; margin: 0 auto; }
     .filters-bar { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-bottom: 1.5rem; padding: 1rem; border: 1px solid var(--aipim-border, #e5e7eb); border-radius: 12px; background: var(--aipim-surface, #fff); }
     .search-input { flex: 1 1 240px; padding: 0.5rem 0.75rem; border: 1px solid var(--aipim-border, #ccc); border-radius: 8px; background: var(--aipim-bg, #fff); color: inherit; }
     .filter-group, .sort-group { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
