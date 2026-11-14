@@ -215,6 +215,7 @@
             <div class="exp-card-number"><span class="aipim-badge aipim-badge--filled" aria-hidden="true">1</span></div>
             <div class="exp-card-content">
               <span class="exp-card-period">mar de 2025 - o momento</span>
+              <span class="badge badge-current">Atual</span>
               <h3 class="exp-card-title">Coordenador de Geotecnologias</h3>
               <p class="exp-card-company">Instituto de Desenvolvimento Florestal e da Biodiversidade do Estado do Pará – IDEFLOR-Bio</p>
               <p class="exp-card-description">Desenvolvimento de soluções inovadoras em análise, interpretação e visualização de dados espaciais para a gestão estratégica de Unidades de Conservação.</p>
@@ -1285,6 +1286,7 @@
       <div class="container">
         <div class="section-header"><p class="section-eyebrow">Credenciais &amp; Especializações</p><h2 class="section-title">Certificações</h2></div>
         <div class="certifications-grid">
+          <h3 class="cert-group-title">IBM</h3>
           <a href="https://www.coursera.org/account/accomplishments/professional-cert/S77137BIW3BB" target="_blank"
             class="cert-card scroll-reveal-item">
             <picture>
@@ -1295,6 +1297,7 @@
             <h3>IBM Data Science</h3>
             <p>Professional Certificate</p>
           </a>
+          <h3 class="cert-group-title">Google</h3>
           <a href="https://www.coursera.org/account/accomplishments/professional-cert/6O9UOEAOR8SC" target="_blank"
             class="cert-card scroll-reveal-item">
             <picture>
@@ -1514,6 +1517,16 @@
       <p class="footer-attribution">Identidade visual e padrões de design construídos sob as diretrizes do <a href="https://github.com/talis-galhardi/aipim" target="_blank" rel="noopener noreferrer">Aipim Design System</a>.</p>
     </div>
   </footer>
+
+  <style>
+    .badge-current { background: var(--aipim-color-secondary-600, #029957); color: #fff; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 999px; margin-left: 0.5rem; vertical-align: middle; }
+    .cert-group-title { grid-column: 1 / -1; font-size: 1.1rem; margin: 1rem 0 0.25rem; opacity: 0.8; }
+    .cert-card img { width: 96px; height: 96px; object-fit: contain; }
+    @media (max-width: 768px) {
+      .drawer-wrapper { display: flex; flex-direction: column; gap: 1rem; }
+      .drawer-exp-card { transform: none !important; filter: none !important; position: relative !important; }
+    }
+  </style>
 
   <script>
     
