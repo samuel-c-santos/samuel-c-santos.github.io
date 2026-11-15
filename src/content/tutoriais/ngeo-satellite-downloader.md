@@ -3,7 +3,7 @@ title: "NGEO Satellite Downloader: Download Automatizado de Imagens de Satélite
 description: "Ambiente operacional no Google Colab para aquisição automatizada de imagens Sentinel-2, Landsat, CBERS-4A e SPOT sobre limites territoriais, com máscaras de nuvens, composição por mediana e exportação em GeoTIFF."
 tags: ["Google Earth Engine", "Sentinel-2", "Landsat", "CBERS-4A", "Python", "Colab"]
 level: "Intermediário"
-thumbnail: "/tutoriais/ngeo-satellite-downloader/thumbnail.png"
+thumbnail: "/tutoriais/ngeo-satellite-downloader/thumbnail.jpg"
 ---
 
 # NGEO Satellite Downloader

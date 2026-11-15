@@ -1,5 +1,11 @@
 ---
-const { title = 'Samuel Santos', description = 'Portfólio e tutoriais de geotecnologias' } = Astro.props;
+const {
+  title = 'Samuel Santos',
+  description = 'Portfólio e tutoriais de geotecnologias',
+  image = '/images/samuel-santos-og.jpg',
+} = Astro.props;
+const siteUrl = 'https://samuelsantos.site';
+const ogImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
 ---
 <!doctype html>
 <html lang="pt-BR">
@@ -8,6 +14,14 @@ const { title = 'Samuel Santos', description = 'Portfólio e tutoriais de geotec
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preload" as="font" type="font/ttf" crossorigin href="/fonts/IBMPlexSans-Variable/IBMPlexSans-VariableFont_wdth,wght.ttf">
     <link rel="stylesheet" href="/fonts/ibm-plex-sans.css">

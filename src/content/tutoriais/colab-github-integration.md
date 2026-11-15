@@ -3,7 +3,7 @@ title: "Google Colab como Front-end: Rodando Repositórios GitHub na Nuvem"
 description: "Guia prático de como usar o Google Colab como interface para executar scripts e notebooks hospedados no GitHub, preparando o ambiente automaticamente, interagindo com o código e entregando resultados — sem configuração local."
 tags: ["Google Colab", "GitHub", "Python", "Reprodutibilidade", "Automação"]
 level: "Iniciante"
-thumbnail: "/tutoriais/colab-github-integration/thumbnail.png"
+thumbnail: "/tutoriais/colab-github-integration/thumbnail.jpg"
 ---
 
 # Google Colab como Front-end: Rodando Repositórios GitHub na Nuvem

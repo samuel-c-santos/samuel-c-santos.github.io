@@ -9,7 +9,16 @@ const sorted = tutoriais.sort((a, b) => {
   return db - da;
 });
 
-const allTags = [...new Set(sorted.flatMap((t) => t.data.tags || []))];
+const tagCounts = new Map<string, number>();
+for (const t of sorted) {
+  for (const tag of t.data.tags || []) {
+    tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+  }
+}
+const topTags = [...tagCounts.entries()]
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  .slice(0, 6)
+  .map(([tag]) => tag);
 const allLevels = [...new Set(sorted.map((t) => t.data.level).filter(Boolean))];
 ---
 <BaseLayout title="Tutoriais | Samuel Santos" description="Tutoriais técnicos de geotecnologias, QGIS, Python, Google Earth Engine e análise de dados.">
@@ -32,10 +41,10 @@ const allLevels = [...new Set(sorted.map((t) => t.data.level).filter(Boolean))];
             <button class="filter-btn" data-filter="level" data-value={lvl}>{lvl}</button>
           ))}
         </div>
-        <div class="filter-group">
+        <div class="filter-group filter-group--tags">
           <span class="filter-label">Tag:</span>
           <button class="filter-btn active" data-filter="tag" data-value="all">Todas</button>
-          {allTags.map((tag) => (
+          {topTags.map((tag) => (
             <button class="filter-btn" data-filter="tag" data-value={tag}>{tag}</button>
           ))}
         </div>
@@ -186,8 +195,21 @@ const allLevels = [...new Set(sorted.map((t) => t.data.level).filter(Boolean))];
     .card-desc { font-size: 0.9rem; opacity: 0.75; flex: 1; line-height: 1.5; }
     .card-date { font-size: 0.75rem; opacity: 0.55; }
     .no-results { text-align: center; padding: 3rem; opacity: 0.7; }
-    @media (max-width: 640px) {
-      .filters-bar { flex-direction: column; align-items: stretch; }
+    @media (max-width: 768px) {
+      .filters-bar {
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .search-input {
+        width: 100%;
+        flex: 1 1 100%;
+        padding: 0.4rem 0.7rem;
+        font-size: 0.9rem;
+      }
+      .filter-group,
+      .sort-group {
+        display: none;
+      }
     }
   </style>
 </BaseLayout>

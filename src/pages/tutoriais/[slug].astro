@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 ---
-<BaseLayout title={`${entry.data.title} | Samuel Santos`} description={entry.data.description}>
+<BaseLayout title={`${entry.data.title} | Samuel Santos`} description={entry.data.description} image={entry.data.thumbnail}>
   <header class="page-header page-header--detail">
     <div class="container">
       <p class="page-eyebrow">{entry.data.level || 'Tutorial'}</p>
