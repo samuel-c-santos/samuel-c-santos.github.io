@@ -1683,6 +1683,89 @@ a:hover {
 }
 
 /* ===================================================================
+   9.1 SEÇÃO PRODUTOS (SAAS / VENTURES)
+=================================================================== */
+.products-section {
+  padding-block: var(--aipim-space-80);
+  background-color: var(--aipim-bg-sunken);
+  border-top: var(--aipim-border-thin) solid var(--aipim-border-subtle);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  gap: var(--aipim-space-32);
+}
+
+.product-card .project-image {
+  block-size: auto;
+  aspect-ratio: 16 / 10;
+}
+
+.product-card .project-image img {
+  object-position: top center;
+}
+
+.product-badges {
+  position: absolute;
+  inset-block-start: var(--aipim-space-12);
+  inset-inline-start: var(--aipim-space-12);
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--aipim-space-8);
+}
+
+.product-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--aipim-radius-full);
+  background-color: var(--aipim-bg-surface);
+  color: var(--aipim-text-primary);
+  box-shadow: var(--aipim-shadow-resting);
+  font-family: var(--aipim-font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.product-badge--founder {
+  background-color: var(--aipim-action-primary-bg);
+  color: var(--aipim-action-primary-text);
+}
+
+.product-dot {
+  inline-size: 7px;
+  block-size: 7px;
+  border-radius: 50%;
+  background-color: var(--aipim-color-secondary-600);
+}
+
+.product-kicker {
+  font-size: var(--aipim-text-body-sm-size);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--aipim-text-muted);
+}
+
+.products-note {
+  margin-block-start: var(--aipim-space-24);
+  font-size: var(--aipim-text-body-sm-size);
+  color: var(--aipim-text-muted);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================================================================
    10. SEÇÃO CERTIFICAÇÕES
 =================================================================== */
 .certifications-section {
