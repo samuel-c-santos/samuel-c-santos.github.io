@@ -157,6 +157,6 @@ A pergunta que devemos fazer não é "a imagem ficou mais bonita?", mas sim "a i
 
 ## Contato
 
-- Email: samuelsantosambiental@gmail.com
-- LinkedIn: https://www.linkedin.com/in/samuel-c-santos/
+- Email: samuel.santos.geo@gmail.com
+- LinkedIn: https://www.linkedin.com/in/samuel-santos-geo/
 - GitHub: https://github.com/samuel-c-santos

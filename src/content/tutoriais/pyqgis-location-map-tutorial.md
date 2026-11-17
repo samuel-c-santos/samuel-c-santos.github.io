@@ -179,6 +179,6 @@ A automação de tarefas no QGIS através do PyQGIS é uma habilidade poderosa q
 ## Contato
 
 Tem dúvidas ou sugestões? Entre em contato:
-- Email: samuelsantosambiental@gmail.com
-- LinkedIn: https://www.linkedin.com/in/samuel-c-santos/
+- Email: samuel.santos.geo@gmail.com
+- LinkedIn: https://www.linkedin.com/in/samuel-santos-geo/
 - GitHub: https://github.com/samuel-c-santos

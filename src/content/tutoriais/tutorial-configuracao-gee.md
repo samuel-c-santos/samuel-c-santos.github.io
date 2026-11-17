@@ -260,6 +260,6 @@ A partir daqui, explore o catálogo de datasets, experimente filtros temporais, 
 ## Contato
 
 Gostou do tutorial? Entre em contato para tirar dúvidas, sugerir melhorias ou colaborar em projetos.
-- Email: samuelsantosambiental@gmail.com
-- LinkedIn: https://www.linkedin.com/in/samuel-c-santos/
+- Email: samuel.santos.geo@gmail.com
+- LinkedIn: https://www.linkedin.com/in/samuel-santos-geo/
 - GitHub: https://github.com/samuel-c-santos

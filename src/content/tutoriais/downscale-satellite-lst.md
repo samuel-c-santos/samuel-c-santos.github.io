@@ -159,6 +159,6 @@ A tecnologia é promissora, mas precisa de validação rigorosa, métricas forma
 
 ## Contato
 
-- Email: samuelsantosambiental@gmail.com
-- LinkedIn: https://www.linkedin.com/in/samuel-c-santos/
+- Email: samuel.santos.geo@gmail.com
+- LinkedIn: https://www.linkedin.com/in/samuel-santos-geo/
 - GitHub: https://github.com/samuel-c-santos

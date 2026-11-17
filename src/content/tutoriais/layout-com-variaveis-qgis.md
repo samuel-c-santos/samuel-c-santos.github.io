@@ -155,6 +155,6 @@ Ao dominar essa técnica, você estará apto a criar fluxos de trabalho mais efi
 ## Contato
 
 Tem dúvidas ou sugestões? Entre em contato:
-- Email: samuelsantosambiental@gmail.com
-- LinkedIn: https://www.linkedin.com/in/samuel-c-santos/
+- Email: samuel.santos.geo@gmail.com
+- LinkedIn: https://www.linkedin.com/in/samuel-santos-geo/
 - GitHub: https://github.com/samuel-c-santos

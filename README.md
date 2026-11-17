@@ -57,7 +57,7 @@ Para adicionar um novo tutorial:
 
 ## Contato
 
-- Email: samuelsantosambiental@gmail.com
-- LinkedIn: https://www.linkedin.com/in/samuelsantos-amb/
+- Email: samuel.santos.geo@gmail.com
+- LinkedIn: https://www.linkedin.com/in/samuel-santos-geo/
 - GitHub: https://github.com/samuel-c-santos
 - Site: https://samuelsantos.site

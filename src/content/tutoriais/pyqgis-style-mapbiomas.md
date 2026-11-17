@@ -212,6 +212,6 @@ O código está disponível para uso e adaptação conforme as demandas do seu p
 ## Contato
 
 Entre em contato para mais informações sobre geoprocessamento e análise espacial:
-- Email: samuelsantosambiental@gmail.com
-- LinkedIn: https://www.linkedin.com/in/samuel-c-santos/
+- Email: samuel.santos.geo@gmail.com
+- LinkedIn: https://www.linkedin.com/in/samuel-santos-geo/
 - GitHub: https://github.com/samuel-c-santos
