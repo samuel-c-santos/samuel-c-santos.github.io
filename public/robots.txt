@@ -1,0 +1,14 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://samuelsantos.site/sitemap.xml
+Sitemap: https://samuelsantos.site/portica-app/sitemap.xml
